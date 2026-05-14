@@ -25,6 +25,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
 .badge-visitor { background: #e8f4fd; color: #1a56db; }
 .badge-exhibitor { background: #fef3e2; color: #e67e22; }
 .card.hidden { display: none; }
+.card.has-profile { cursor: pointer; }
+.card.has-profile:hover { box-shadow: 0 4px 14px rgba(26,86,219,.22); }
+.profile { display: none; margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; text-align: left; font-size: 11px; color: #444; line-height: 1.6; }
+.card.expanded .profile { display: block; }
+.card.has-profile .name::after { content: ' ▸'; font-size: 10px; color: #1a56db; }
+.card.expanded .name::after { content: ' ▾'; }
 </style>
 </head>
 <body>
@@ -38,11 +44,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
 </div>
 <p class="count" id="count"></p>
 <div class="grid">
-<div class="card" data-name="澤田淳" data-org="グラファー" data-type="来場者">
+<div class="card has-profile" data-name="澤田淳" data-org="グラファー" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPua+pOeUsOa3szwvdGV4dD48L3N2Zz4=" alt="澤田淳">
+  <img src="https://wsrv.nl/?url=graffer.jp/img/graffer/management/jun-sawada.jpg" alt="澤田淳">
   <div class="name">澤田淳</div>
   <div class="org">グラファー</div>
+  <div class="profile">グラファーSVP。スリーエムジャパン、GCA（M&amp;A）を経て2021年グラファー参画。GovTech事業本部を統括。</div>
 </div>
 <div class="card" data-name="岡嶋大樹" data-org="国立病院機構" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -98,11 +105,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">柏野幸大</div>
   <div class="org">グラファー</div>
 </div>
-<div class="card" data-name="田城功揮" data-org="タシロ" data-type="来場者">
+<div class="card has-profile" data-name="田城功揮" data-org="タシロ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPueUsOWfjuWKn+aPrjwvdGV4dD48L3N2Zz4=" alt="田城功揮">
+  <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/72459/7/72459-7-ed0d69c9880247845df4032fa523615c-1715x1606.jpg" alt="田城功揮">
   <div class="name">田城功揮</div>
   <div class="org">タシロ</div>
+  <div class="profile">株式会社タシロ3代目代表。1992年生まれ。パソナ、NGO理事を経て2023年に31歳で精密板金メーカーの代表に就任。</div>
 </div>
 <div class="card" data-name="塚田亜希子" data-org="カンム" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -158,11 +166,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">黒田岳士</div>
   <div class="org">グローバル政策研究</div>
 </div>
-<div class="card" data-name="守屋祐一郎" data-org="Ubie" data-type="来場者">
+<div class="card has-profile" data-name="守屋祐一郎" data-org="Ubie" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWuiOWxi+elkOS4gOmDjjwvdGV4dD48L3N2Zz4=" alt="守屋祐一郎">
+  <img src="https://wsrv.nl/?url=assets.st-note.com/production/uploads/images/5629278/profile_2dcd9d39740e4db698520f12fb5f8262.jpg" alt="守屋祐一郎">
   <div class="name">守屋祐一郎</div>
   <div class="org">Ubie</div>
+  <div class="profile">Ubie 医療機関向け事業開発。慶應大卒後セルソース→Ubie。公衆衛生大学院（聖路加）にも在籍。</div>
 </div>
 <div class="card" data-name="佐藤光則" data-org="ウォーキングサッカー" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -176,11 +185,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">鈴木宏和</div>
   <div class="org">グラファー</div>
 </div>
-<div class="card" data-name="太田義史" data-org="アライアンスフォーラム" data-type="来場者">
+<div class="card has-profile" data-name="太田義史" data-org="アライアンスフォーラム" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWkqueUsOe+qeWPsjwvdGV4dD48L3N2Zz4=" alt="太田義史">
   <div class="name">太田義史</div>
   <div class="org">アライアンスフォーラム</div>
+  <div class="profile">アライアンス・フォーラム財団 ゲームチェンジャーズ・フォーラム事務局長。電通25年（中国関連約10年）後、現職。</div>
 </div>
 <div class="card" data-name="河原琴子" data-org="経産省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -308,11 +318,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">安川寿</div>
   <div class="org">和音</div>
 </div>
-<div class="card" data-name="星野悠樹" data-org="Public Shaper Networks" data-type="来場者">
+<div class="card has-profile" data-name="星野悠樹" data-org="Public Shaper Networks" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaYn+mHjuaCoOaouTwvdGV4dD48L3N2Zz4=" alt="星野悠樹">
+  <img src="https://wsrv.nl/?url=publicshaper.co.jp/assets/img/home/pic_yuki_hoshino.jpg" alt="星野悠樹">
   <div class="name">星野悠樹</div>
   <div class="org">Public Shaper Networks</div>
+  <div class="profile">Public Shaper Networks執行役員。医師免許後内閣府入府。ローランド・ベルガー、マッキンゼーを経てUCLでMPA取得。</div>
 </div>
 <div class="card" data-name="南部高幸" data-org="KOA" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -386,11 +397,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">宇田川雅俊</div>
   <div class="org">Wovn Technologies</div>
 </div>
-<div class="card" data-name="高橋朗" data-org="マカイラCOO" data-type="来場者">
+<div class="card has-profile" data-name="高橋朗" data-org="マカイラCOO" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumrmOapi+aclzwvdGV4dD48L3N2Zz4=" alt="高橋朗">
+  <img src="https://wsrv.nl/?url=makairaworld.com/wp2024/wp-content/uploads/2021/07/Makaira-Akira-Takahashi.jpg" alt="高橋朗">
   <div class="name">高橋朗</div>
   <div class="org">マカイラCOO</div>
+  <div class="profile">マカイラCOO。</div>
 </div>
 <div class="card" data-name="新井伸介" data-org="富士通" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -500,11 +512,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">根岸孝</div>
   <div class="org">EY新日本</div>
 </div>
-<div class="card" data-name="西澤七海" data-org="スタートアップスタジオ協会" data-type="来場者">
+<div class="card has-profile" data-name="西澤七海" data-org="スタートアップスタジオ協会" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuilv+a+pOS4g+a1tzwvdGV4dD48L3N2Zz4=" alt="西澤七海">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/tWyvwM6" alt="西澤七海">
   <div class="name">西澤七海</div>
   <div class="org">スタートアップスタジオ協会</div>
+  <div class="profile">スタートアップスタジオ協会運営事務局。9yards Productionディレクター兼務。新卒からスタートアップ支援業界で活動。</div>
 </div>
 <div class="card" data-name="関尚弘" data-org="古河電工" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -512,11 +525,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">関尚弘</div>
   <div class="org">古河電工</div>
 </div>
-<div class="card" data-name="小林慎之助" data-org="Weeave" data-type="来場者">
+<div class="card has-profile" data-name="小林慎之助" data-org="Weeave" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWwj+ael+aFjuS5i+WKqTwvdGV4dD48L3N2Zz4=" alt="小林慎之助">
+  <img src="https://wsrv.nl/?url=www.weeave.co.jp/wordpress/wp-content/themes/weeave/assets/images/top/member-kobayashi.webp" alt="小林慎之助">
   <div class="name">小林慎之助</div>
   <div class="org">Weeave</div>
+  <div class="profile">Weeave代表。東南アジアでのクロスボーダー事業開発と国会議員事務所でのデジタル戦略推進経験を持つ。</div>
 </div>
 <div class="card" data-name="イルマス玲" data-org="オルタック" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -536,17 +550,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">田中淳一</div>
   <div class="org">うるら</div>
 </div>
-<div class="card" data-name="黒田千春" data-org="内閣府" data-type="来場者">
+<div class="card has-profile" data-name="黒田千春" data-org="内閣府" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPum7kueUsOWNg+aYpTwvdGV4dD48L3N2Zz4=" alt="黒田千春">
+  <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/8b7e10b3b599fe58974a02e628f5d15d.png" alt="黒田千春">
   <div class="name">黒田千春</div>
   <div class="org">内閣府</div>
+  <div class="profile">内閣府参事官補佐。デジタル政策・官民連携推進担当。</div>
 </div>
-<div class="card" data-name="北原宏和" data-org="Archetype Ventures" data-type="来場者">
+<div class="card has-profile" data-name="北原宏和" data-org="Archetype Ventures" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWMl+WOn+Wuj+WSjDwvdGV4dD48L3N2Zz4=" alt="北原宏和">
+  <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/42582921e6941231253c8a052bfdc512-300x300-1.png" alt="北原宏和">
   <div class="name">北原宏和</div>
   <div class="org">Archetype Ventures</div>
+  <div class="profile">Archetype Venturesマネージングパートナー。東大法→CMU→USC。総務省→BCGを経て2013年VC設立。B2B Tech・サステナビリティ特化、40社以上支援。</div>
 </div>
 <div class="card" data-name="駒形舞" data-org="トランスコスモス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -566,11 +582,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">篠原秀和</div>
   <div class="org">八代市</div>
 </div>
-<div class="card" data-name="藏重嘉伸" data-org="YMFG ZONE" data-type="来場者">
+<div class="card has-profile" data-name="藏重嘉伸" data-org="YMFG ZONE" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiXj+mHjeWYieS8uDwvdGV4dD48L3N2Zz4=" alt="藏重嘉伸">
+  <img src="https://wsrv.nl/?url=cdn.projectdesign.jp/uploads/2023/03/30/RjRXCiWka30MFYYCmb8MiSCxgbMmOYfrn7MpXT7O.jpg" alt="藏重嘉伸">
   <div class="name">藏重嘉伸</div>
   <div class="org">YMFG ZONE</div>
+  <div class="profile">YMFG ZONEプラニング代表取締役社長。2021年1月就任。山口銀行入行後、YMFG ZONE Planning参画。PPP/PFIサポーターとして国土交通省から任命。地方創生コンサルティングを展開。</div>
 </div>
 <div class="card" data-name="豊川桃華" data-org="ナウキャスト" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -578,11 +595,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">豊川桃華</div>
   <div class="org">ナウキャスト</div>
 </div>
-<div class="card" data-name="曽根原弘樹" data-org="ゲノムクリニック" data-type="来場者">
+<div class="card has-profile" data-name="曽根原弘樹" data-org="ゲノムクリニック" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuabveagueWOn+W8mOaouTwvdGV4dD48L3N2Zz4=" alt="曽根原弘樹">
+  <img src="https://wsrv.nl/?url=genome-clinic.co.jp/corporate/wp-content/uploads/2018/04/face_4.png" alt="曽根原弘樹">
   <div class="name">曽根原弘樹</div>
   <div class="org">ゲノムクリニック</div>
+  <div class="profile">ゲノムクリニック代表取締役共同CEO。医師（MD）。千葉大発ベンチャー、2018年創業。遺伝子検査の医療実装に取り組む。</div>
 </div>
 <div class="card" data-name="羽鳥智喜" data-org="Works Human Intelligence" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -764,11 +782,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">竹内良輔</div>
   <div class="org">BIPROGY</div>
 </div>
-<div class="card" data-name="奈良崎翔太" data-org="慶應イノベーション" data-type="来場者">
+<div class="card has-profile" data-name="奈良崎翔太" data-org="慶應イノベーション" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWliOiJr+W0jue/lOWkqjwvdGV4dD48L3N2Zz4=" alt="奈良崎翔太">
+  <img src="https://wsrv.nl/?url=www.keio-innovation.co.jp/cms/wp-content/uploads/2022/01/narazaki-294x378.jpg" alt="奈良崎翔太">
   <div class="name">奈良崎翔太</div>
   <div class="org">慶應イノベーション</div>
+  <div class="profile">慶應イノベーション・イニシアティブ（KII）シニアアソシエイト。慶應発VCでスタートアップ投資・支援担当。</div>
 </div>
 <div class="card" data-name="高橋麻倫" data-org="官民連携事業研究所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -794,11 +813,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">志村龍之介</div>
   <div class="org">東広島市</div>
 </div>
-<div class="card" data-name="鈴木利空" data-org="LITALICO" data-type="来場者">
+<div class="card has-profile" data-name="鈴木利空" data-org="LITALICO" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumItOacqOWIqeepujwvdGV4dD48L3N2Zz4=" alt="鈴木利空">
   <div class="name">鈴木利空</div>
   <div class="org">LITALICO</div>
+  <div class="profile">1985年岐阜県多治見市生まれ。名古屋大学理学部卒、2008年LITALICO入社、2009年代表取締役社長就任。2023年代表取締役会長を経て2025年1月に社長に再就任。</div>
 </div>
 <div class="card" data-name="永岡大誠" data-org="デジタル庁" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -806,11 +826,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">永岡大誠</div>
   <div class="org">デジタル庁</div>
 </div>
-<div class="card" data-name="野口智弘" data-org="ボードアドバイザーズ" data-type="来場者">
+<div class="card has-profile" data-name="野口智弘" data-org="ボードアドバイザーズ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumHjuWPo+aZuuW8mDwvdGV4dD48L3N2Zz4=" alt="野口智弘">
+  <img src="https://wsrv.nl/?url=bajpn.com/wp/wp-content/uploads/2023/05/06.jpg" alt="野口智弘">
   <div class="name">野口智弘</div>
   <div class="org">ボードアドバイザーズ</div>
+  <div class="profile">ボードアドバイザーズパートナー。コーポレートガバナンス改革・経営人材構築支援専門。</div>
 </div>
 <div class="card" data-name="中田由起子" data-org="全国市町村研修財団" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -818,11 +839,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">中田由起子</div>
   <div class="org">全国市町村研修財団</div>
 </div>
-<div class="card" data-name="永田暁彦" data-org="UntroD Capital" data-type="来場者">
+<div class="card has-profile" data-name="永田暁彦" data-org="UntroD Capital" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuawuOeUsOaageW9pjwvdGV4dD48L3N2Zz4=" alt="永田暁彦">
+  <img src="https://wsrv.nl/?url=sagri.tokyo/wp-content/uploads/2024/09/fc81ee44f2ff1679a4a295d9883f0f0e-300x278.png" alt="永田暁彦">
   <div class="name">永田暁彦</div>
   <div class="org">UntroD Capital</div>
+  <div class="profile">UntroD Capital Japan代表。1982年生まれ。ユーグレナCFO→COO→CEOを経て2024年退任、同年UntroD Capital Japan代表就任。リアルテックファンド（300億円超）を運営。</div>
 </div>
 <div class="card" data-name="金谷英生" data-org="成田空港" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -998,11 +1020,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">中島正太郎</div>
   <div class="org">メリービズ</div>
 </div>
-<div class="card" data-name="中村隆洋" data-org="ポーラスタースペース" data-type="来場者">
+<div class="card has-profile" data-name="中村隆洋" data-org="ポーラスタースペース" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4readkemahua0izwvdGV4dD48L3N2Zz4=" alt="中村隆洋">
+  <img src="https://wsrv.nl/?url=polarstarspace.com/main/wp-content/uploads/2024/03/20220228_mrNakamura-012-medium-1-150x150.jpg" alt="中村隆洋">
   <div class="name">中村隆洋</div>
   <div class="org">ポーラスタースペース</div>
+  <div class="profile">防衛大学校航空宇宙工学科卒、三菱電機エンジニアリングで人工衛星開発に従事。2017年にポーラスター・スペースを創業。衛星データを活用した農業・環境のリモートセンシングソリューションを提供。</div>
 </div>
 <div class="card" data-name="中村ケンジ" data-org="日野リトラックス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1040,11 +1063,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">大川真史</div>
   <div class="org">PwC</div>
 </div>
-<div class="card" data-name="北澤雄太" data-org="うるる" data-type="来場者">
+<div class="card has-profile" data-name="北澤雄太" data-org="うるる" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWMl+a+pOmbhOWkqjwvdGV4dD48L3N2Zz4=" alt="北澤雄太">
+  <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/49287/293/49287-293-0eebf85b28b85af47fdfc0bec2c63aa3-379x379.jpg" alt="北澤雄太">
   <div class="name">北澤雄太</div>
   <div class="org">うるる</div>
+  <div class="profile">うるる NJSS＆Govtech事業本部長。2015年うるる入社、2023年部長就任。内閣府マッチングピッチにも登壇。</div>
 </div>
 <div class="card" data-name="武田健二" data-org="コランダム" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1070,11 +1094,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">新田修平</div>
   <div class="org">ナウキャスト</div>
 </div>
-<div class="card" data-name="延広絵美" data-org="GR Japan" data-type="来場者">
+<div class="card has-profile" data-name="延広絵美" data-org="GR Japan" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW7tuW6g+e1tee+jjwvdGV4dD48L3N2Zz4=" alt="延広絵美">
+  <img src="https://wsrv.nl/?url=grjapan.com/sites/default/files/styles/large/public/content/profile/image/emi_nobuhiro_1_0.jpg" alt="延広絵美">
   <div class="name">延広絵美</div>
   <div class="org">GR Japan</div>
+  <div class="profile">GR Japanシニアパブリックポリシーマネージャー。Bloomberg News・広島テレビ記者出身。安倍・菅・岸田政権下で経済・外交政策を取材後、現職。</div>
 </div>
 <div class="card" data-name="川上由美" data-org="東京共同会計" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1142,11 +1167,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">中村右弥</div>
   <div class="org">江崎グリコ</div>
 </div>
-<div class="card" data-name="栫井誠一郎" data-org="Publink代表" data-type="出展者">
+<div class="card has-profile" data-name="栫井誠一郎" data-org="Publink代表" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuagq+S6leiqoOS4gOmDjjwvdGV4dD48L3N2Zz4=" alt="栫井誠一郎">
+  <img src="https://wsrv.nl/?url=graj.org/wp-content/uploads/2024/02/f043cd14d831c73bcfc07f110fcdc6d0-e1707621589543.jpg" alt="栫井誠一郎">
   <div class="name">栫井誠一郎</div>
   <div class="org">Publink代表</div>
+  <div class="profile">Publink代表取締役CEO。1982年生まれ。東大工学部→経産省（NISC兼務）→2018年Publink設立。官民共創・GRコンサルティングを推進。</div>
 </div>
 <div class="card" data-name="緒方康浩" data-org="MISO SOUP" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1232,11 +1258,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">打越宏明</div>
   <div class="org">東広島市</div>
 </div>
-<div class="card" data-name="落合孝文" data-org="渥美坂井法律事務所" data-type="来場者">
+<div class="card has-profile" data-name="落合孝文" data-org="渥美坂井法律事務所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiQveWQiOWtneaWhzwvdGV4dD48L3N2Zz4=" alt="落合孝文">
+  <img src="https://wsrv.nl/?url=www.aplawjapan.com/application/files/8416/7452/2824/takafumi-ochiai.jpg" alt="落合孝文">
   <div class="name">落合孝文</div>
   <div class="org">渥美坂井法律事務所</div>
+  <div class="profile">渥美坂井法律事務所シニアパートナー弁護士。慶應理工→IT・AI・フィンテック・データ保護専門。Fintech協会代表理事副会長。内閣府規制改革WG座長。</div>
 </div>
 <div class="card" data-name="福田英臣" data-org="栃木市" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1280,11 +1307,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">岸功</div>
   <div class="org">日立</div>
 </div>
-<div class="card" data-name="小林庸平" data-org="財務省" data-type="来場者">
+<div class="card has-profile" data-name="小林庸平" data-org="財務省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWwj+ael+W6uOW5szwvdGV4dD48L3N2Zz4=" alt="小林庸平">
+  <img src="https://wsrv.nl/?url=www.rieti.go.jp/assets_c/0000/00/photo-thumb-100x120-18839.jpg" alt="小林庸平">
   <div class="name">小林庸平</div>
   <div class="org">財務省</div>
+  <div class="profile">三菱UFJリサーチ&amp;コンサルティング主任研究員・行動科学チームリーダー。公共経済学・応用計量経済学・ナッジ政策専門。一橋大博士（経済学）。</div>
 </div>
 <div class="card" data-name="川口惠" data-org="双日" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1328,11 +1356,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">森田大地</div>
   <div class="org">GO</div>
 </div>
-<div class="card" data-name="明石知樹" data-org="One Purpose" data-type="来場者">
+<div class="card has-profile" data-name="明石知樹" data-org="One Purpose" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaYjuefs+efpeaouTwvdGV4dD48L3N2Zz4=" alt="明石知樹">
   <div class="name">明石知樹</div>
   <div class="org">One Purpose</div>
+  <div class="profile">株式会社One Purpose代表取締役。元りそな銀行員、2015年独立後財務コンサルとして活動。琉球アスティーダのTPM上場を支援。9年で70億超の資金調達支援実績。社外CFO支援に特化。</div>
 </div>
 <div class="card" data-name="荒井雄彦" data-org="nicollap" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1382,11 +1411,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">亀井優樹</div>
   <div class="org">国交省/内閣府</div>
 </div>
-<div class="card" data-name="松尾慎太郎" data-org="プロトスター" data-type="来場者">
+<div class="card has-profile" data-name="松尾慎太郎" data-org="プロトスター" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuadvuWwvuaFjuWkqumDjjwvdGV4dD48L3N2Zz4=" alt="松尾慎太郎">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/3d5C1Ry" alt="松尾慎太郎">
   <div class="name">松尾慎太郎</div>
   <div class="org">プロトスター</div>
+  <div class="profile">1992年大阪生まれ。スタークス株式会社を経て2021年11月プロトスター参画、取締役・M&amp;A事業責任者に就任。情報経営イノベーション専門職大学客員准教授も務める。</div>
 </div>
 <div class="card" data-name="菅原義剛" data-org="内閣官房" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1394,11 +1424,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">菅原義剛</div>
   <div class="org">内閣官房</div>
 </div>
-<div class="card" data-name="志賀久美子" data-org="ソーシャルエックス" data-type="来場者">
+<div class="card has-profile" data-name="志賀久美子" data-org="ソーシャルエックス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW/l+izgOS5hee+juWtkDwvdGV4dD48L3N2Zz4=" alt="志賀久美子">
+  <img src="https://wsrv.nl/?url=assets.st-note.com/production/uploads/images/126679537/profile_88178a8e2cfcc712dd63798b4bf31ab7.png" alt="志賀久美子">
   <div class="name">志賀久美子</div>
   <div class="org">ソーシャルエックス</div>
+  <div class="profile">ソーシャル・エックス PR/GR Director。官民共創型アクセラレーション「ソーシャルXアクセラレーション」を担当。財務リターンと社会的インパクトの両立を目指す新規事業を支援。</div>
 </div>
 <div class="card" data-name="田代貴久" data-org="経産省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1418,11 +1449,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">八田正史</div>
   <div class="org">GXイノベーションズ</div>
 </div>
-<div class="card" data-name="吉田昌平" data-org="TMI総合法律事務所" data-type="来場者">
+<div class="card has-profile" data-name="吉田昌平" data-org="TMI総合法律事務所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWQieeUsOaYjOW5szwvdGV4dD48L3N2Zz4=" alt="吉田昌平">
+  <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2020/09/18/8378_1140-500.jpg" alt="吉田昌平">
   <div class="name">吉田昌平</div>
   <div class="org">TMI総合法律事務所</div>
+  <div class="profile">TMI総合法律事務所弁護士。M&amp;A・エクイティファイナンス・スタートアップ株式公開支援専門。</div>
 </div>
 <div class="card" data-name="鷲山雄一" data-org="イーグル経営" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1448,11 +1480,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">森俊</div>
   <div class="org">山形市</div>
 </div>
-<div class="card" data-name="竹之内隆夫" data-org="プライバシーテック協会" data-type="来場者">
+<div class="card has-profile" data-name="竹之内隆夫" data-org="プライバシーテック協会" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuerueS5i+WGhemahuWkqzwvdGV4dD48L3N2Zz4=" alt="竹之内隆夫">
+  <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/46917/81/46917-81-d0f8d4c88b881e0ed93ae2a2de06c921-3900x3900.jpg" alt="竹之内隆夫">
   <div class="name">竹之内隆夫</div>
   <div class="org">プライバシーテック協会</div>
+  <div class="profile">プライバシーテック協会事務局長・Acompany執行役員VP of PA。NEC→Digital Garage→LINEヤフーで秘密計算・差分プライバシー研究後2024年参画。工学博士・MBA。</div>
 </div>
 <div class="card" data-name="林大祐" data-org="南都銀行" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1472,11 +1505,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">神野和磨</div>
   <div class="org">東京大学Diligent</div>
 </div>
-<div class="card" data-name="岡庭嵩" data-org="クラスター" data-type="来場者">
+<div class="card has-profile" data-name="岡庭嵩" data-org="クラスター" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWyoeW6reW1qTwvdGV4dD48L3N2Zz4=" alt="岡庭嵩">
+  <img src="https://wsrv.nl/?url=assets.st-note.com/img/1712039807622-7X0ZO9lwIY.jpg" alt="岡庭嵩">
   <div class="name">岡庭嵩</div>
   <div class="org">クラスター</div>
+  <div class="profile">クラスター エンタープライズ事業部長。CARTA HOLDINGS12年（海外事業責任者等）→最大5社役員歴任後クラスター入社。</div>
 </div>
 <div class="card" data-name="清末大翔" data-org="SAITAMA Rise" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1484,11 +1518,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">清末大翔</div>
   <div class="org">SAITAMA Rise</div>
 </div>
-<div class="card" data-name="中村則雄" data-org="産総研" data-type="来場者">
+<div class="card has-profile" data-name="中村則雄" data-org="産総研" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4readkeWJh+mbhDwvdGV4dD48L3N2Zz4=" alt="中村則雄">
+  <img src="https://wsrv.nl/?url=miraisens.com/img/about01.png" alt="中村則雄">
   <div class="name">中村則雄</div>
   <div class="org">産総研</div>
+  <div class="profile">産総研主任研究員、ミライセンス Founder兼取締役CTO。3Dハプティクス（触覚技術）研究者として「デジタル体感」技術を開発し2014年ミライセンス設立。</div>
 </div>
 <div class="card" data-name="中島和哉" data-org="スタジオダレバス/TIS" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1514,17 +1549,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">髙野寛未</div>
   <div class="org">NTTデータ北海道</div>
 </div>
-<div class="card" data-name="横山啓" data-org="マカイラ" data-type="出展者">
+<div class="card has-profile" data-name="横山啓" data-org="マカイラ" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaoquWxseWVkzwvdGV4dD48L3N2Zz4=" alt="横山啓">
+  <img src="https://wsrv.nl/?url=makairaworld.com/wp2024/wp-content/uploads/2022/06/Makaira-Kei-Yokoyama3.jpg" alt="横山啓">
   <div class="name">横山啓</div>
   <div class="org">マカイラ</div>
+  <div class="profile">マカイラディレクター。元総務省官僚。マイナンバー・情報システム改革担当後、三重県DX責任者として出向。2022年パブリックアフェアーズコンサルへ転身。</div>
 </div>
-<div class="card" data-name="島津敦好" data-org="カウリス" data-type="来場者">
+<div class="card has-profile" data-name="島津敦好" data-org="カウリス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWztua0peaVpuWlvTwvdGV4dD48L3N2Zz4=" alt="島津敦好">
+  <img src="https://wsrv.nl/?url=cdn.getshifter.co/38a4d842fa3e5953fde43746f0194de650adcafc/uploads/2023/12/board-shimazu.png" alt="島津敦好">
   <div class="name">島津敦好</div>
   <div class="org">カウリス</div>
+  <div class="profile">カウリス代表取締役。京大→ドリコム→ロゼッタストーン→Capyを経て2015年カウリス創業。東証グロース上場。</div>
 </div>
 <div class="card" data-name="勝見祐幸" data-org="グレイスグループ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1532,11 +1569,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">勝見祐幸</div>
   <div class="org">グレイスグループ</div>
 </div>
-<div class="card" data-name="川崎正治" data-org="HENNGE" data-type="来場者">
+<div class="card has-profile" data-name="川崎正治" data-org="HENNGE" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW3neW0juato+ayuzwvdGV4dD48L3N2Zz4=" alt="川崎正治">
+  <img src="https://wsrv.nl/?url=ez-cdn.shoeisha.jp/static/images/article/14734/14734_03.jpg" alt="川崎正治">
   <div class="name">川崎正治</div>
   <div class="org">HENNGE</div>
+  <div class="profile">HENNGE新規営業セクションマネージャー。Google Apps黎明期からクラウドに携わり2015年HENNGE入社。</div>
 </div>
 <div class="card" data-name="野里彩" data-org="うるる" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1586,11 +1624,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">河野貴伸</div>
   <div class="org">MMOL Holdings</div>
 </div>
-<div class="card" data-name="堂上和那" data-org="うるる" data-type="来場者">
+<div class="card has-profile" data-name="堂上和那" data-org="うるる" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWgguS4iuWSjOmCozwvdGV4dD48L3N2Zz4=" alt="堂上和那">
+  <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/49287/124/49287-124-edded2b2ec9177d3a0bffbad8373d9fa-655x655.jpg" alt="堂上和那">
   <div class="name">堂上和那</div>
   <div class="org">うるる</div>
+  <div class="profile">うるる OurPhotoプロダクトマネージャー兼えんフォートEM。2017年新卒入社、社内最年少で開発部長に昇格。</div>
 </div>
 <div class="card" data-name="西水徹" data-org="内閣官房" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1616,11 +1655,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">石垣亜祈</div>
   <div class="org">トランスコスモス</div>
 </div>
-<div class="card" data-name="山本茂" data-org="セーフィー" data-type="来場者">
+<div class="card has-profile" data-name="山本茂" data-org="セーフィー" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWxseacrOiMgjwvdGV4dD48L3N2Zz4=" alt="山本茂">
+  <img src="https://wsrv.nl/?url=safie.co.jp/assets/img/company/officer/img_yamamoto.jpg" alt="山本茂">
   <div class="name">山本茂</div>
   <div class="org">セーフィー</div>
+  <div class="profile">セーフィー執行役員 営業本部副本部長。</div>
 </div>
 <div class="card" data-name="山森正浩" data-org="ニッキン" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1634,11 +1674,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">栃倉恒敬</div>
   <div class="org">横浜総合マネジメント</div>
 </div>
-<div class="card" data-name="河合道雄" data-org="チームみらい" data-type="来場者">
+<div class="card has-profile" data-name="河合道雄" data-org="チームみらい" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuays+WQiOmBk+mbhDwvdGV4dD48L3N2Zz4=" alt="河合道雄">
+  <img src="https://wsrv.nl/?url=images.microcms-assets.io/assets/4bcffd74e0c14144b50ea8be93e5e95a/cb65621c90bb4aba84b0ad33a899dd8a/kawai-green.png" alt="河合道雄">
   <div class="name">河合道雄</div>
   <div class="org">チームみらい</div>
+  <div class="profile">チームみらい衆議院議員・広報本部長。東大文→京大大学院→LITALICO→HLAB→2026年衆院選初当選。教育・福祉政策推進。</div>
 </div>
 <div class="card" data-name="黄翌成" data-org="東京大学Diligent" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1676,11 +1717,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">元杭康二</div>
   <div class="org">東京共同会計</div>
 </div>
-<div class="card" data-name="後藤英作" data-org="リンクアンドモチベーション" data-type="来場者">
+<div class="card has-profile" data-name="後藤英作" data-org="リンクアンドモチベーション" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW+jOiXpOiLseS9nDwvdGV4dD48L3N2Zz4=" alt="後藤英作">
   <div class="name">後藤英作</div>
   <div class="org">リンクアンドモチベーション</div>
+  <div class="profile">リンクアンドモチベーション グローバル統括執行役員（2026年就任）。中堅・ベンチャー向けコンサルティングのユニットマネジャー、カンパニー長を歴任。</div>
 </div>
 <div class="card" data-name="田中淳子" data-org="会計検査院" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1694,11 +1736,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">水谷正邦</div>
   <div class="org">みよし市議会</div>
 </div>
-<div class="card" data-name="江口晋太朗" data-org="eiicon" data-type="来場者">
+<div class="card has-profile" data-name="江口晋太朗" data-org="eiicon" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaxn+WPo+aZi+WkquaclzwvdGV4dD48L3N2Zz4=" alt="江口晋太朗">
   <div class="name">江口晋太朗</div>
   <div class="org">eiicon</div>
+  <div class="profile">1984年福岡県生まれ。編集者・ジャーナリスト。TOKYObeta代表。都市開発、地域活性、ビジネス開発、ブランディングなど幅広い領域で編集・プロデュースを手がける。</div>
 </div>
 <div class="card" data-name="桑島祐太郎" data-org="トランスコスモス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1706,11 +1749,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">桑島祐太郎</div>
   <div class="org">トランスコスモス</div>
 </div>
-<div class="card" data-name="原良憲" data-org="京都大学名誉教授" data-type="来場者">
+<div class="card has-profile" data-name="原良憲" data-org="京都大学名誉教授" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWOn+iJr+aGsjwvdGV4dD48L3N2Zz4=" alt="原良憲">
+  <img src="https://wsrv.nl/?url=www.gsm.kyoto-u.ac.jp/wp-content/uploads/21dd26a26dadd555fa555f54ce7fbdf5-148x183.jpeg" alt="原良憲">
   <div class="name">原良憲</div>
   <div class="org">京都大学名誉教授</div>
+  <div class="profile">京都大学経営管理大学院名誉教授。東大工→NEC→スタンフォード客員→2006年京大教授。サービス・イノベーション、オープンイノベーション研究。</div>
 </div>
 <div class="card" data-name="瀧下智美" data-org="マカイラ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1802,11 +1846,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">関口一</div>
   <div class="org">Dialogue for Everyone</div>
 </div>
-<div class="card" data-name="橋本笑穂" data-org="AiCAN" data-type="来場者">
+<div class="card has-profile" data-name="橋本笑穂" data-org="AiCAN" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuapi+acrOeskeepgjwvdGV4dD48L3N2Zz4=" alt="橋本笑穂">
+  <img src="https://wsrv.nl/?url=www.aican-inc.com/wp-content/themes/AiCAN_theme/assets/img/company/cmo.png" alt="橋本笑穂">
   <div class="name">橋本笑穂</div>
   <div class="org">AiCAN</div>
+  <div class="profile">AiCAN取締役CMO。AIを活用した児童虐待防止・早期発見支援スタートアップ。</div>
 </div>
 <div class="card" data-name="MU WEIHAO" data-org="Company Doctor AI" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1826,11 +1871,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">井上雄貴</div>
   <div class="org">京都市</div>
 </div>
-<div class="card" data-name="岩間郁乃" data-org="森濱田松本法律" data-type="来場者">
+<div class="card has-profile" data-name="岩間郁乃" data-org="森濱田松本法律" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWyqemWk+mDgeS5gzwvdGV4dD48L3N2Zz4=" alt="岩間郁乃">
+  <img src="https://wsrv.nl/?url=www.morihamada.com/sites/default/files/people/images/ayano-iwama.jpg" alt="岩間郁乃">
   <div class="name">岩間郁乃</div>
   <div class="org">森濱田松本法律</div>
+  <div class="profile">森・濱田松本法律事務所弁護士。東大法→東大ロースクール。公共政策法務・AI・データプライバシー・フィンテック・ヘルスケア規制専門。</div>
 </div>
 <div class="card" data-name="早川世治" data-org="ミレー" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1850,11 +1896,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">小島章利</div>
   <div class="org">KPO</div>
 </div>
-<div class="card" data-name="藤森健至" data-org="三越伊勢丹" data-type="来場者">
+<div class="card has-profile" data-name="藤森健至" data-org="三越伊勢丹" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiXpOajruWBpeiHszwvdGV4dD48L3N2Zz4=" alt="藤森健至">
+  <img src="https://wsrv.nl/?url=jmi.jma.or.jp/wp/wp-content/uploads/2021/06/isetan_fujimori.png" alt="藤森健至">
   <div class="name">藤森健至</div>
   <div class="org">三越伊勢丹</div>
+  <div class="profile">三越伊勢丹HD執行役員、三越伊勢丹ビジネス・サポート代表取締役社長。「個を活かす」経営の実践者。</div>
 </div>
 <div class="card" data-name="加藤和磨" data-org="日本政策研究所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1874,23 +1921,26 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">白石由貴</div>
   <div class="org">防衛省</div>
 </div>
-<div class="card" data-name="富山浩樹" data-org="サツドラHD" data-type="来場者">
+<div class="card has-profile" data-name="富山浩樹" data-org="サツドラHD" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWvjOWxsea1qeaouTwvdGV4dD48L3N2Zz4=" alt="富山浩樹">
+  <img src="https://wsrv.nl/?url=satudora-hd.co.jp/images/img_leader_01.jpg" alt="富山浩樹">
   <div class="name">富山浩樹</div>
   <div class="org">サツドラHD</div>
+  <div class="profile">サツドラHD代表取締役社長CEO。1976年生まれ。2015年代表就任。北海道共通ポイントEZOCAを立ち上げ地域連携事業を推進。</div>
 </div>
-<div class="card" data-name="正木伸城" data-org="NOVRIN" data-type="来場者">
+<div class="card has-profile" data-name="正木伸城" data-org="NOVRIN" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuato+acqOS8uOWfjjwvdGV4dD48L3N2Zz4=" alt="正木伸城">
+  <img src="https://wsrv.nl/?url=thefocus-on.com/wp/wp-content/uploads/2023/01/%E6%AD%A3%E6%9C%A8%E6%A7%98-e1674461099611.jpeg" alt="正木伸城">
   <div class="name">正木伸城</div>
   <div class="org">NOVRIN</div>
+  <div class="profile">1981年東京生まれ。文筆家・実業家。創価学会本部職員・聖教新聞記者を経てIT企業・人材ビジネス大手でマーケティング・広報を担当。2021年独立、NOVRINを設立。読書冊数1.5万冊超。</div>
 </div>
-<div class="card" data-name="末廣将志" data-org="SWAT Mobility Japan" data-type="来場者">
+<div class="card has-profile" data-name="末廣将志" data-org="SWAT Mobility Japan" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuacq+W7o+WwhuW/lzwvdGV4dD48L3N2Zz4=" alt="末廣将志">
+  <img src="https://wsrv.nl/?url=cdn.prod.website-files.com/6673ae8c2c9d0602c8f22957/66d61c0b3dae1a0597bd5148_masashi-suehiro.jpg" alt="末廣将志">
   <div class="name">末廣将志</div>
   <div class="org">SWAT Mobility Japan</div>
+  <div class="profile">SWAT Mobility Japan代表取締役。総合商社→欧州MBA→グローバルコンサル→2019年SWAT Mobility入社、2020年日本法人代表就任。</div>
 </div>
 <div class="card" data-name="有野文明" data-org="トラストコンサルティング" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1952,11 +2002,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">早田清宏</div>
   <div class="org">文科省</div>
 </div>
-<div class="card" data-name="吉野次郎" data-org="ドローン操縦士協会" data-type="来場者">
+<div class="card has-profile" data-name="吉野次郎" data-org="ドローン操縦士協会" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWQiemHjuasoemDjjwvdGV4dD48L3N2Zz4=" alt="吉野次郎">
+  <img src="https://wsrv.nl/?url=www.hb-j.jp/images/sys/db/202009/aea109a77965b35c14d8cb4ffe920ceb206ecf66.JPG" alt="吉野次郎">
   <div class="name">吉野次郎</div>
   <div class="org">ドローン操縦士協会</div>
+  <div class="profile">DPA代表理事。京大・ハーバード大ケネディスクール（MPA）卒。電通総研→内閣官房→電通→2018年DPA代表理事。</div>
 </div>
 <div class="card" data-name="中島康明" data-org="中小企業基盤整備機構" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -1994,11 +2045,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">佐野祐太郎</div>
   <div class="org">新潟県</div>
 </div>
-<div class="card" data-name="荒井悦久" data-org="TMI総合法律事務所" data-type="来場者">
+<div class="card has-profile" data-name="荒井悦久" data-org="TMI総合法律事務所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiNkuS6leaCpuS5hTwvdGV4dD48L3N2Zz4=" alt="荒井悦久">
+  <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2020/09/17/5049_1140-500.jpg" alt="荒井悦久">
   <div class="name">荒井悦久</div>
   <div class="org">TMI総合法律事務所</div>
+  <div class="profile">TMI総合法律事務所パートナー弁護士。M&amp;A・コーポレートガバナンス・スタートアップ支援専門。ジョージタウン大LL.M.取得。</div>
 </div>
 <div class="card" data-name="真田隼助" data-org="Code for Japan" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2078,11 +2130,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">太田祐也</div>
   <div class="org">KAE</div>
 </div>
-<div class="card" data-name="須田仁之" data-org="フリーランス/弁護士ドットコム" data-type="来場者">
+<div class="card has-profile" data-name="須田仁之" data-org="フリーランス/弁護士ドットコム" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumgiOeUsOS7geS5izwvdGV4dD48L3N2Zz4=" alt="須田仁之">
+  <img src="https://wsrv.nl/?url=www.kouenirai.com/upload/lecturers/9217.jpg" alt="須田仁之">
   <div class="name">須田仁之</div>
   <div class="org">フリーランス/弁護士ドットコム</div>
+  <div class="profile">連続起業家・エンジェル投資家。ソフトバンク系事業立ち上げ→アエリアCFOとして東証IPO→弁護士ドットコム・クラウドワークスIPOに関与。30社超の役員・顧問。</div>
 </div>
 <div class="card" data-name="堀俊太郎" data-org="日本総合研究所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2090,11 +2143,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">堀俊太郎</div>
   <div class="org">日本総合研究所</div>
 </div>
-<div class="card" data-name="伊藤大貴" data-org="ソーシャルエックス" data-type="来場者">
+<div class="card has-profile" data-name="伊藤大貴" data-org="ソーシャルエックス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS8iuiXpOWkp+iytDwvdGV4dD48L3N2Zz4=" alt="伊藤大貴">
+  <img src="https://wsrv.nl/?url=www4.city.sapporo.jp/scg/img/topics/interview_013_1.jpg" alt="伊藤大貴">
   <div class="name">伊藤大貴</div>
   <div class="org">ソーシャルエックス</div>
+  <div class="profile">ソーシャル・エックス代表取締役。早大大学院→日経BP→横浜市議3期10年→官民共創「逆プロポ」開発→2022年SOCIALX創業。</div>
 </div>
 <div class="card" data-name="小島寛人" data-org="スパイスファクトリー" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2102,11 +2156,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">小島寛人</div>
   <div class="org">スパイスファクトリー</div>
 </div>
-<div class="card" data-name="伊藤伸" data-org="デジタル庁参与" data-type="来場者">
+<div class="card has-profile" data-name="伊藤伸" data-org="デジタル庁参与" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS8iuiXpOS8uDwvdGV4dD48L3N2Zz4=" alt="伊藤伸">
+  <img src="https://wsrv.nl/?url=www.kosonippon.org/wp-manager/wp-content/themes/kosonippon_v2/img/company/staff/staff__ito.png" alt="伊藤伸">
   <div class="name">伊藤伸</div>
   <div class="org">デジタル庁参与</div>
+  <div class="profile">構想日本総括ディレクター兼デジタル庁参与。</div>
 </div>
 <div class="card" data-name="狩谷真治" data-org="デロイトトーマツベンチャーサポート" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2246,17 +2301,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">石井佑介</div>
   <div class="org">BIPROGY</div>
 </div>
-<div class="card" data-name="上條由紀子" data-org="九州工業大学" data-type="来場者">
+<div class="card has-profile" data-name="上條由紀子" data-org="九州工業大学" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4iuaineeUsee0gOWtkDwvdGV4dD48L3N2Zz4=" alt="上條由紀子">
+  <img src="https://wsrv.nl/?url=no-maps.jp/nomaps_wp/wp-content/uploads/2024/09/%E4%B8%8A%E6%A2%9D-%E7%94%B1%E7%B4%80%E5%AD%90.jpg" alt="上條由紀子">
   <div class="name">上條由紀子</div>
   <div class="org">九州工業大学</div>
+  <div class="profile">九州工業大学特任教授。慶應理工→弁理士・技術経営専門家。知的財産戦略・標準化・アントレプレナーシップ教育を専門。九州・沖縄スタートアップエコシステム構築推進。</div>
 </div>
-<div class="card" data-name="廣瀬文乃" data-org="政策研究大学院大学" data-type="来場者">
+<div class="card has-profile" data-name="廣瀬文乃" data-org="政策研究大学院大学" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW7o+eArOaWh+S5gzwvdGV4dD48L3N2Zz4=" alt="廣瀬文乃">
+  <img src="https://wsrv.nl/?url=www.grips.ac.jp/Ayano_Hirose.png" alt="廣瀬文乃">
   <div class="name">廣瀬文乃</div>
   <div class="org">政策研究大学院大学</div>
+  <div class="profile">GRIPS教授。名大法→一橋大博士（経営）。NEC→研究者へ。知識創造理論・イノベーション専門。野中郁次郎の末弟子。元立教大経営学部長。</div>
 </div>
 <div class="card" data-name="藤森貴生" data-org="NTTドコモビジネス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2282,11 +2339,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">安藤輝人</div>
   <div class="org">パーソルキャリア</div>
 </div>
-<div class="card" data-name="三根公博" data-org="finoject" data-type="出展者">
+<div class="card has-profile" data-name="三根公博" data-org="finoject" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4ieagueWFrOWNmjwvdGV4dD48L3N2Zz4=" alt="三根公博">
+  <img src="https://wsrv.nl/?url=www.finoject.com/wp-content/uploads/2024/11/%E4%B8%89%E6%A0%B9-%E5%85%AC%E5%8D%9A.png" alt="三根公博">
   <div class="name">三根公博</div>
   <div class="org">finoject</div>
+  <div class="profile">finoject代表取締役CEO。旧日本興業銀行→松井証券→SBI→マネックス→コインチェック立て直し→bitFlyer CEO→2021年finoject設立。</div>
 </div>
 <div class="card" data-name="中川雅之" data-org="日立" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2342,17 +2400,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">西井萌花</div>
   <div class="org">千葉道場</div>
 </div>
-<div class="card" data-name="加藤順彦ポール" data-org="ラジオ大阪" data-type="来場者">
+<div class="card has-profile" data-name="加藤順彦ポール" data-org="ラジオ大阪" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWKoOiXpOmghuW9puODneODvOODqzwvdGV4dD48L3N2Zz4=" alt="加藤順彦ポール">
+  <img src="https://wsrv.nl/?url=katou.jp/paul/wp-content/uploads/2026/01/IMG_9671.jpeg" alt="加藤順彦ポール">
   <div class="name">加藤順彦ポール</div>
   <div class="org">ラジオ大阪</div>
+  <div class="profile">ラジオ大阪代表取締役会長・エンジェル投資家。1992年GMO NIKKO前身創業、80社超にエンジェル投資。現在シンガポール在住。</div>
 </div>
-<div class="card" data-name="藤塚洋介" data-org="MOONSHOT WORKS" data-type="来場者">
+<div class="card has-profile" data-name="藤塚洋介" data-org="MOONSHOT WORKS" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiXpOWhmua0i+S7izwvdGV4dD48L3N2Zz4=" alt="藤塚洋介">
+  <img src="https://wsrv.nl/?url=static.wixstatic.com/media/6540b8_6dd5a49c8a1346e08c0ece8c9106d9a9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6540b8_6dd5a49c8a1346e08c0ece8c9106d9a9~mv2.jpg" alt="藤塚洋介">
   <div class="name">藤塚洋介</div>
   <div class="org">MOONSHOT WORKS</div>
+  <div class="profile">MOONSHOT WORKS代表取締役CEO。元バイクレーサー。企業・自治体・大学向け新規事業開発・イノベーション人材育成コンサルティング。100件超の事業開発プロジェクトに関与。</div>
 </div>
 <div class="card" data-name="山下憲男" data-org="ヒューマンウェア" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2378,11 +2438,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">崔溥虔</div>
   <div class="org">MEMORY LAB</div>
 </div>
-<div class="card" data-name="坂本教晃" data-org="東京大学エッジキャピタル" data-type="来場者">
+<div class="card has-profile" data-name="坂本教晃" data-org="東京大学エッジキャピタル" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWdguacrOaVmeaZgzwvdGV4dD48L3N2Zz4=" alt="坂本教晃">
+  <img src="https://wsrv.nl/?url=www.ut-ec.co.jp/admin/wp-content/uploads/2016/09/593777143c96f1f08ffd68bcd85e30f9-2.png" alt="坂本教晃">
   <div class="name">坂本教晃</div>
   <div class="org">東京大学エッジキャピタル</div>
+  <div class="profile">UTEC代表取締役COO・MPP。経産省→コロンビアMBA→McKinsey→2014年UTEC参画。Forbes日本VCランキング上位。</div>
 </div>
 <div class="card" data-name="御厨直樹" data-org="日本経済新聞" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2450,11 +2511,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">川畑瑞穂</div>
   <div class="org">丸紅</div>
 </div>
-<div class="card" data-name="廣田太一" data-org="プレイド" data-type="来場者">
+<div class="card has-profile" data-name="廣田太一" data-org="プレイド" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW7o+eUsOWkquS4gDwvdGV4dD48L3N2Zz4=" alt="廣田太一">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/3bN9Qkt" alt="廣田太一">
   <div class="name">廣田太一</div>
   <div class="org">プレイド</div>
+  <div class="profile">プレイド所属。CXプラットフォームKARTEを運営する東証グロース上場企業。</div>
 </div>
 <div class="card" data-name="光山茜" data-org="日建設計" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2516,11 +2578,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">今井直人</div>
   <div class="org">ダイキン</div>
 </div>
-<div class="card" data-name="廣田達宣" data-org="issues" data-type="来場者">
+<div class="card has-profile" data-name="廣田達宣" data-org="issues" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW7o+eUsOmBlOWuozwvdGV4dD48L3N2Zz4=" alt="廣田達宣">
+  <img src="https://wsrv.nl/?url=graj.org/wp-content/uploads/2024/02/68404fd1c303b6a50d379e69f9970907-e1707619531134.png" alt="廣田達宣">
   <div class="name">廣田達宣</div>
   <div class="org">issues</div>
+  <div class="profile">issues代表取締役。慶應経済→manabo共同創業後、NPO法人フローレンス経て2018年issues設立。市民と地方議員をつなぐ政策提言プラットフォーム運営。</div>
 </div>
 <div class="card" data-name="島方敏" data-org="日本スマートパブリック" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2534,17 +2597,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">神森大地</div>
   <div class="org">すみだFAN CLUB</div>
 </div>
-<div class="card" data-name="林航平" data-org="インキュベイトファンド" data-type="来場者">
+<div class="card has-profile" data-name="林航平" data-org="インキュベイトファンド" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuael+iIquW5szwvdGV4dD48L3N2Zz4=" alt="林航平">
+  <img src="https://wsrv.nl/?url=incubatefund.com/wp_cp/wp-content/uploads/2026/04/hayashi_color_blue_%E8%83%8C%E6%99%AF%E3%81%82%E3%82%8A_2-scaled.png" alt="林航平">
   <div class="name">林航平</div>
   <div class="org">インキュベイトファンド</div>
+  <div class="profile">インキュベイトファンドアナリスト。シード特化型VCで国内スタートアップへの投資・支援業務を担当。</div>
 </div>
-<div class="card" data-name="二戸浩平" data-org="酒ストリート" data-type="来場者">
+<div class="card has-profile" data-name="二戸浩平" data-org="酒ストリート" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS6jOaIuOa1qeW5szwvdGV4dD48L3N2Zz4=" alt="二戸浩平">
+  <img src="https://wsrv.nl/?url=images.sakestreet.com/m/62883038208/9233246457521654599.jpg" alt="二戸浩平">
   <div class="name">二戸浩平</div>
   <div class="org">酒ストリート</div>
+  <div class="profile">酒ストリート（SAKE Street）編集長。地酒専門店勤務約9年後、SAKE Street編集長就任。WSET Level3 in Sake取得。</div>
 </div>
 <div class="card" data-name="吉沢絵菜" data-org="東大Diligent" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2630,11 +2695,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">安原直正</div>
   <div class="org">慶應</div>
 </div>
-<div class="card" data-name="田村謙治" data-org="Digital Entertainment Asset" data-type="来場者">
+<div class="card has-profile" data-name="田村謙治" data-org="Digital Entertainment Asset" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPueUsOadkeismeayuzwvdGV4dD48L3N2Zz4=" alt="田村謙治">
+  <img src="https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/e/e5/Tamura_Kenji.jpg" alt="田村謙治">
   <div class="name">田村謙治</div>
   <div class="org">Digital Entertainment Asset</div>
+  <div class="profile">1968年生まれ。東大卒、財務省勤務を経て2004年衆議院議員初当選（民主党）。Digital Entertainment Asset（DEA）に参画。Web3・ゲームを活用した社会課題解決に取り組む。</div>
 </div>
 <div class="card" data-name="小泉真寿" data-org="デジタル庁" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2678,11 +2744,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">慶長久和</div>
   <div class="org">nagomi</div>
 </div>
-<div class="card" data-name="竹下加奈子" data-org="ココナラ" data-type="来場者">
+<div class="card has-profile" data-name="竹下加奈子" data-org="ココナラ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuerueS4i+WKoOWliOWtkDwvdGV4dD48L3N2Zz4=" alt="竹下加奈子">
+  <img src="https://wsrv.nl/?url=cdn.prod.website-files.com/662699fa51908dce226c0f1c/662cc8692e3e9cd2ad7edb17_1669026319182-DoMrvOjSzd.jpg" alt="竹下加奈子">
   <div class="name">竹下加奈子</div>
   <div class="org">ココナラ</div>
+  <div class="profile">ソフトバンク・ヒューマンキャピタル、サイバーエージェントグループでマーケター・事業責任者を経験。AI企業の執行役を経て2020年ココナラに参画。VP of Product Managementとしてプロダクト事業を牽引。</div>
 </div>
 <div class="card" data-name="鈴木大翔" data-org="ドルビックスコンサルティング" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2708,11 +2775,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">加藤幹也</div>
   <div class="org">東海国立大学機構</div>
 </div>
-<div class="card" data-name="石坂弘紀" data-org="ALGO ARTIS" data-type="来場者">
+<div class="card has-profile" data-name="石坂弘紀" data-org="ALGO ARTIS" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuefs+WdguW8mOe0gDwvdGV4dD48L3N2Zz4=" alt="石坂弘紀">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/cNZEjy7" alt="石坂弘紀">
   <div class="name">石坂弘紀</div>
   <div class="org">ALGO ARTIS</div>
+  <div class="profile">ALGO ARTIS取締役会長。1973年生まれ。元経産省キャリア。ライブドア・東電・タカタ・DeNA等の事業再生後、インフラDXスタートアップ設立参画。</div>
 </div>
 <div class="card" data-name="五十嵐次郎" data-org="ファイブアンドミライアソシエイツ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2780,11 +2848,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">蔵本肇</div>
   <div class="org">インテック</div>
 </div>
-<div class="card" data-name="相川真太郎" data-org="グリーベンチャーズ" data-type="来場者">
+<div class="card has-profile" data-name="相川真太郎" data-org="グリーベンチャーズ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
   <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuebuOW3neecn+WkqumDjjwvdGV4dD48L3N2Zz4=" alt="相川真太郎">
   <div class="name">相川真太郎</div>
   <div class="org">グリーベンチャーズ</div>
+  <div class="profile">早稲田大学卒、アンダーセンコンサルティング、楽天執行役員を経て2010年グリー入社。2020年グリーベンチャーズ設立・代表取締役就任。AI・Deeptech・DXのシード・アーリー投資を手がける。</div>
 </div>
 <div class="card" data-name="伊藤剛" data-org="文科省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2858,11 +2927,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">吉田裕昭</div>
   <div class="org">パソナ</div>
 </div>
-<div class="card" data-name="藤岡聡子" data-org="医療法人オレンジ" data-type="来場者">
+<div class="card has-profile" data-name="藤岡聡子" data-org="医療法人オレンジ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiXpOWyoeiBoeWtkDwvdGV4dD48L3N2Zz4=" alt="藤岡聡子">
+  <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/152822/13/152822-13-732a20bad50096ef9638b7754e3c1575-1920x1280.jpg" alt="藤岡聡子">
   <div class="name">藤岡聡子</div>
   <div class="org">医療法人オレンジ</div>
+  <div class="profile">医療法人社団オレンジ「ほっちのロッヂ」共同代表・ReDo代表。1985年生まれ。デンマーク留学後、2020年軽井沢に在宅医療×福祉の複合拠点を開設。フィガロジャポンBWAアワード2025受賞。</div>
 </div>
 <div class="card" data-name="小林真太郎" data-org="U-NEXT HD" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2872,21 +2942,23 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
 </div>
 <div class="card" data-name="柴田京佑" data-org="シバ吉" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaftOeUsOS6rOS9kTwvdGV4dD48L3N2Zz4=" alt="柴田京佑">
+  <img src="https://wsrv.nl/?url=www.tokyo-cci.or.jp/shachonet/img/2552.jpg" alt="柴田京佑">
   <div class="name">柴田京佑</div>
   <div class="org">シバ吉</div>
 </div>
-<div class="card" data-name="大川力也" data-org="オムロンヘルスケア" data-type="来場者">
+<div class="card has-profile" data-name="大川力也" data-org="オムロンヘルスケア" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWkp+W3neWKm+S5nzwvdGV4dD48L3N2Zz4=" alt="大川力也">
+  <img src="https://wsrv.nl/?url=marketingagenda.jp/b2b/images/attendees/b2b25_spk_Qm9zEiCSp8.jpg" alt="大川力也">
   <div class="name">大川力也</div>
   <div class="org">オムロンヘルスケア</div>
+  <div class="profile">オムロンヘルスケア 経営統轄部副統轄部長。1993年オムロン入社、国内事業部長・中国副総経理等を経て現職。</div>
 </div>
-<div class="card" data-name="早川周作" data-org="琉球アスティーダ" data-type="来場者">
+<div class="card has-profile" data-name="早川周作" data-org="琉球アスティーダ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaXqeW3neWRqOS9nDwvdGV4dD48L3N2Zz4=" alt="早川周作">
+  <img src="https://wsrv.nl/?url=kouen-nobetech.jp/wp-content/uploads/2021/07/78095bfbfc27d577189061f1cb3358de.png" alt="早川周作">
   <div class="name">早川周作</div>
   <div class="org">琉球アスティーダ</div>
+  <div class="profile">琉球アスティーダスポーツクラブ代表取締役。2018年卓球プロチームを創設し3年目でTリーグ優勝。2021年プロスポーツ史上初の東証TOKYO PRO Market上場実現。</div>
 </div>
 <div class="card" data-name="寺町誠志" data-org="Doshin EC" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -2894,11 +2966,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">寺町誠志</div>
   <div class="org">Doshin EC</div>
 </div>
-<div class="card" data-name="宜保友理子" data-org="慶應イノベーション" data-type="来場者">
+<div class="card has-profile" data-name="宜保友理子" data-org="慶應イノベーション" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWunOS/neWPi+eQhuWtkDwvdGV4dD48L3N2Zz4=" alt="宜保友理子">
+  <img src="https://wsrv.nl/?url=www.keio-innovation.co.jp/cms/wp-content/uploads/2021/04/gibo-1-504x648.jpg" alt="宜保友理子">
   <div class="name">宜保友理子</div>
   <div class="org">慶應イノベーション</div>
+  <div class="profile">慶應イノベーション・イニシアティブ（KII）リレーションシップ・マネジャー。KII2号ファンド（103億円規模）等の管理に携わる。慶應大学発VCの運営を担う。</div>
 </div>
 <div class="card" data-name="鈴木俊太" data-org="デジタルガレージ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3008,11 +3081,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">田中麻子</div>
   <div class="org">リンクアンドモチベーション</div>
 </div>
-<div class="card" data-name="松栄友希" data-org="SmartHR" data-type="来場者">
+<div class="card has-profile" data-name="松栄友希" data-org="SmartHR" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuadvuaghOWPi+W4jDwvdGV4dD48L3N2Zz4=" alt="松栄友希">
+  <img src="https://wsrv.nl/?url=assets.st-note.com/production/uploads/images/9822928/e9f15fd87de5ba17a234dc212ac899db.jpeg" alt="松栄友希">
   <div class="name">松栄友希</div>
   <div class="org">SmartHR</div>
+  <div class="profile">SmartHR プロダクトマネージャー。タレントマネジメント領域のPMチーフを担当。日本CPO協会理事も務める。</div>
 </div>
 <div class="card" data-name="徳永健太郎" data-org="経産省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3026,11 +3100,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">六瀬貴大</div>
   <div class="org">レバレジーズ</div>
 </div>
-<div class="card" data-name="北野善久" data-org="フィデアキャピタル" data-type="来場者">
+<div class="card has-profile" data-name="北野善久" data-org="フィデアキャピタル" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWMl+mHjuWWhOS5hTwvdGV4dD48L3N2Zz4=" alt="北野善久">
+  <img src="https://wsrv.nl/?url=storage.googleapis.com/no-design-prod-assets/upload/de1adf2a-3cf9-11ef-b872-264de4031efd.jpg" alt="北野善久">
   <div class="name">北野善久</div>
   <div class="org">フィデアキャピタル</div>
+  <div class="profile">フィデアキャピタル代表取締役。東北初の地銀系VC（フィデアHD傘下）として1995年設立、同社を率いる。</div>
 </div>
 <div class="card" data-name="緒方彰大" data-org="森濱田松本法律" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3038,11 +3113,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">緒方彰大</div>
   <div class="org">森濱田松本法律</div>
 </div>
-<div class="card" data-name="中井佑" data-org="テトラアビエーション" data-type="来場者">
+<div class="card has-profile" data-name="中井佑" data-org="テトラアビエーション" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4reS6leS9kTwvdGV4dD48L3N2Zz4=" alt="中井佑">
+  <img src="https://wsrv.nl/?url=hillsbreakfast.roppongihills.com/assets/20200229Nakai_GoFly_up.JPG" alt="中井佑">
   <div class="name">中井佑</div>
   <div class="org">テトラアビエーション</div>
+  <div class="profile">テトラ・アビエーション代表取締役CEO。東大工学系博士課程でeVTOL開発コンペGoFlyに参加・賞金獲得、2018年起業。空飛ぶクルマの社会実装を推進。</div>
 </div>
 <div class="card" data-name="市原潤" data-org="BIPROGY" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3086,11 +3162,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">稲田誠士</div>
   <div class="org">JXP</div>
 </div>
-<div class="card" data-name="Timothy Langley" data-org="Langley Esquire" data-type="来場者">
+<div class="card has-profile" data-name="Timothy Langley" data-org="Langley Esquire" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPlRpbW90aHk8L3RleHQ+PC9zdmc+" alt="Timothy Langley">
+  <img src="https://wsrv.nl/?url=langleyesquire.com/wp-content/uploads/2023/02/Langley-Esquire-2022-094300_web2k-768x960.jpg" alt="Timothy Langley">
   <div class="name">Timothy Langley</div>
   <div class="org">Langley Esquire</div>
+  <div class="profile">Langley Esquire CEO。国会議員政策秘書として外国人初の国会勤務。Apple Japan・GM法務責任者を経て日本政府渉外戦略を担う。ジョージタウン大・デンバー大・東北大で法学位取得。</div>
 </div>
 <div class="card" data-name="成田和正" data-org="アビームコンサルティング" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3122,17 +3199,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">荒尾奈那</div>
   <div class="org">青葉組</div>
 </div>
-<div class="card" data-name="甲田恵子" data-org="AsMama" data-type="来場者">
+<div class="card has-profile" data-name="甲田恵子" data-org="AsMama" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPueUsueUsOaBteWtkDwvdGV4dD48L3N2Zz4=" alt="甲田恵子">
+  <img src="https://wsrv.nl/?url=asmama.jp/cms/wp-content/themes/asmama/assets/img/member/kouda_new.jpg" alt="甲田恵子">
   <div class="name">甲田恵子</div>
   <div class="org">AsMama</div>
+  <div class="profile">AsMama代表取締役CEO・創業者。1975年生まれ。ニフティ→2009年AsMama創業。「子育てシェア」アプリ運営。シェアリングエコノミー協会理事。</div>
 </div>
-<div class="card" data-name="森原誠" data-org="BCG日本総括" data-type="来場者">
+<div class="card has-profile" data-name="森原誠" data-org="BCG日本総括" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuajruWOn+iqoDwvdGV4dD48L3N2Zz4=" alt="森原誠">
+  <img src="https://wsrv.nl/?url=volve.co.jp/wp-content/uploads/2024/06/n7a4406b80a4e_1675306736603-caDeSB4p0u.jpg" alt="森原誠">
   <div class="name">森原誠</div>
   <div class="org">BCG日本総括</div>
+  <div class="profile">BCGマネージングD&amp;Pパートナー。東大法→UCLA法科大学院。総務省出身。公共セクター・気候変動グループ所属。群馬県政策アドバイザー。</div>
 </div>
 <div class="card" data-name="尾崎ゆう" data-org="FTIコンサルティング" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3224,11 +3303,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">柳井研</div>
   <div class="org">合志市</div>
 </div>
-<div class="card" data-name="江田覚" data-org="デロイトトーマツ" data-type="来場者">
+<div class="card has-profile" data-name="江田覚" data-org="デロイトトーマツ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaxn+eUsOimmjwvdGV4dD48L3N2Zz4=" alt="江田覚">
+  <img src="https://wsrv.nl/?url=faportal.g.kuroco-img.app/v=1773724937/files/topics/685_ext_1_0.jpg" alt="江田覚">
   <div class="name">江田覚</div>
   <div class="org">デロイトトーマツ</div>
+  <div class="profile">デロイト トーマツ ファイナンシャルアドバイザリー 編集長・主席研究員。時事通信社ワシントン特派員・編集委員を経て2022年同社に参画。国際関係論・経済安全保障・AI政策専門。</div>
 </div>
 <div class="card" data-name="石橋あやの" data-org="経産省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3248,11 +3328,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">山本智昭</div>
   <div class="org">東京大学地域同窓会</div>
 </div>
-<div class="card" data-name="高橋龍征" data-org="conecuri" data-type="来場者">
+<div class="card has-profile" data-name="高橋龍征" data-org="conecuri" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumrmOapi+m+jeW+gTwvdGV4dD48L3N2Zz4=" alt="高橋龍征">
+  <img src="https://wsrv.nl/?url=mz-cdn.shoeisha.jp/static/images/author/1336/Takahashi_san.jpg" alt="高橋龍征">
   <div class="name">高橋龍征</div>
   <div class="org">conecuri</div>
+  <div class="profile">conecuri合同会社代表。CSK・Sony・Samsung BD担当→2020年conecuri設立。コミュニティ構築・人材育成支援。iU客員教授。</div>
 </div>
 <div class="card" data-name="船木隆一郎" data-org="東京大学" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3272,11 +3353,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">樋山裕己</div>
   <div class="org">日建設計</div>
 </div>
-<div class="card" data-name="笠井泰士" data-org="サツドラHD" data-type="来場者">
+<div class="card has-profile" data-name="笠井泰士" data-org="サツドラHD" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuesoOS6leazsOWjqzwvdGV4dD48L3N2Zz4=" alt="笠井泰士">
+  <img src="https://wsrv.nl/?url=assets.st-note.com/production/uploads/images/145914953/04e41ab2fc657c77b9efe51390c1ab1c.jpg" alt="笠井泰士">
   <div class="name">笠井泰士</div>
   <div class="org">サツドラHD</div>
+  <div class="profile">サツドラHD/EZOHUB TOKYO事業担当。元財務省中国財務局・内閣官房まち・ひと・しごと創生本部事務局。2024年6月転職。北海道と首都圏企業等との官民連携事業創出を担当。</div>
 </div>
 <div class="card" data-name="川島奈穂" data-org="コトラ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3410,11 +3492,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">首藤栄太</div>
   <div class="org">東芝</div>
 </div>
-<div class="card" data-name="近藤浩計" data-org="うるる" data-type="来場者">
+<div class="card has-profile" data-name="近藤浩計" data-org="うるる" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPui/keiXpOa1qeioiDwvdGV4dD48L3N2Zz4=" alt="近藤浩計">
+  <img src="https://wsrv.nl/?url=blog.uluru.biz/wp-content/uploads/2022/07/20210128102237-1.jpg" alt="近藤浩計">
   <div class="name">近藤浩計</div>
   <div class="org">うるる</div>
+  <div class="profile">うるる取締役。商工中金、中小機構、みずほCA等を経て2015年うるる入社。CFOとして上場をリード、現在は未来創造担当役員。</div>
 </div>
 <div class="card" data-name="青景史明" data-org="東京海上" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3440,11 +3523,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">岡部泰大</div>
   <div class="org">横浜国立大学</div>
 </div>
-<div class="card" data-name="笠場愛翔" data-org="Sansan" data-type="来場者">
+<div class="card has-profile" data-name="笠場愛翔" data-org="Sansan" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuesoOWgtOaEm+e/lDwvdGV4dD48L3N2Zz4=" alt="笠場愛翔">
+  <img src="https://wsrv.nl/?url=images.microcms-assets.io/assets/76aea745ba734f369962fbbd817b34b8/5c059b133ce440398d416aa56736f5f1/manato-kasaba_main_pc.jpg" alt="笠場愛翔">
   <div class="name">笠場愛翔</div>
   <div class="org">Sansan</div>
+  <div class="profile">Sansan Bill One VPoP。2020年新卒入社。クラウド請求書受領サービス「Bill One」のプロダクト開発戦略を統括。</div>
 </div>
 <div class="card" data-name="海浦航平" data-org="リバネス" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3470,11 +3554,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">中川光</div>
   <div class="org">官民連携事業研究所</div>
 </div>
-<div class="card" data-name="篠永信一朗" data-org="熱意ある地方創生ベンチャー連合" data-type="来場者">
+<div class="card has-profile" data-name="篠永信一朗" data-org="熱意ある地方創生ベンチャー連合" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuevoOawuOS/oeS4gOaclzwvdGV4dD48L3N2Zz4=" alt="篠永信一朗">
+  <img src="https://wsrv.nl/?url=netsui.or.jp/wp-content/themes/ystandard-child/image/staff_shinonaga.jpg" alt="篠永信一朗">
   <div class="name">篠永信一朗</div>
   <div class="org">熱意ある地方創生ベンチャー連合</div>
+  <div class="profile">熱意ある地方創生ベンチャー連合代表理事。1997年愛媛生まれ。愛媛大→慶大大学院政策メディア。2021年参画、2024年代表理事就任。</div>
 </div>
 <div class="card" data-name="松山功" data-org="ひびき精機" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3488,11 +3573,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">岡本慎平</div>
   <div class="org">NRI</div>
 </div>
-<div class="card" data-name="小木曽稔" data-org="政策渉外ドゥタンククロスボーダー" data-type="来場者">
+<div class="card has-profile" data-name="小木曽稔" data-org="政策渉外ドゥタンククロスボーダー" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWwj+acqOabveeolDwvdGV4dD48L3N2Zz4=" alt="小木曽稔">
+  <img src="https://wsrv.nl/?url=graj.org/wp-content/uploads/2024/03/56894635353f59de52f3164f778e5b03.jpeg" alt="小木曽稔">
   <div class="name">小木曽稔</div>
   <div class="org">政策渉外ドゥタンククロスボーダー</div>
+  <div class="profile">東大法卒、運輸省・国土交通省9年勤務後、楽天15年（渉外室ヴァイスGM）。新経済連盟政策部長を経て2022年独立。政策渉外ドゥタンク・クロスボーダー代表。</div>
 </div>
 <div class="card" data-name="高橋啓一" data-org="博報堂" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3524,11 +3610,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">安生隆行</div>
   <div class="org">経産省</div>
 </div>
-<div class="card" data-name="相川直視" data-org="Rimo" data-type="出展者">
+<div class="card has-profile" data-name="相川直視" data-org="Rimo" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuebuOW3neebtOimljwvdGV4dD48L3N2Zz4=" alt="相川直視">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/QQRbvxg" alt="相川直視">
   <div class="name">相川直視</div>
   <div class="org">Rimo</div>
+  <div class="profile">Rimo合同会社代表取締役。Rimo Voice（AI議事録SaaS）創業者。</div>
 </div>
 <div class="card" data-name="片山あゆ美" data-org="エヌエヌ生命/家業イノベーション" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3536,11 +3623,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">片山あゆ美</div>
   <div class="org">エヌエヌ生命/家業イノベーション</div>
 </div>
-<div class="card" data-name="藤本あゆみ" data-org="スタートアップエコシステム協会" data-type="来場者">
+<div class="card has-profile" data-name="藤本あゆみ" data-org="スタートアップエコシステム協会" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiXpOacrOOBguOChuOBvzwvdGV4dD48L3N2Zz4=" alt="藤本あゆみ">
+  <img src="https://wsrv.nl/?url=entrepreneurship.metro.tokyo.lg.jp/wp-content/uploads/2024/09/fujimoto-ayumi.jpeg" alt="藤本あゆみ">
   <div class="name">藤本あゆみ</div>
   <div class="org">スタートアップエコシステム協会</div>
+  <div class="profile">スタートアップエコシステム協会代表理事。Google→at Will Work→Plug and Play Japan CMOを経て2022年協会設立。文科省アントレプレナーシップ推進大使。</div>
 </div>
 <div class="card" data-name="栗林正司" data-org="加古川市" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3548,17 +3636,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">栗林正司</div>
   <div class="org">加古川市</div>
 </div>
-<div class="card" data-name="南知果" data-org="Public Meets Innovation" data-type="来場者">
+<div class="card has-profile" data-name="南知果" data-org="Public Meets Innovation" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWNl+efpeaenDwvdGV4dD48L3N2Zz4=" alt="南知果">
+  <img src="https://wsrv.nl/?url=zelojapan.com/wp/wp-content/uploads/2022/04/img_mem_main_minami-1280x906.jpg" alt="南知果">
   <div class="name">南知果</div>
   <div class="org">Public Meets Innovation</div>
+  <div class="profile">法律事務所ZeLo弁護士・PMI共同代表。1990年大阪生まれ。京大法→西村あさひ→2022-24年経産省スタートアップ政策担当。ルールメイキング・PA専門。</div>
 </div>
-<div class="card" data-name="山田仁太" data-org="PoliPoli COO" data-type="来場者">
+<div class="card has-profile" data-name="山田仁太" data-org="PoliPoli COO" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWxseeUsOS7geWkqjwvdGV4dD48L3N2Zz4=" alt="山田仁太">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/Gthi2er" alt="山田仁太">
   <div class="name">山田仁太</div>
   <div class="org">PoliPoli COO</div>
+  <div class="profile">1998年生まれ。慶應大卒。PoliPoli共同創業者・取締役COO。プロダクト・デザイン・事業開発を統括。2024年2月よりCOO就任。</div>
 </div>
 <div class="card" data-name="池田大輔" data-org="MBKパートナーズ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3608,11 +3698,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">北川由佳</div>
   <div class="org">岡山市</div>
 </div>
-<div class="card" data-name="合田哲雄" data-org="文科省" data-type="来場者">
+<div class="card has-profile" data-name="合田哲雄" data-org="文科省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWQiOeUsOWTsumbhDwvdGV4dD48L3N2Zz4=" alt="合田哲雄">
+  <img src="https://wsrv.nl/?url=steam-japan.com/wp/wp-content/uploads/2026/01/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2026-01-08-18.23.52.png" alt="合田哲雄">
   <div class="name">合田哲雄</div>
   <div class="org">文科省</div>
+  <div class="profile">東北大学法学部卒業後、1992年文部省入省。福岡県教育庁高校教育課長、NSFフェロー、初等中等教育局教育課程課長などを歴任。2025年7月より文部科学省高等教育局長。</div>
 </div>
 <div class="card" data-name="三宅平太" data-org="イシン" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
@@ -3644,11 +3735,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">横山隼人</div>
   <div class="org">EventHub</div>
 </div>
-<div class="card" data-name="彈塚寛之" data-org="TMI" data-type="出展者">
+<div class="card has-profile" data-name="彈塚寛之" data-org="TMI" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuW9iOWhmuWvm+S5izwvdGV4dD48L3N2Zz4=" alt="彈塚寛之">
+  <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2020/09/18/0495_1140-500.jpg" alt="彈塚寛之">
   <div class="name">彈塚寛之</div>
   <div class="org">TMI</div>
+  <div class="profile">TMI総合法律事務所パートナー弁護士。東大法→UCLA LL.M.。2016年TMI入所、2026年1月パートナー就任。知財争訟・M&amp;A・スタートアップ投資専門。</div>
 </div>
 <div class="card" data-name="小野寺亮太" data-org="京都市/応縁堂" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3662,11 +3754,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">渡辺大貴</div>
   <div class="org">Te&amp;Te</div>
 </div>
-<div class="card" data-name="晝田浩一郎" data-org="官民連携事業研究所" data-type="来場者">
+<div class="card has-profile" data-name="晝田浩一郎" data-org="官民連携事業研究所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuaZneeUsOa1qeS4gOmDjjwvdGV4dD48L3N2Zz4=" alt="晝田浩一郎">
+  <img src="https://wsrv.nl/?url=p4rl.com/web2025/wp-content/uploads/member_hiruta02.jpg" alt="晝田浩一郎">
   <div class="name">晝田浩一郎</div>
   <div class="org">官民連携事業研究所</div>
+  <div class="profile">官民連携事業研究所取締役CCO。元岡崎市役所スーパー公務員。Forbes「日本を元気にする88人」選出。官民連携アクセラレータの第一人者。</div>
 </div>
 <div class="card" data-name="吉田泰己" data-org="デジタル庁" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3680,11 +3773,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">今井恭子</div>
   <div class="org">エールエンジン</div>
 </div>
-<div class="card" data-name="仙石裕明" data-org="マイクロベース" data-type="来場者">
+<div class="card has-profile" data-name="仙石裕明" data-org="マイクロベース" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS7meefs+ijleaYjjwvdGV4dD48L3N2Zz4=" alt="仙石裕明">
+  <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/c0c4c9a41ee084c6d2b4150d16488a5b.png" alt="仙石裕明">
   <div class="name">仙石裕明</div>
   <div class="org">マイクロベース</div>
+  <div class="profile">マイクロベース代表取締役CEO・Ph.D。博士課程在学中の2013年から事業化し起業。都市シミュレーション・不動産価格予測・空き家予測などのAI予測サービスを提供。</div>
 </div>
 <div class="card" data-name="佐藤由実" data-org="ウェルエイジング経済フォーラム" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3704,17 +3798,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">板橋洋平</div>
   <div class="org">経産省</div>
 </div>
-<div class="card" data-name="岩本卓也" data-org="Polyuse" data-type="来場者">
+<div class="card has-profile" data-name="岩本卓也" data-org="Polyuse" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWyqeacrOWNk+S5nzwvdGV4dD48L3N2Zz4=" alt="岩本卓也">
+  <img src="https://wsrv.nl/?url=novolba.com/media/wp-content/uploads/2022/06/Polyuse-Iwamoto-Takuya-1280x721.jpg" alt="岩本卓也">
   <div class="name">岩本卓也</div>
   <div class="org">Polyuse</div>
+  <div class="profile">Polyuse代表取締役CEO。1993年生まれ。建設用3Dプリンター事業を2019年創業。MIT Tech Review「Innovators Under 35 Japan 2022」。</div>
 </div>
-<div class="card" data-name="岩佐凌" data-org="エイターリンク" data-type="来場者">
+<div class="card has-profile" data-name="岩佐凌" data-org="エイターリンク" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWyqeS9kOWHjDwvdGV4dD48L3N2Zz4=" alt="岩佐凌">
+  <img src="https://wsrv.nl/?url=aeterlink.com/wp-content/uploads/2021/11/isawa-san_2x-e1766714296629.jpg" alt="岩佐凌">
   <div class="name">岩佐凌</div>
   <div class="org">エイターリンク</div>
+  <div class="profile">エイターリンク代表取締役CEO。2020年創業。マイクロ波方式ワイヤレス給電技術で配線不要のデジタル工場実現を目指す。Forbes Asia 100 To Watch 2025選出。</div>
 </div>
 <div class="card" data-name="江良泉" data-org="東京共同会計" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3758,11 +3854,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">木曽原和之</div>
   <div class="org">トモノカイ</div>
 </div>
-<div class="card" data-name="阿部洸三" data-org="TMI" data-type="出展者">
+<div class="card has-profile" data-name="阿部洸三" data-org="TMI" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumYv+mDqOa0uOS4iTwvdGV4dD48L3N2Zz4=" alt="阿部洸三">
+  <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2024/01/18/DSGF5996-1.jpg" alt="阿部洸三">
   <div class="name">阿部洸三</div>
   <div class="org">TMI</div>
+  <div class="profile">TMI総合法律事務所パートナー弁護士。東大法→東大法科大学院。情報通信・IT・経済安全保障・リスクマネジメント専門。2024年1月パートナー就任。</div>
 </div>
 <div class="card" data-name="釜野千絵美" data-org="マイナビ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3782,11 +3879,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">内藤優太</div>
   <div class="org">白馬村</div>
 </div>
-<div class="card" data-name="菅野大志" data-org="山形県西川町長" data-type="来場者">
+<div class="card has-profile" data-name="菅野大志" data-org="山形県西川町長" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuiPhemHjuWkp+W/lzwvdGV4dD48L3N2Zz4=" alt="菅野大志">
+  <img src="https://wsrv.nl/?url=www.town.nishikawa.yamagata.jp/uploaded/image/471.png" alt="菅野大志">
   <div class="name">菅野大志</div>
   <div class="org">山形県西川町長</div>
+  <div class="profile">山形県西川町長。1978年生まれ。財務省東北財務局→内閣官房等経て2022年当選。デジタルNFT住民票・社会減ゼロ達成など日本初施策を次々実施。</div>
 </div>
 <div class="card" data-name="木村香織" data-org="CULTA" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3818,11 +3916,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">大橋康太</div>
   <div class="org">森ビル</div>
 </div>
-<div class="card" data-name="小泉愼一" data-org="ジャパンアクティベーションキャピタル" data-type="来場者">
+<div class="card has-profile" data-name="小泉愼一" data-org="ジャパンアクティベーションキャピタル" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWwj+azieaEvOS4gDwvdGV4dD48L3N2Zz4=" alt="小泉愼一">
+  <img src="https://wsrv.nl/?url=images.prismic.io/jac-prd/aS61HXNYClf9nrrA_8_shinichi-koizumi.webp" alt="小泉愼一">
   <div class="name">小泉愼一</div>
   <div class="org">ジャパンアクティベーションキャピタル</div>
+  <div class="profile">ジャパン・アクティベーション・キャピタル(JAC)アドバイザー。東レ専務取締役後、国際協力銀行理事・DeNA監査役・PFN社外取締役等を歴任。</div>
 </div>
 <div class="card" data-name="後藤美千代" data-org="UntroD Capital" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3842,11 +3941,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">向野陽一郎</div>
   <div class="org">経産省</div>
 </div>
-<div class="card" data-name="上野一英" data-org="TMI" data-type="出展者">
+<div class="card has-profile" data-name="上野一英" data-org="TMI" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4iumHjuS4gOiLsTwvdGV4dD48L3N2Zz4=" alt="上野一英">
+  <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2021/03/08/ueno9079_1140-500.jpg" alt="上野一英">
   <div class="name">上野一英</div>
   <div class="org">TMI</div>
+  <div class="profile">TMI総合法律事務所パートナー弁護士。慶應法科→Georgetown LL.M.。経済安全保障・国際通商・カルテル規制専門。日経新聞弁護士ランキング国際通商・経済安保分野5位（2024年）。</div>
 </div>
 <div class="card" data-name="黒井宏昌" data-org="FIELD MANAGEMENT EXPAND" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3860,11 +3960,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">竹安宏曜</div>
   <div class="org">経産省</div>
 </div>
-<div class="card" data-name="滝川麻衣子" data-org="EVeM" data-type="出展者">
+<div class="card has-profile" data-name="滝川麻衣子" data-org="EVeM" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPua7neW3nem6u+iho+WtkDwvdGV4dD48L3N2Zz4=" alt="滝川麻衣子">
+  <img src="https://wsrv.nl/?url=emp.evem-management.com/hubfs/emp.evem-management.com/images/trainer/maiko_takigawa/thumbnail.webp" alt="滝川麻衣子">
   <div class="name">滝川麻衣子</div>
   <div class="org">EVeM</div>
+  <div class="profile">EVeM Vice President of Impact。元産経新聞記者。Business Insider Japan副編集長を経てEVeM参画。マネジメント専門家。</div>
 </div>
 <div class="card" data-name="松尾真里" data-org="SHE" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3884,11 +3985,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">井之口満耶</div>
   <div class="org">LobbyAI</div>
 </div>
-<div class="card" data-name="三輪開人" data-org="e-Education" data-type="来場者">
+<div class="card has-profile" data-name="三輪開人" data-org="e-Education" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4iei8qumWi+S6ujwvdGV4dD48L3N2Zz4=" alt="三輪開人">
+  <img src="https://wsrv.nl/?url=eedu.jp/data/media/eedu/page/about/member/img01.jpg" alt="三輪開人">
   <div class="name">三輪開人</div>
   <div class="org">e-Education</div>
+  <div class="profile">e-Education代表。1986年生まれ。早大法在学中に設立、JICA勤務後2014年代表就任。途上国14か国3万人に映像授業を届ける。Forbes 30 Under 30 Asia選出。</div>
 </div>
 <div class="card" data-name="宮崎智幸" data-org="KDDI" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3908,23 +4010,26 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">長山美由貴</div>
   <div class="org">経産省</div>
 </div>
-<div class="card" data-name="佐藤直樹" data-org="finoject" data-type="出展者">
+<div class="card has-profile" data-name="佐藤直樹" data-org="finoject" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS9kOiXpOebtOaouTwvdGV4dD48L3N2Zz4=" alt="佐藤直樹">
+  <img src="https://wsrv.nl/?url=www.finoject.com/wp-content/uploads/2024/11/%E4%BD%90%E8%97%A4-%E7%9B%B4%E6%A8%B9.png" alt="佐藤直樹">
   <div class="name">佐藤直樹</div>
   <div class="org">finoject</div>
+  <div class="profile">finoject取締役/パートナー。不動産ファンド業界での規制対応・J-REIT運用に長年従事。2024年8月finoject参画。</div>
 </div>
-<div class="card" data-name="橋本直樹" data-org="Kumanomics" data-type="来場者">
+<div class="card has-profile" data-name="橋本直樹" data-org="Kumanomics" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuapi+acrOebtOaouTwvdGV4dD48L3N2Zz4=" alt="橋本直樹">
+  <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/36e1074fa5b994cee9339ca733193c20-300x300-1.png" alt="橋本直樹">
   <div class="name">橋本直樹</div>
   <div class="org">Kumanomics</div>
+  <div class="profile">元経産省・特許庁・デジタル庁。1986年生まれ兵庫県出身、東大法卒。Parsons School of Design（MFA）修了。デザイン経営・サービスデザイン政策を推進後、2024年Kumanomics代表として独立。</div>
 </div>
-<div class="card" data-name="西川徹" data-org="PFN" data-type="来場者">
+<div class="card has-profile" data-name="西川徹" data-org="PFN" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuilv+W3neW+uTwvdGV4dD48L3N2Zz4=" alt="西川徹">
+  <img src="https://wsrv.nl/?url=www.preferred.jp/images/company/cofounders/nishikawa-profile-77904d.png" alt="西川徹">
   <div class="name">西川徹</div>
   <div class="org">PFN</div>
+  <div class="profile">Preferred Networks共同創業者・代表取締役会長。2006年東大大学院在学中にPI創業、2014年PFNを設立。2025年11月より会長。</div>
 </div>
 <div class="card" data-name="小野夏樹" data-org="文科省" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3956,23 +4061,26 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">甲斐碧</div>
   <div class="org">東大Diligent</div>
 </div>
-<div class="card" data-name="伊藤和真" data-org="PoliPoli" data-type="来場者">
+<div class="card has-profile" data-name="伊藤和真" data-org="PoliPoli" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS8iuiXpOWSjOecnzwvdGV4dD48L3N2Zz4=" alt="伊藤和真">
+  <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/7f9540c6cf386b5ff752f7e6ebcdb266-300x300-1.png" alt="伊藤和真">
   <div class="name">伊藤和真</div>
   <div class="org">PoliPoli</div>
+  <div class="profile">1998年生まれ。慶應大卒。2018年PoliPoli設立・代表取締役CEO。政策共創プラットフォームを運営。Forbes JAPAN「30 UNDER 30 2023」受賞。GovTech協会共同代表。</div>
 </div>
-<div class="card" data-name="村上敬亮" data-org="東大/慶應" data-type="来場者">
+<div class="card has-profile" data-name="村上敬亮" data-org="東大/慶應" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuadkeS4iuaVrOS6rjwvdGV4dD48L3N2Zz4=" alt="村上敬亮">
+  <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/2e5ab57b7fc5d17239d0e0916927b016-300x300-1.png" alt="村上敬亮">
   <div class="name">村上敬亮</div>
   <div class="org">東大/慶應</div>
+  <div class="profile">東京大学公共政策大学院特任教授。東大卒・ミシガン大院修士。通商産業省・経済産業省入省後、内閣官房で地方創生を担当。デジタル庁統括官を歴任。</div>
 </div>
-<div class="card" data-name="中馬和彦" data-org="みずほFG" data-type="来場者">
+<div class="card has-profile" data-name="中馬和彦" data-org="みずほFG" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuS4remmrOWSjOW9pjwvdGV4dD48L3N2Zz4=" alt="中馬和彦">
+  <img src="https://wsrv.nl/?url=auba-edge.eiicon.net/users/6389/icon/c7e84fd2664676c02710ca9b7e5ad896f644c37e8b0be7e860e67d3b4e79db06.jpg" alt="中馬和彦">
   <div class="name">中馬和彦</div>
   <div class="org">みずほFG</div>
+  <div class="profile">みずほFG執行役員CBDO兼BlueLab代表取締役。KDDI時代に「KDDI∞Labo」を国内最大級の共創PFに育て、「バーチャル渋谷」等牽引。2024年みずほFGに移籍。</div>
 </div>
 <div class="card" data-name="一色義直" data-org="所沢市" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -3992,17 +4100,19 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">高田龍太郎</div>
   <div class="org">サピエンス</div>
 </div>
-<div class="card" data-name="福島智史" data-org="グロービスCP" data-type="来場者">
+<div class="card has-profile" data-name="福島智史" data-org="グロービスCP" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuemj+WztuaZuuWPsjwvdGV4dD48L3N2Zz4=" alt="福島智史">
+  <img src="https://wsrv.nl/?url=images.microcms-assets.io/assets/f99791ccaae94f50b03bcecf5656b592/d1aa904172d34da691e6310717f05f8a/satoshi-fukushima_2.jpg" alt="福島智史">
   <div class="name">福島智史</div>
   <div class="org">グロービスCP</div>
+  <div class="profile">グロービス・キャピタル・パートナーズ パートナー。東大経済→ドイツ証券M&amp;A→2014年GCP入社。IT/テクノロジー投資担当。著書「ベンチャーキャピタルの実務」。</div>
 </div>
-<div class="card" data-name="古谷紳太郎" data-org="COMMONZ" data-type="来場者">
+<div class="card has-profile" data-name="古谷紳太郎" data-org="COMMONZ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWPpOiwt+e0s+WkqumDjjwvdGV4dD48L3N2Zz4=" alt="古谷紳太郎">
+  <img src="https://wsrv.nl/?url=commonz.co.jp/wp-content/uploads/2025/03/20240508_CMZ古谷-2.png" alt="古谷紳太郎">
   <div class="name">古谷紳太郎</div>
   <div class="org">COMMONZ</div>
+  <div class="profile">COMMONZ代表取締役副社長。「思考調達」提唱者。経営層・新規事業・人材アセスメント・研修プログラムのコンセプト創出と実行支援を展開。</div>
 </div>
 <div class="card" data-name="佐伯直行" data-org="Rimo" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
@@ -4058,11 +4168,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">山田彰太郎</div>
   <div class="org">NRI</div>
 </div>
-<div class="card" data-name="鈴木翔平" data-org="TMI" data-type="出展者">
+<div class="card has-profile" data-name="鈴木翔平" data-org="TMI" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumItOacqOe/lOW5szwvdGV4dD48L3N2Zz4=" alt="鈴木翔平">
+  <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2024/08/28/0847_1140.jpg" alt="鈴木翔平">
   <div class="name">鈴木翔平</div>
   <div class="org">TMI</div>
+  <div class="profile">TMI総合法律事務所パートナー弁護士。テキサス大LL.M.・カリフォルニア州弁護士。個人情報・データ保護・AI/IoT・プライバシーガバナンス専門。CIPP/US・CIPP/E保有。</div>
 </div>
 <div class="card" data-name="小林翔太" data-org="キカガク" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
@@ -4118,11 +4229,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">今村高駒</div>
   <div class="org">財務省</div>
 </div>
-<div class="card" data-name="小澤隆生" data-org="ブーストキャピタル" data-type="来場者">
+<div class="card has-profile" data-name="小澤隆生" data-org="ブーストキャピタル" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWwj+a+pOmahueUnzwvdGV4dD48L3N2Zz4=" alt="小澤隆生">
+  <img src="https://wsrv.nl/?url=boostcapital.co.jp/main/wp-content/uploads/2026/03/%E5%B0%8F%E6%BE%A4%E9%9A%86%E7%94%9F_boost-capital0021-683x1024.jpg" alt="小澤隆生">
   <div class="name">小澤隆生</div>
   <div class="org">ブーストキャピタル</div>
+  <div class="profile">Boost Capital代表。</div>
 </div>
 <div class="card" data-name="成迫剛志" data-org="岐阜大/デンソー/トヨタ" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -4142,11 +4254,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">野村哲</div>
   <div class="org">日建設計</div>
 </div>
-<div class="card" data-name="岡田利久" data-org="PFN" data-type="出展者">
+<div class="card has-profile" data-name="岡田利久" data-org="PFN" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWyoeeUsOWIqeS5hTwvdGV4dD48L3N2Zz4=" alt="岡田利久">
+  <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/53344/357/53344-357-8600a367b6e9197a99208f55a1bf9147-300x363.png" alt="岡田利久">
   <div class="name">岡田利久</div>
   <div class="org">PFN</div>
+  <div class="profile">Preferred Networks VP of Solutions Business。Arthur D. Little→AGCを経て現職。生成AI基盤「PLaMo」のビジネス展開を統括。</div>
 </div>
 <div class="card" data-name="末田朋大" data-org="サッポロビール" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -4166,11 +4279,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">上野山健太</div>
   <div class="org">日建設計</div>
 </div>
-<div class="card" data-name="海野裕也" data-org="PFN" data-type="出展者">
+<div class="card has-profile" data-name="海野裕也" data-org="PFN" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPua1t+mHjuijleS5nzwvdGV4dD48L3N2Zz4=" alt="海野裕也">
+  <img src="https://wsrv.nl/?url=images.wantedly.com/i/ZiV3qcx" alt="海野裕也">
   <div class="name">海野裕也</div>
   <div class="org">PFN</div>
+  <div class="profile">Preferred Networks執行役員。東大大学院→IBM Japan→PI経由で2016年PFN入社。深層学習フレームワーク「Chainer」コミッター。2026年より東京理科大准教授兼任。</div>
 </div>
 <div class="card" data-name="鷲見英利" data-org="官民連携事業研究所" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -4202,11 +4316,12 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">佐藤仁人</div>
   <div class="org">NRI</div>
 </div>
-<div class="card" data-name="長村禎庸" data-org="EVeM" data-type="出展者">
+<div class="card has-profile" data-name="長村禎庸" data-org="EVeM" data-type="出展者">
   <span class="badge badge-exhibitor">出展者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumVt+adkeemjuW6uDwvdGV4dD48L3N2Zz4=" alt="長村禎庸">
+  <img src="https://wsrv.nl/?url=s3-ap-northeast-1.amazonaws.com/i.schoo/images/teacher/3668.jpg" alt="長村禎庸">
   <div class="name">長村禎庸</div>
   <div class="org">EVeM</div>
+  <div class="profile">EVeM代表取締役CEO。大阪大→リクルート→DeNA→ハウテレビジョンCOO（東証マザーズ上場導く）→2020年EVeM設立。著書「急成長を導くマネージャーの型」。</div>
 </div>
 <div class="card" data-name="堀本善雄" data-org="金融庁" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
@@ -4214,23 +4329,26 @@ h1 { text-align: center; font-size: 22px; color: #1a2540; margin-bottom: 6px; }
   <div class="name">堀本善雄</div>
   <div class="org">金融庁</div>
 </div>
-<div class="card" data-name="松本勇気" data-org="LayerX" data-type="来場者">
+<div class="card has-profile" data-name="松本勇気" data-org="LayerX" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuadvuacrOWLh+awlzwvdGV4dD48L3N2Zz4=" alt="松本勇気">
+  <img src="https://wsrv.nl/?url=layerx.co.jp/wp-content/uploads/2025/09/matsumoto01-1.png" alt="松本勇気">
   <div class="name">松本勇気</div>
   <div class="org">LayerX</div>
+  <div class="profile">LayerX代表取締役CTO。東大在学中にGunosy入社・2015年CTO就任。DMM CTO→2021年LayerX CTO就任。Forbes Asia「30歳未満」選出。</div>
 </div>
-<div class="card" data-name="逸見勇太" data-org="Another works" data-type="来場者">
+<div class="card has-profile" data-name="逸見勇太" data-org="Another works" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPumAuOimi+WLh+WkqjwvdGV4dD48L3N2Zz4=" alt="逸見勇太">
+  <img src="https://wsrv.nl/?url=boienci.jp/bowers/wp-content/uploads/2023/07/0-2-1024x970.jpeg" alt="逸見勇太">
   <div class="name">逸見勇太</div>
   <div class="org">Another works</div>
+  <div class="profile">パソナ出身。2021年Another worksに参画し同年MVPを獲得。2024年1月に上級執行役員COOに就任。複業クラウドのセールス・新規事業開発に従事。</div>
 </div>
-<div class="card" data-name="図師雄太" data-org="本庄市議会議員" data-type="来場者">
+<div class="card has-profile" data-name="図師雄太" data-org="本庄市議会議員" data-type="来場者">
   <span class="badge badge-visitor">来場者</span>
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iNDAiIGZpbGw9IiNlOGYwZmUiLz48dGV4dCB4PSI0MCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxYTU2ZGIiPuWbs+W4q+mbhOWkqjwvdGV4dD48L3N2Zz4=" alt="図師雄太">
+  <img src="https://wsrv.nl/?url=www.city.honjo.lg.jp/material/images/group/30/01zushi.jpg" alt="図師雄太">
   <div class="name">図師雄太</div>
   <div class="org">本庄市議会議員</div>
+  <div class="profile">埼玉県本庄市議会議員。テクノロジーを活用した地域課題解決に取り組む若手地方議員。</div>
 </div>
 </div>
 <script>
@@ -4266,6 +4384,10 @@ document.querySelectorAll('.btn').forEach(b => {
 });
 
 updateCards();
+
+document.querySelectorAll('.card.has-profile').forEach(card => {
+  card.addEventListener('click', () => card.classList.toggle('expanded'));
+});
 </script>
 </body>
 </html>
