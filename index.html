@@ -27,6 +27,7 @@ header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
 .card.cat-giin   { border-left: 4px solid #c44; }
 .card.cat-jichi  { border-left: 4px solid #4a90d9; }
 .card.cat-minkan { border-left: 4px solid #8bc34a; }
+.card.cat-jichi2 { border-left: 4px solid #26a69a; }
 .pfurigana { font-size: 10px; color: #aaa; margin-bottom: 1px; letter-spacing: 0.05em; }
 .priority-badge { display: inline-block; font-size: 9px; font-weight: 700; color: #fff; padding: 1px 5px; border-radius: 8px; margin-left: 5px; vertical-align: middle; }
 .meta-row { display: flex; gap: 6px; padding: 4px 12px; background: #f9f7f5; border-bottom: 1px solid #eee; font-size: 12px; }
@@ -40,6 +41,7 @@ header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
 .card.cat-giin  .photo { border-color: #c44; }
 .card.cat-jichi .photo { border-color: #4a90d9; }
 .card.cat-minkan .photo { border-color: #8bc34a; }
+.card.cat-jichi2 .photo { border-color: #26a69a; }
 
 .info { flex: 1; min-width: 0; }
 .pname { font-size: 17px; font-weight: 800; color: #1a1a1a; }
@@ -77,6 +79,7 @@ header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
 <div class="view-tab" onclick="setTab('giin', this)">🗳️ 議員 <span class="cnt-badge" id="cnt-giin">1</span></div>
 <div class="view-tab" onclick="setTab('jichi', this)">🏙️ 地方自治体 <span class="cnt-badge" id="cnt-jichi">8</span></div>
 <div class="view-tab" onclick="setTab('minkan', this)">🏢 民間企業 <span class="cnt-badge" id="cnt-minkan">43</span></div>
+<div class="view-tab" onclick="setTab('jichi2', this)">🗾 自治体＋ <span class="cnt-badge" id="cnt-jichi2">40</span></div>
 </div>
 
 <div class="profiles">
@@ -1712,6 +1715,888 @@ header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
     <div class="d-section"><div class="d-label">専門分野</div><div class="d-text">女性活躍推進・キャリア支援・EdTech・コミュニティ運営</div></div>
     <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext">SHElikesの研修・コーチング会議でのRimo活用。SHElikes×Rimoのコラボ（キャリアアップ研修でRimoを使う）という提案が刺さる。</div></div>
     <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext">懇親会でのアプローチ</div></div>
+    
+  </div>
+</div>
+</div>
+<div class="cat-section" id="sec-jichi2" style="display:none">
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pmL/ol6Q8L3RleHQ+PC9zdmc+" alt="阿藤 貴通" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pmL/ol6Q8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">阿藤 貴通</div>
+      
+      <div class="porg">長野県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7ph47lnYI8L3RleHQ+PC9zdmc+" alt="野坂 亮太朗" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7ph47lnYI8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">野坂 亮太朗</div>
+      
+      <div class="porg">鳥取県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nlLDlj6M8L3RleHQ+PC9zdmc+" alt="田口 怜央" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nlLDlj6M8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">田口 怜央</div>
+      
+      <div class="porg">八幡平市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nr6Dljp88L3RleHQ+PC9zdmc+" alt="篠原 秀和" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nr6Dljp88L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">篠原 秀和</div>
+      
+      <div class="porg">八代市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nn6Llj6M8L3RleHQ+PC9zdmc+" alt="矢口 浩樹" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nn6Llj6M8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">矢口 浩樹</div>
+      
+      <div class="porg">白馬村</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mlonol6Q8L3RleHQ+PC9zdmc+" alt="斉藤 淳" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mlonol6Q8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">斉藤 淳</div>
+      
+      <div class="porg">石川県庁</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuInmnp08L3RleHQ+PC9zdmc+" alt="三枝 大海" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuInmnp08L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">三枝 大海</div>
+      
+      <div class="porg">長野県庁</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsqHnlLA8L3RleHQ+PC9zdmc+" alt="岡田 俊樹" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsqHnlLA8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">岡田 俊樹</div>
+      
+      <div class="porg">豊田市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lv5fmnZE8L3RleHQ+PC9zdmc+" alt="志村 龍之介" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lv5fmnZE8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">志村 龍之介</div>
+      
+      <div class="porg">東広島市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7msLjkupU8L3RleHQ+PC9zdmc+" alt="永井 誠一" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7msLjkupU8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">永井 誠一</div>
+      
+      <div class="porg">御殿場市議会</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5nmvqQ8L3RleHQ+PC9zdmc+" alt="髙澤 恵" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5nmvqQ8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">髙澤 恵</div>
+      
+      <div class="porg">八潮市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuIrnlLA8L3RleHQ+PC9zdmc+" alt="上田 真之" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuIrnlLA8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">上田 真之</div>
+      
+      <div class="porg">新潟県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mspbph448L3RleHQ+PC9zdmc+" alt="沖野 匠吾" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mspbph448L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">沖野 匠吾</div>
+      
+      <div class="porg">八幡平市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7npo/nlLA8L3RleHQ+PC9zdmc+" alt="福田 英臣" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7npo/nlLA8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">福田 英臣</div>
+      
+      <div class="porg">栃木市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuoDkupU8L3RleHQ+PC9zdmc+" alt="亀井 優樹" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuoDkupU8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">亀井 優樹</div>
+      
+      <div class="porg">国交省/内閣府</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjYiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mo648L3RleHQ+PC9zdmc+" alt="森 俊" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjYiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mo648L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">森 俊</div>
+      
+      <div class="porg">山形市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7msLTosLc8L3RleHQ+PC9zdmc+" alt="水谷 正邦" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7msLTosLc8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">水谷 正邦</div>
+      
+      <div class="porg">みよし市議会</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5jmqYs8L3RleHQ+PC9zdmc+" alt="高橋 弘成" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5jmqYs8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">高橋 弘成</div>
+      
+      <div class="porg">愛媛県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kupXkuIo8L3RleHQ+PC9zdmc+" alt="井上 雄貴" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kupXkuIo8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">井上 雄貴</div>
+      
+      <div class="porg">京都市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsI/lubM8L3RleHQ+PC9zdmc+" alt="小平 諒" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsI/lubM8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">小平 諒</div>
+      
+      <div class="porg">神戸市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kvZDph448L3RleHQ+PC9zdmc+" alt="佐野 祐太郎" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kvZDph448L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">佐野 祐太郎</div>
+      
+      <div class="porg">新潟県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7ojIXph448L3RleHQ+PC9zdmc+" alt="茅野 裕也" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7ojIXph448L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">茅野 裕也</div>
+      
+      <div class="porg">兵庫県庁</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsI/lt508L3RleHQ+PC9zdmc+" alt="小川 大輔" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsI/lt508L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">小川 大輔</div>
+      
+      <div class="porg">富士見町</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnInnlLA8L3RleHQ+PC9zdmc+" alt="有田 泰子" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnInnlLA8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">有田 泰子</div>
+      
+      <div class="porg">品川区</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7phZLkupU8L3RleHQ+PC9zdmc+" alt="酒井 毅" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7phZLkupU8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">酒井 毅</div>
+      
+      <div class="porg">内閣府</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnb7mnKw8L3RleHQ+PC9zdmc+" alt="松本 英将" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnb7mnKw8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">松本 英将</div>
+      
+      <div class="porg">五島市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nn7Pljp88L3RleHQ+PC9zdmc+" alt="石原 裕文" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7nn7Pljp88L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">石原 裕文</div>
+      
+      <div class="porg">八千代市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kvZDol6Q8L3RleHQ+PC9zdmc+" alt="佐藤 圭祐" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kvZDol6Q8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">佐藤 圭祐</div>
+      
+      <div class="porg">新潟県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsbHnlLA8L3RleHQ+PC9zdmc+" alt="山田 良司" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsbHnlLA8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">山田 良司</div>
+      
+      <div class="porg">大田区</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnZHkuIo8L3RleHQ+PC9zdmc+" alt="村上 祥教" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnZHkuIo8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">村上 祥教</div>
+      
+      <div class="porg">福崎町</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mmI7msrs8L3RleHQ+PC9zdmc+" alt="明治 達也" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mmI7msrs8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">明治 達也</div>
+      
+      <div class="porg">鳥取県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5jmqYs8L3RleHQ+PC9zdmc+" alt="高橋 浩二" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5jmqYs8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">高橋 浩二</div>
+      
+      <div class="porg">大鰐町議会</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsqnmnKw8L3RleHQ+PC9zdmc+" alt="岩本 彩乃" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsqnmnKw8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">岩本 彩乃</div>
+      
+      <div class="porg">和歌山県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsbHopb88L3RleHQ+PC9zdmc+" alt="山西 優翔" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lsbHopb88L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">山西 優翔</div>
+      
+      <div class="porg">小松島市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mrablt508L3RleHQ+PC9zdmc+" alt="武川 裕一郎" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mrablt508L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">武川 裕一郎</div>
+      
+      <div class="porg">山梨県</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mn7PkupU8L3RleHQ+PC9zdmc+" alt="柳井 研" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mn7PkupU8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">柳井 研</div>
+      
+      <div class="porg">合志市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuK3osYrmmbQ8L3RleHQ+PC9zdmc+" alt="中豊晴" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuK3osYrmmbQ8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">中豊晴</div>
+      
+      <div class="porg">紀の川市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7moJfmnpc8L3RleHQ+PC9zdmc+" alt="栗林 正司" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7moJfmnpc8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">栗林 正司</div>
+      
+      <div class="porg">加古川市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuIDoibI8L3RleHQ+PC9zdmc+" alt="一色 義直" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7kuIDoibI8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">一色 義直</div>
+      
+      <div class="porg">所沢市</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
+    
+  </div>
+</div>
+<div class="card cat-jichi2" data-cat="jichi2" onclick="toggleCard(this)">
+  <div class="card-top">
+    <div class="photo-wrap">
+      <img class="photo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lm7PluKs8L3RleHQ+PC9zdmc+" alt="図師 雄太" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7lm7PluKs8L3RleHQ+PC9zdmc+'" >
+    </div>
+    <div class="info">
+      <div class="pname">図師 雄太</div>
+      
+      <div class="porg">本庄市議会議員</div>
+      <div class="prole"></div>
+      <div class="sub-tag"></div>
+    </div>
+  </div>
+  <div class="detail">
+    
+    <div class="d-section"><div class="d-label">経歴</div><div class="d-text"></div></div>
+    <div class="d-section"><div class="d-label">専門分野</div><div class="d-text"></div></div>
+    <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext"></div></div>
+    <div class="box box-action"><div class="blabel">📍 連絡先ヒント</div><div class="btext"></div></div>
     
   </div>
 </div>
