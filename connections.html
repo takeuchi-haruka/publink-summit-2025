@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publink Summit 2026 — Rimoチーム共通点マップ（社内用）</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, 'Hiragino Sans', sans-serif; background: #f4f5f7; color: #222; font-size: 13px; }
+header { background: #1a1a2e; color: #fff; padding: 16px 24px; position: sticky; top: 0; z-index: 100; }
+header h1 { font-size: 16px; font-weight: 700; }
+header p { font-size: 11px; color: #aaa; margin-top: 4px; }
+.legend { background: #fff; padding: 16px 24px; border-bottom: 1px solid #eee; }
+.legend h3 { font-size: 12px; color: #666; margin-bottom: 10px; }
+.legend-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.legend-bio { font-size: 11px; color: #555; line-height: 1.5; }
+.filter-bar { background: #fff; padding: 10px 24px; border-bottom: 1px solid #eee; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.filter-bar label { font-size: 11px; color: #666; }
+.filter-btn { padding: 4px 12px; border-radius: 20px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-size: 11px; }
+.filter-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+.mbadge { display: inline-block; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+main { padding: 16px 24px; max-width: 1400px; margin: 0 auto; }
+.cat-heading { font-size: 14px; font-weight: 700; color: #444; margin: 20px 0 10px; padding-left: 8px; border-left: 4px solid #1a1a2e; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+.card { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.card-header { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+.photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.card-name { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.card-org { font-size: 12px; color: #1a56db; font-weight: 600; }
+.card-role { font-size: 11px; color: #666; margin-top: 2px; }
+.card-meta { font-size: 10px; color: #888; margin-top: 2px; }
+.pri-badge { font-size: 10px; padding: 1px 6px; border-radius: 8px; color: #fff; margin-left: 6px; }
+.career-text { font-size: 11px; color: #555; line-height: 1.5; margin-bottom: 10px; padding: 8px; background: #fafafa; border-radius: 6px; }
+.connections { display: flex; flex-direction: column; gap: 6px; }
+.member-badge { padding: 6px 8px; background: #fafafa; border-radius: 6px; }
+.conn-list { margin-top: 4px; padding-left: 16px; }
+.conn-list li { font-size: 11px; color: #444; margin-bottom: 2px; }
+.no-conn { font-size: 11px; color: #aaa; font-style: italic; }
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🤝 Publink Summit 2026 — Rimoチーム 共通点マップ</h1>
+  <p>社内用 | 74名 | 各参加者とRimoメンバーのアイスブレイクネタ</p>
+</header>
+<div class="legend">
+  <h3>Rimoチームメンバー</h3>
+  
+<div class="legend-item">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <span class="legend-bio">早稲田大→Google検索チーム→Wantedly→Rimo創業。エンジニア出身のCEO。</span>
+</div>
+<div class="legend-item">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <span class="legend-bio">CA志望から一転、2020年Rimo新卒入社（セールス3人目）。現在は採用・広報・オンボーディング担当。</span>
+</div>
+<div class="legend-item">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <span class="legend-bio">アクセンチュア→建設ベンチャー→コンサルファーム→Rimo（2025年1月〜）。製造・金融・通信・ITのDX推進経験。</span>
+</div>
+<div class="legend-item">
+  <span class="mbadge" style="background:#27ae60">🟢 前野さん</span>
+  <span class="legend-bio">新卒USEN→26歳支店長→エンタープライズ営業・管理職14年→Rimo（2023年9月〜）。エンタープライズ事業部長。</span>
+</div>
+<div class="legend-item">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <span class="legend-bio">1987年三重生まれ、名古屋の中学高校、早稲田大学。証券→広告代理店→NPO団体代表→AIベンチャー3社→Rimo。経営企画マネージャー。</span>
+</div>
+</div>
+<div class="filter-bar">
+  <label>フィルタ：</label>
+  <button class="filter-btn active" onclick="filterAll()">全員</button>
+  <button class="filter-btn" onclick="filterPri('A')">優先度A</button>
+  <button class="filter-btn" onclick="filterPri('B')">優先度B</button>
+  <button class="filter-btn" onclick="filterMember('aikawa')">🔴 相川さんと共通点あり</button><button class="filter-btn" onclick="filterMember('hori')">🟣 堀さんと共通点あり</button><button class="filter-btn" onclick="filterMember('saeki')">🔵 佐伯さんと共通点あり</button><button class="filter-btn" onclick="filterMember('maeno')">🟢 前野さんと共通点あり</button><button class="filter-btn" onclick="filterMember('takeuchi')">🟠 竹内さんと共通点あり</button>
+</div>
+<main><h2 class="cat-heading">🏛️ 官公庁・省庁</h2>
+<div class="cards-grid">
+
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/70e0d43070706d1ca548b73df5810a69-300x300-1.png" class="photo" alt="堀本 善雄" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">堀本 善雄
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">金融庁</div>
+      <div class="card-role">総合政策局長</div>
+      <div class="card-meta">📍 兵庫県姫路市</div>
+      <div class="card-meta">🎓 東京大学経済学部卒（1990年）、ハーバード大学留学（1993年）</div>
+    </div>
+  </div>
+  <div class="career-text">1990年大蔵省入省。ハーバード大学留学。金融規制・フィンテック政策・金融DXを統括。2025年〜総合政策局長。民間経験（IBMプロモントリー）も持つ稀有な幹部。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：留学</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX / 金融</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/63785cd67b9108b865ff794a5a3a370c.png" class="photo" alt="奥家 敏和" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">奥家 敏和
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">経済産業省</div>
+      <div class="card-role">大臣官房審議官（商務情報政策局担当）</div>
+      
+      <div class="card-meta">🎓 ハーバード大学研究員 / ハーバードケネディスクールMCMPA修士(2004年)</div>
+    </div>
+  </div>
+  <div class="career-text">1995年通産省入省。マクロ経済・サイバーセキュリティ課長・IT政策。2024年7月より現職。「ソブリンAI」実現を提唱する経産省AI政策中枢。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：IT</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/db4b7fe9117c78e4363f79977c67bd6a-300x300-1.png" class="photo" alt="合田 哲雄" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">合田 哲雄
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">文部科学省</div>
+      <div class="card-role">高等教育局長</div>
+      <div class="card-meta">📍 岡山県倉敷市</div>
+      <div class="card-meta">🎓 東北大学法学部→東大大学院法学政治学研究科修士</div>
+    </div>
+  </div>
+  <div class="career-text">1992年文部省入省。国立大学法人化・10兆円大学ファンド創設に関与。2025年7月高等教育局長就任。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/c5d056652ec66bd403f27c151747faa4-300x300-1.png" class="photo" alt="今里 和之" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">今里 和之
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">経済産業省</div>
+      <div class="card-role">経済産業政策局 産業人材課長</div>
+      
+      <div class="card-meta">🎓 東京大学大学院理学系研究科生物化学専攻修了、カーネギーメロン大学公共政策学専攻修了</div>
+    </div>
+  </div>
+  <div class="career-text">経産省入省。産業技術環境局・中小企業庁・NEDO等を経て産業人材課長。AI時代の人材育成・リスキリング政策の実務責任者。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=jomsa.org/wp-content/uploads/2020/10/yano.png" class="photo" alt="矢野 剛史" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">矢野 剛史
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">内閣官房 地域未来戦略本部事務局</div>
+      <div class="card-role">内閣参事官</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">内閣官房で地域デジタル・DXを担当する参事官。デジタル田園都市国家構想の実務推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/92c0f0864e93025a70aaee4ad75f7eca-300x300-1.png" class="photo" alt="津脇 慈子" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">津脇 慈子
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">内閣府</div>
+      <div class="card-role">科学技術・イノベーション推進事務局参事官</div>
+      <div class="card-meta">📍 福岡県</div>
+      <div class="card-meta">🎓 東京大学法学部卒 (2004年)</div>
+    </div>
+  </div>
+  <div class="career-text">2004年経産省入省。内閣官房IT室→デジタル庁企画官（立上げメンバー）→JETROロサンゼルス次長→2025年内閣府科学技術・イノベーション推進参事官。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：IT</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/1d0e10c9ec047798275093b65b85d90f-300x300-1.png" class="photo" alt="吉田 泰己" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">吉田 泰己
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">デジタル庁</div>
+      <div class="card-role">企画官（兼 経産省情報プロジェクト室長）</div>
+      
+      <div class="card-meta">🎓 シンガポール国立大MBA / LKYスクール公共経営学修士 / ハーバードケネディスクールフェロー</div>
+    </div>
+  </div>
+  <div class="career-text">2008年経産省入省。シンガポール国立大MBA・ハーバードKSフェロー。政府IT調達プラットフォーム「DMP」推進の実務責任者。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：IT</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #27ae60">
+  <span class="mbadge" style="background:#27ae60">🟢 前野さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：SaaS</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7plbflsbE8L3RleHQ+PC9zdmc+" class="photo" alt="長山 美由貴" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">長山 美由貴
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">経済産業省</div>
+      <div class="card-role">地域産業基盤整備課 課長補佐（総括）</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">経産省で地域産業政策・企業立地促進を担当する課長補佐。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7mnb/mqYs8L3RleHQ+PC9zdmc+" class="photo" alt="板橋 洋平" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">板橋 洋平
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">経済産業省</div>
+      <div class="card-role">通商政策局 貿易振興課 課長補佐（総括）</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">経産省の貿易振興・通商政策担当。JETRO連携での海外展開支援。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：海外</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.rise-a.jp/vc-files/about/img/evangelist/murakami_keisuke.jpg" class="photo" alt="村上 敬亮" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">村上 敬亮
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">東京大学公共政策大学院 / 慶應SFC</div>
+      <div class="card-role">特任教授</div>
+      <div class="card-meta">📍 東京都渋谷区</div>
+      <div class="card-meta">🎓 東京大学教養学部相関社会科学分科卒（1990年）、ミシガン大学経済学部修了（2000年）</div>
+    </div>
+  </div>
+  <div class="career-text">1990年通産省入省。資源エネルギー→IT政策→クールジャパン戦略立上げ→2025年東大GraSPP・慶應SFC特任教授。政策と産業の橋渡し役。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：IT</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/5d2a46c552dd05ffb3e8e8c72b4a3cf6-300x300-1.png" class="photo" alt="伊藤 伸" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">伊藤 伸
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">デジタル庁 / 構想日本</div>
+      <div class="card-role">参与 / 理事・総括ディレクター</div>
+      <div class="card-meta">📍 北海道本別町</div>
+      <div class="card-meta">🎓 同志社大学法学部卒</div>
+    </div>
+  </div>
+  <div class="career-text">2000年衆院議員秘書→2005年構想日本→2009年内閣府行政刷新会議参事官→2013年〜構想日本総括ディレクター→2022年デジタル庁参与。河野太郎元大臣の最も信頼するブレーン。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/856807d3e1734dfff1d10908c2ec6fbc-300x300-1.png" class="photo" alt="占部 昭裕" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">占部 昭裕
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">内閣官房 日本成長戦略本部事務局</div>
+      <div class="card-role">主査</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">2020年経済産業省入省。再エネ・対中通商・省内業務改革を経て内閣官房。高市内閣の成長戦略立案・推進を担う若手実務者。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/027cf4a3bf18748f7e8bb4ee66151184-300x300-1.png" class="photo" alt="長野 浩二" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">長野 浩二
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">内閣府</div>
+      <div class="card-role">国立公文書館課長・参事官</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">内閣府採用。働き方改革分野で内閣府特命担当大臣賞受賞。現在、国立公文書館課長・内閣府参事官として行政記録デジタル化を所管。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：採用</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/ea99202a4980be151c27f218564491fc-300x300-1-1.png" class="photo" alt="上杉 泰樹" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">上杉 泰樹
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">厚生労働省</div>
+      <div class="card-role">大臣官房 総務課 課長補佐</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">2015年厚生労働省入省。雇用政策・労働安全・感染症対策等を経て大臣官房総務課で省内AI・デジタル活用推進計画担当。オックスフォード大学留学歴。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：留学</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/8b7e10b3b599fe58974a02e628f5d15d.png" class="photo" alt="黒田 千春" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">黒田 千春
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">内閣府</div>
+      <div class="card-role">参事官補佐</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">内閣府の若手官僚。参事官補佐として官民連携政策の企画・推進を担当。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/c478b1a6dedb96603a486610161ab963.png" class="photo" alt="長瀬 洋裕" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">長瀬 洋裕
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">国土交通省 九州地方整備局</div>
+      <div class="card-role">建政部長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">国土交通省の九州地方整備局建政部長。インフラ・建設行政を統括。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/2a01bf38f43c2b14a23f61d6f288b608-1.png" class="photo" alt="向野 陽一郎" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">向野 陽一郎
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">経済産業省中部経済産業局電力・ガス事業北陸支局</div>
+      <div class="card-role">支局長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">経産省の地方局（北陸支局）の支局長。電力・ガス事業の地域行政を担当。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/dc664dddf4299be550f08469d3c55e14-300x300-1.png" class="photo" alt="安生 隆行" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">安生 隆行
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">経済産業省 通商政策局ビジネス・人権政策調整室</div>
+      <div class="card-role">総括補佐兼通商戦略課次席補佐</div>
+      
+      <div class="card-meta">🎓 東京外国語大学外国語学部東アジア課程中国語学科卒（2004年）</div>
+    </div>
+  </div>
+  <div class="career-text">経産省の通商政策・ビジネスと人権政策を担当。通商戦略の実務担当者。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/2a4183d625ae1e95153e2130aa4d63df-300x300-1.png" class="photo" alt="猪股 裕" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">猪股 裕
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">経済産業省 製造産業局産業機械課 / ちいきん会</div>
+      <div class="card-role">係長（総括）/ プロデューサー</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">経産省の製造産業・産業機械政策担当。ちいきん会（地域金融と行政の連携コミュニティ）の運営も兼務。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：製造 / 金融</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/1736f28f76ae05c4e61fa6d17bfb8b96-300x300-1.png" class="photo" alt="三枝 弦人" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">三枝 弦人
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">農林水産省</div>
+      <div class="card-role">係長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">農林水産省の若手官僚。農業政策・食料安全保障を担当。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/1c8d3f43e8f0a876436a17f6da51c848-300x300-1.png" class="photo" alt="北川 浩伸" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">北川 浩伸
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">日本食品海外プロモーションセンター（JFOODO）</div>
+      <div class="card-role">執行役</div>
+      <div class="card-meta">📍 東京都（推定）</div>
+      <div class="card-meta">🎓 慶應義塾大学大学院商学研究科博士後期課程（単位満期退学）</div>
+    </div>
+  </div>
+  <div class="career-text">JFOODO（農水省所管の外郭団体）で日本食の海外展開を推進。ハリウッド大学院大学の教授も兼任。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：海外</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：マーケティング</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="kanko" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/aab96a3a7d79c68abe5ab1d6e1aa8b7e.png" class="photo" alt="譲尾 進" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">譲尾 進
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">独立行政法人 国際協力機構（JICA）</div>
+      <div class="card-role">企画部審議役（イノベーション・SDGs担当）</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">JICAのイノベーション・SDGs担当審議役。国際協力プロジェクトにスタートアップ技術を活用する取り組みを推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：CA / スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div></div>
+<h2 class="cat-heading">🗳️ 議員</h2>
+<div class="cards-grid">
+
+<div class="card" data-cat="giin" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/810f7092672b92e30d1589184f296b8d-300x300-1.png" class="photo" alt="小林 史明" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">小林 史明
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">衆議院議員・自由民主党</div>
+      <div class="card-role">経済産業部会長</div>
+      <div class="card-meta">📍 広島県三原市</div>
+      <div class="card-meta">🎓 上智大学理工学部化学科卒</div>
+    </div>
+  </div>
+  <div class="career-text">NTTドコモ法人営業→2012年衆院初当選（6期）。デジタル副大臣、環境副大臣歴任。地方自治体AI研究会（2018年設立）主宰。「テクノロジーの社会実装」を政治信条とする。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #27ae60">
+  <span class="mbadge" style="background:#27ae60">🟢 前野さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：営業 / 法人営業</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div></div>
+</div></div>
+<h2 class="cat-heading">🏙️ 地方自治体</h2>
+<div class="cards-grid">
+
+<div class="card" data-cat="jichi" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.town.nishikawa.yamagata.jp/uploaded/image/471.png" class="photo" alt="菅野 大志" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">菅野 大志
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">山形県西川町</div>
+      <div class="card-role">町長・全国若手町村長会副会長</div>
+      <div class="card-meta">📍 山形県</div>
+      <div class="card-meta">🎓 山形県立寒河江高等学校→早稲田大学人間科学部</div>
+    </div>
+  </div>
+  <div class="career-text">2001年財務省東北財務局→金融庁→内閣官房→デジタル田園都市国家構想実現会議事務局→2022年西川町長当選。人口5000人の町で社会減ゼロを達成した地方創生の星。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：金融</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li><li>💼 共通キーワード：財務</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="B">
+  <div class="card-header">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7ljJflt508L3RleHQ+PC9zdmc+" class="photo" alt="北川 由佳" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">北川 由佳
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">岡山市</div>
+      <div class="card-role">政策局長</div>
+      <div class="card-meta">📍 岡山県</div>
+      
+    </div>
+  </div>
+  <div class="career-text">岡山市の政策局長。自治体の政策立案・DX推進を担当。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="B">
+  <div class="card-header">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7npo/lhYM8L3RleHQ+PC9zdmc+" class="photo" alt="福元 香苗" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">福元 香苗
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">東京都庁 / 東京港埠頭株式会社</div>
+      <div class="card-role">総務部長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">東京都庁からの派遣で東京港埠頭の総務部長を担当。都の外郭団体でのDX推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/941aeee57f8a72083b682ab15b0a9c53-1.png" class="photo" alt="三谷 航平" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">三谷 航平
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">北海道上川町</div>
+      <div class="card-role">東京事務所 ゼネラルマネージャー</div>
+      <div class="card-meta">📍 北海道（枝幸町付近）</div>
+      <div class="card-meta">🎓 旭川市内の大学（大学名不明）</div>
+    </div>
+  </div>
+  <div class="career-text">北海道上川町の東京事務所GM。地方自治体の東京拠点を管轄し、官民連携・地方創生のハブ役。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/1316db7dc4dcb9b988bd99118ed18cad.png" class="photo" alt="吉川 和志" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">吉川 和志
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">兵庫県高砂市役所</div>
+      <div class="card-role">政策部広報観光課課長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">兵庫県高砂市役所の課長。自治体の政策広報・観光DXを推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：広報</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/05b55e3351ccc1a88a3f638c399802d7.png" class="photo" alt="打越 宏明" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">打越 宏明
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">東広島市</div>
+      <div class="card-role">産業振興課 主任</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">東広島市産業振興課の主任。地域産業振興・官民連携事業を推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/1.png" class="photo" alt="中軽米 真人" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">中軽米 真人
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">岩手県八幡平市</div>
+      <div class="card-role">産業建設部 主幹兼GX産業推進室長</div>
+      <div class="card-meta">📍 岩手県八幡平市</div>
+      <div class="card-meta">🎓 不明（大学卒業後1998年松尾村役場入庁）</div>
+    </div>
+  </div>
+  <div class="career-text">岩手県八幡平市のGX産業推進室長。地方自治体のグリーン×DX推進を担当。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="jichi" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/2-1.png" class="photo" alt="内藤 優太" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">内藤 優太
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">長野県白馬村</div>
+      <div class="card-role">観光課 主任</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">長野県白馬村の観光課主任。観光DX・インバウンド対応・自治体の地域振興を担当。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div></div>
+<h2 class="cat-heading">🏢 民間企業</h2>
+<div class="cards-grid">
+
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.preferred.jp/images/company/cofounders/nishikawa-profile-77904d.png" class="photo" alt="西川 徹" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">西川 徹
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">株式会社Preferred Networks</div>
+      <div class="card-role">代表取締役会長</div>
+      <div class="card-meta">📍 東京都</div>
+      <div class="card-meta">🎓 東京大学大学院情報理工学系研究科修士卒</div>
+    </div>
+  </div>
+  <div class="career-text">2005年IPA未踏ソフト採択。2006年ACM/ICPC世界大会19位。同年Preferred Infrastructure創業。2014年PFN創業。AIユニコーン企業の創業者。NTT・トヨタと大型資本提携。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / 創業</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=venturecafetokyo.org/wp-content/uploads/sites/14/formidable/7/53006174_2260820133970809_5023647766652387328_n.jpeg" class="photo" alt="栫井 誠一郎" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">栫井 誠一郎
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">株式会社Publink</div>
+      <div class="card-role">代表取締役社長CEO</div>
+      <div class="card-meta">📍 東京都</div>
+      <div class="card-meta">🎓 筑駒（旧教駒）→東京大学工学部卒</div>
+    </div>
+  </div>
+  <div class="career-text">2005年経済産業省入省（国家1種）。マクロ経済・IT政策・内閣官房出向。2011年退省。Zpeer共同創業。2018年Publink設立。官民共創コミュニティ「Publinkパートナー」運営。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：創業</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX / IT</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=boostcapital.co.jp/main/wp-content/uploads/2026/03/%E5%B0%8F%E6%BE%A4%E9%9A%86%E7%94%9F_boost-capital0021-683x1024.jpg" class="photo" alt="小澤 隆生" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">小澤 隆生
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">ブーストキャピタル株式会社</div>
+      <div class="card-role">代表取締役</div>
+      
+      <div class="card-meta">🎓 早稲田大学法学部卒 (1995年)</div>
+    </div>
+  </div>
+  <div class="career-text">1995年CSK入社→1999年ビズシーク設立・楽天に売却→楽天野球団取締役→2011年クロコスをYahoo!に売却→2022年ヤフーCEO→2024年BoostCapital設立。連続起業家×元ヤフーCEO。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=layerx.co.jp/wp-content/uploads/2025/09/matsumoto01-1.png" class="photo" alt="松本 勇気" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">松本 勇気
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">株式会社LayerX</div>
+      <div class="card-role">代表取締役CTO</div>
+      
+      <div class="card-meta">🎓 東京大学工学部在籍（中退?）</div>
+    </div>
+  </div>
+  <div class="career-text">2013年Gunosy学生インターン→CTO→DMMグループCTO(2018-2020)→日本CTO協会理事(2019-)→2021年LayerX代表取締役CTO。AI・LLM事業部管掌。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：エンジニア / AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=blogs.itmedia.co.jp/mt-static/support/assets_c/userpics/userpic-146-100x100.png" class="photo" alt="成迫 剛志" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">成迫 剛志
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">デンソー / トヨタ自動車 / 岐阜大学</div>
+      <div class="card-role">シニアアドバイザー / チーフエバンジェリスト / 客員教授</div>
+      
+      <div class="card-meta">🎓 明治大学経営学部卒業</div>
+    </div>
+  </div>
+  <div class="career-text">大企業（トヨタ・デンソー）でのAI実装と産学連携を推進。デジタルトランスフォーメーションのエバンジェリスト。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX / 製造</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=satudora-hd.co.jp/images/img_leader_01.jpg" class="photo" alt="富山 浩樹" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">富山 浩樹
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">サツドラホールディングス株式会社</div>
+      <div class="card-role">代表取締役社長CEO</div>
+      <div class="card-meta">📍 北海道</div>
+      <div class="card-meta">🎓 札幌大学経営学部卒業</div>
+    </div>
+  </div>
+  <div class="career-text">北海道を拠点にドラッグストア事業とデジタル地域通貨「EZOCA」を運営。地方経済とDXの融合で注目される経営者。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：CA</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.kandc.com/wp-content/uploads/2023/07/eb8792ecf92ce8d836871d61c13a2351.jpg" class="photo" alt="岩田 真吾" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">岩田 真吾
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">三星グループ</div>
+      <div class="card-role">代表</div>
+      <div class="card-meta">📍 愛知県一宮市</div>
+      <div class="card-meta">🎓 慶應義塾大学法学部卒業</div>
+    </div>
+  </div>
+  <div class="career-text">地方の老舗企業（毛織物等）の代表として地方産業の変革を推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>📍 同じ出身地（愛知）</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.euglena.jp/asset/img/companyinfo/exective/boad4.jpg" class="photo" alt="永田 暁彦" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">永田 暁彦
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">UntroD Capital Japan株式会社</div>
+      <div class="card-role">代表取締役社長</div>
+      <div class="card-meta">📍 山口県下関市（幼少期福岡へ）</div>
+      <div class="card-meta">🎓 慶應義塾大学商学部卒業</div>
+    </div>
+  </div>
+  <div class="career-text">2008年ユーグレナに参画。CFO→COO→2021年代表執行役員CEO（2024年退任）。2015年リアルテックファンド設立→2024年UntroD Capital Japan代表。ディープテック専門VC。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=aeterlink.com/wp-content/uploads/2021/11/isawa-san_2x-e1766714296629.jpg" class="photo" alt="岩佐 凌" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">岩佐 凌
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">エイターリンク株式会社</div>
+      <div class="card-role">代表取締役CEO</div>
+      <div class="card-meta">📍 千葉県流山市</div>
+      <div class="card-meta">🎓 学習院大学経済学部卒（2015年）</div>
+    </div>
+  </div>
+  <div class="career-text">ワイヤレス給電・IoTスタートアップのCEO。ディープテック系スタートアップの代表。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.nexstokyo.metro.tokyo.lg.jp/wp-content/uploads/2022/06/%E3%80%90%E6%9C%80%E6%96%B0%E7%89%88%E3%80%91KDDI%E4%B8%AD%E9%A6%AC.jpeg.jpg" class="photo" alt="中馬 和彦" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">中馬 和彦
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">みずほフィナンシャルグループ / みずほ銀行</div>
+      <div class="card-role">執行役員CBDO</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">みずほFGのCBDO。スタートアップ投資・オープンイノベーション担当。金融×テック連携の推進役。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：金融</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=images.microcms-assets.io/assets/18598a9a51944b7daa5722b0fd747fee/783408f558a240a9bf1635c4f8f7c4c2/kobayashi.jpeg" class="photo" alt="小林 翔太" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">小林 翔太
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">株式会社キカガク</div>
+      <div class="card-role">研修事業部 事業部長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">キカガクの研修事業を統括。AI人材育成研修を官民問わず展開。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=s3-ap-northeast-1.amazonaws.com/i.schoo/images/teacher/3668.jpg" class="photo" alt="長村 禎庸" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">長村 禎庸
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社EVeM</div>
+      <div class="card-role">代表取締役CEO</div>
+      
+      <div class="card-meta">🎓 大阪大学文学部日本史学専攻卒（2006年）</div>
+    </div>
+  </div>
+  <div class="career-text">スタートアップ専門のマネジメント育成会社EVeM CEO。スタートアップのミドルマネジャー育成に特化。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=entrepreneurship.metro.tokyo.lg.jp/wp-content/uploads/2024/09/fujimoto-ayumi.jpeg" class="photo" alt="藤本 あゆみ" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">藤本 あゆみ
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">スタートアップエコシステム協会 / FoundersNation</div>
+      <div class="card-role">代表理事 / 代表取締役社長</div>
+      
+      <div class="card-meta">🎓 東京経済大学コミュニケーション学部卒</div>
+    </div>
+  </div>
+  <div class="career-text">2002年キャリアデザインセンター→2007年Google（女性活躍推進）→at Will Work設立→2022年スタートアップエコシステム協会設立代表理事。内閣府規制改革推進会議スタートアップ・投資WG専門委員。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>🏢 共通の前職（Google）</li><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=images.microcms-assets.io/assets/f99791ccaae94f50b03bcecf5656b592/d1aa904172d34da691e6310717f05f8a/satoshi-fukushima_2.jpg" class="photo" alt="福島 智史" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">福島 智史
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">グロービス・キャピタル・パートナーズ株式会社</div>
+      <div class="card-role">パートナー</div>
+      
+      <div class="card-meta">🎓 東京大学経済学部卒（2007年）</div>
+    </div>
+  </div>
+  <div class="career-text">グロービスCPのVC投資家。EdTech・AI・SaaSへの投資実績。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #27ae60">
+  <span class="mbadge" style="background:#27ae60">🟢 前野さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：SaaS</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www4.city.sapporo.jp/scg/img/topics/interview_013_1.jpg" class="photo" alt="伊藤 大貴" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">伊藤 大貴
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">株式会社ソーシャル・エックス</div>
+      <div class="card-role">代表取締役</div>
+      <div class="card-meta">📍 三重県</div>
+      <div class="card-meta">🎓 早稲田大学理工学部卒（2000年）、大学院理工学研究科修了（2002年）</div>
+    </div>
+  </div>
+  <div class="career-text">官民共創・社会課題解決型ビジネスの専門家。政府・地方自治体との共創事業を多数推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li><li>📍 同じ出身地（三重）</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=assets.st-note.com/production/uploads/images/61698200/profile_d34ff9ea4765a70c31aaff06c5bc0568.jpg" class="photo" alt="南 知果" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">南 知果
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">PublicMeetsInnovation（PMI）</div>
+      <div class="card-role">代表理事</div>
+      <div class="card-meta">📍 大阪府</div>
+      <div class="card-meta">🎓 京都大学法学部卒（2012年）、法科大学院修了（2014年）、ペンシルバニア大学ロースクールLL.M.修了（2022年）</div>
+    </div>
+  </div>
+  <div class="career-text">PMI（公共政策×イノベーション）の代表。行政と起業家を繋ぐコミュニティ運営。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=prcdn.freetls.fastly.net/release_image/32735/91/32735-91-6517b828242b1b774c19adc029735fca-1080x1080.jpg" class="photo" alt="伊藤 和真" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">伊藤 和真
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">株式会社PoliPoli</div>
+      <div class="card-role">代表取締役CEO</div>
+      <div class="card-meta">📍 愛知県</div>
+      <div class="card-meta">🎓 東海高校（愛知）→慶應義塾大学卒</div>
+    </div>
+  </div>
+  <div class="career-text">1998年生まれ。18歳で政策SNS「PoliPoli」設立。経産省・総務省の有識者委員。Forbes「日本のルールメーカー30人」選出。WEF Global Shapers選出。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>📍 同じ地域（東海）</li><li>📍 同じ出身地（愛知）</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=p4rl.com/web2025/wp-content/uploads/washimi_mini02.jpg" class="photo" alt="鷲見 英利" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">鷲見 英利
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社官民連携事業研究所</div>
+      <div class="card-role">代表取締役社長</div>
+      <div class="card-meta">📍 大阪府</div>
+      <div class="card-meta">🎓 黒龍江大学卒業</div>
+    </div>
+  </div>
+  <div class="career-text">官民連携事業のコンサルタント・研究者。PPP/PFI案件に精通。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：コンサル</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=makairaworld.com/wp2024/wp-content/uploads/2021/07/Makaira-Akira-Takahashi.jpg" class="photo" alt="高橋 朗" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">高橋 朗
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">マカイラ株式会社</div>
+      <div class="card-role">代表取締役COO</div>
+      
+      <div class="card-meta">🎓 早稲田大学商学部卒、パデュー大学クラナート経営大学院MBA修了</div>
+    </div>
+  </div>
+  <div class="career-text">パブリックアフェアーズ（政府渉外）の専門会社マカイラのCOO。政府・政治家との対話を支援。PublicAffairsJP運営。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=images.microcms-assets.io/assets/18598a9a51944b7daa5722b0fd747fee/9af5af2cba50414fac27690858870a79/kikagaku_akiyama.png" class="photo" alt="秋山 貴史" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">秋山 貴史
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">株式会社キカガク</div>
+      <div class="card-role">執行役員CRO</div>
+      
+      <div class="card-meta">🎓 神戸大学（空港・コンテナターミナルの発着最適化研究）</div>
+    </div>
+  </div>
+  <div class="career-text">神戸大学卒業後ニトリ→ClassIII（AI開発ベンチャー）→2022年キカガク入社。セールス&amp;マーケ責任者→コンサル事業立上げ→現在研修事業責任者兼CRO。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：コンサル / DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiI+PHJlY3QgZmlsbD0iI2Y1ZjBlYyIgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiByeD0iMzYiLz48dGV4dCB4PSIzNiIgeT0iNDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNGMTRDMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7pq5jlsbE8L3RleHQ+PC9zdmc+" class="photo" alt="高山 智司" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">高山 智司
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">トランスコスモス株式会社</div>
+      <div class="card-role">上席常務執行役員</div>
+      <div class="card-meta">📍 東京都文京区</div>
+      <div class="card-meta">🎓 明治大学法学部卒</div>
+    </div>
+  </div>
+  <div class="career-text">トランスコスモス（コールセンター・BPO）の上席常務執行役員。デジタルマーケティング・BPO事業を統括。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：マーケティング</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2024/01/18/DSGF5996-1.jpg" class="photo" alt="阿部 洸三" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">阿部 洸三
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">TMI総合法律事務所</div>
+      <div class="card-role">パートナー弁護士</div>
+      <div class="card-meta">📍 愛媛県（愛光高校）</div>
+      <div class="card-meta">🎓 愛光高校→東京大学法学部第一類 (2007年卒) →東大法科大学院 (2009年卒)</div>
+    </div>
+  </div>
+  <div class="career-text">1984年生まれ。東大法学部→東大法科大学院→2010年東京弁護士会登録→2011年TMI入所→2024年パートナー就任。専門: IT/情報通信/メディア/AI法務/リスクマネジメント。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：IT / 通信</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.tmi.gr.jp/uploads/2021/03/08/ueno9079_570-570.jpg" class="photo" alt="上野 一英" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">上野 一英
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">TMI総合法律事務所</div>
+      <div class="card-role">パートナー弁護士</div>
+      
+      <div class="card-meta">🎓 学習院大学法学部卒（2005年）、慶應義塾大学法科大学院修了（2007年）、ジョージタウン大学ローセンターLL.M.修了（2014年）</div>
+    </div>
+  </div>
+  <div class="career-text">TMIのパートナー弁護士。IT・企業法務専門。阿部洸三さんとセット。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：IT</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.jri.co.jp/image/staff/yamadaeiji.jpg" class="photo" alt="山田 英司" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">山田 英司
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">株式会社日本総合研究所</div>
+      <div class="card-role">理事</div>
+      
+      <div class="card-meta">🎓 早稲田大学法学部卒、英国ウェールズ大学MBA修了、EU Business School DBA修了</div>
+    </div>
+  </div>
+  <div class="career-text">日本総研の理事。政策提言・調査研究・官民連携のシンクタンク。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>🎓 同じ大学（早稲田大学）</li><li>🎓 同じ大学（早稲田）</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.glass-rock.com/images/team_04.jpg" class="photo" alt="橋本 直樹" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">橋本 直樹
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社Kumanomics</div>
+      <div class="card-role">代表取締役・ノマド政策家</div>
+      <div class="card-meta">📍 兵庫県</div>
+      <div class="card-meta">🎓 東京大学法学部卒、パーソンズ美術大学MFA修了</div>
+    </div>
+  </div>
+  <div class="career-text">「ノマド政策家」として政策×イノベーションの架け橋となる活動。地方と中央をつなぐ。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=cehub.jp/wp-content/uploads/2022/06/284489096_1504727776628804_7748598899849737081_n-e1655781790342-220x220.png" class="photo" alt="北原 宏和" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">北原 宏和
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">Archetype Ventures</div>
+      <div class="card-role">Partner</div>
+      
+      <div class="card-meta">🎓 東京大学法学部卒、カーネギーメロン大学ハインツカレッジ（公共政策・情報管理）修了、南カリフォルニア大学グールド法科大学院修了</div>
+    </div>
+  </div>
+  <div class="career-text">スタートアップ特化のベンチャーキャピタリスト。DeepTech・AI・B2B SaaSへの投資。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #27ae60">
+  <span class="mbadge" style="background:#27ae60">🟢 前野さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：B2B / SaaS</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI / スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=images.wantedly.com/i/5DC89W5" class="photo" alt="仙石 裕明" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">仙石 裕明
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">マイクロベース株式会社</div>
+      <div class="card-role">代表取締役</div>
+      <div class="card-meta">📍 岐阜県（推定）</div>
+      <div class="card-meta">🎓 慶應義塾大学環境情報学部卒（2009年）、東京大学大学院新領域創成科学研究科博士（2014年）</div>
+    </div>
+  </div>
+  <div class="career-text">脱炭素・エネルギーマネジメントのスタートアップ代表。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=www.technologyreview.jp/wp-content/uploads/sites/2/2022/11/41c03da182e679ca293a17c73f4c92fc.jpg" class="photo" alt="岩本 卓也" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">岩本 卓也
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社Polyuse</div>
+      <div class="card-role">代表取締役</div>
+      <div class="card-meta">📍 大阪府</div>
+      <div class="card-meta">🎓 信州大学理学部卒、一橋大学大学院商学研究科MBA修了</div>
+    </div>
+  </div>
+  <div class="career-text">建設業向け3Dコンクリートプリンティングスタートアップ。ディープテック起業家。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：スタートアップ</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/0c8d73d5ac4fb7a5e1571a4d7f71468b-1.png" class="photo" alt="阿部 吉倫" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">阿部 吉倫
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">Ubie株式会社</div>
+      <div class="card-role">共同代表取締役CEO / 医師</div>
+      <div class="card-meta">📍 大阪府</div>
+      <div class="card-meta">🎓 医師免許保有</div>
+    </div>
+  </div>
+  <div class="career-text">AI医療プラットフォームUbieの共同代表。医師×起業家。厚労省・デジタル庁との連携実績多数。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e74c3c">
+  <span class="mbadge" style="background:#e74c3c">🔴 相川さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：AI</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="A">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/18b4405a7d7a2df7a0ebcf1a2ca39c88-1.png" class="photo" alt="鈴木 宏和" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">鈴木 宏和
+        <span class="pri-badge" style="background:#e74c3c">優先度A</span>
+      </div>
+      <div class="card-org">株式会社グラファー</div>
+      <div class="card-role">Govtechストラテジスト</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">グラファー（自治体DXプラットフォームGraffer）のGovtechストラテジスト。行政手続きデジタル化・自治体DXのエバンジェリスト。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/ca274b60491cf8bcdb0b4788bec307a4-1.png" class="photo" alt="篠崎 亮" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">篠崎 亮
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">PwCコンサルティング合同会社</div>
+      <div class="card-role">ディレクター</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">PwCコンサルティングのディレクター。官民共創・行政DXコンサルを専門。自治体・省庁への大型DXプロジェクトを多数手がける。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：コンサル / DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/573333d77f5fe241ba1aab9cfff2b314.png" class="photo" alt="中村 勇太" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">中村 勇太
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">マカイラ株式会社</div>
+      <div class="card-role">ディレクター</div>
+      <div class="card-meta">📍 東京都武蔵野市</div>
+      
+    </div>
+  </div>
+  <div class="career-text">マカイラのディレクター。高橋朗COOの右腕として政府・政治家との対話支援を実務担当。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/05/28469b5422cfc2ac49f104f9bf16366a-1.png" class="photo" alt="片山 敏宏" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">片山 敏宏
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">成田国際空港株式会社</div>
+      <div class="card-role">上席執行役員</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">成田国際空港の上席執行役員。空港インフラの大型組織での会議・意思決定プロセスを統括。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/cb03c94720721f3e2ef05c177973e74d-300x300-1.png" class="photo" alt="石川 貴之" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">石川 貴之
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社日建設計</div>
+      <div class="card-role">上席理事</div>
+      
+      <div class="card-meta">🎓 九州大学大学院工学研究科建築学専攻修士課程修了（推定1985年頃）</div>
+    </div>
+  </div>
+  <div class="career-text">日建設計（日本最大手の設計事務所）の上席理事。大規模都市開発・建築プロジェクトのマネジメント。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/a61ea940d4327b94115bc63020c131be.png" class="photo" alt="藤森 健至" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">藤森 健至
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">三越伊勢丹ビジネス・サポート株式会社</div>
+      <div class="card-role">代表取締役社長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">三越伊勢丹ビジネス・サポートの代表取締役。三越伊勢丹グループのビジネスサポート・DX推進を担当。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/a4f56d6d8cd43c1b21596e5188a5c283-300x300-1.png" class="photo" alt="野村 哲" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">野村 哲
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社日建設計</div>
+      <div class="card-role">都市デザイン部部長</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">日建設計の都市デザイン部長。都市計画・まちづくり・官民連携プロジェクトを担当。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/335ffd95ae6ad2774959d7a80fb562c0-300x300-1.jpg" class="photo" alt="秋田 大介" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">秋田 大介
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社イマゴト</div>
+      <div class="card-role">代表取締役</div>
+      <div class="card-meta">📍 兵庫県高砂市</div>
+      <div class="card-meta">🎓 大阪大学工学部環境工学科卒（2000年頃）、大学院工学研究科修士修了、京都芸術大学大学院修了</div>
+    </div>
+  </div>
+  <div class="career-text">官民共創・社会起業の支援会社イマゴトの代表取締役。地域社会課題の解決を官民連携でサポート。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：社会課題</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/fed0d8a14539951fd79f89dc25d8befb-300x300-1.png" class="photo" alt="晝田 浩一郎" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">晝田 浩一郎
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社官民連携事業研究所</div>
+      <div class="card-role">執行役員CCO</div>
+      <div class="card-meta">📍 三重県志摩市</div>
+      <div class="card-meta">🎓 青山学院大学経済学部卒（2010年）</div>
+    </div>
+  </div>
+  <div class="career-text">官民連携事業研究所の執行役員CCO。鷲見英利代表取締役（No.26）の右腕として官民連携コミュニティを運営。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>📍 同じ出身地（三重）</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/1d87500a2185fdad721fb67f941aebd8-300x300-1-1.png" class="photo" alt="木曽原 和之" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">木曽原 和之
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">株式会社トモノカイ</div>
+      <div class="card-role">執行役員</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">トモノカイ（学生×社会をつなぐコミュニティプラットフォーム）の執行役員。若者の官民共創・キャリア支援を推進。</div>
+  <div class="connections"><p class="no-conn">共通点なし（新規開拓）</p></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/6cc19c002a14384c43681052cd7c6cf3-1-300x300-1.png" class="photo" alt="原田 信也" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">原田 信也
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">株式会社丸井グループ</div>
+      <div class="card-role">人事部長</div>
+      
+      <div class="card-meta">🎓 法政大学卒（学部不明）</div>
+    </div>
+  </div>
+  <div class="career-text">丸井グループの人事部長。大手小売グループの人事・組織開発・採用・DXを担当。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #9b59b6">
+  <span class="mbadge" style="background:#9b59b6">🟣 堀さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：採用</li></ul>
+</div>
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="C">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/4-1.png" class="photo" alt="江良 泉" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">江良 泉
+        <span class="pri-badge" style="background:#95a5a6">優先度C</span>
+      </div>
+      <div class="card-org">東京共同会計事務所</div>
+      <div class="card-role">部長 公認会計士</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">東京共同会計事務所の部長・公認会計士。官民連携・PPP/PFI事業の会計・財務アドバイスを専門。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #e67e22">
+  <span class="mbadge" style="background:#e67e22">🟠 竹内さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：財務</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/4.png" class="photo" alt="岸 功" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">岸 功
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">株式会社日立製作所</div>
+      <div class="card-role">チーフビジネスプロデューサー</div>
+      
+      
+    </div>
+  </div>
+  <div class="career-text">日立製作所のチーフビジネスプロデューサー。Social Innovation事業・官民連携案件を担当。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div>
+<div class="card" data-cat="minkan" data-priority="B">
+  <div class="card-header">
+    <img src="https://wsrv.nl/?url=publink.site/wp-content/uploads/2026/04/2.png" class="photo" alt="松尾 真里" loading="lazy">
+    <div class="card-info">
+      <div class="card-name">松尾 真里
+        <span class="pri-badge" style="background:#e67e22">優先度B</span>
+      </div>
+      <div class="card-org">SHE株式会社（SHElikes）</div>
+      <div class="card-role">CEO室長</div>
+      
+      <div class="card-meta">🎓 九州大学農学部卒（2016年）</div>
+    </div>
+  </div>
+  <div class="career-text">女性向けキャリアスクールSHElikesを運営するSHEのCEO室長。女性活躍推進・キャリアDXを推進。</div>
+  <div class="connections">
+<div class="member-badge" style="border-left:3px solid #2980b9">
+  <span class="mbadge" style="background:#2980b9">🔵 佐伯さん</span>
+  <ul class="conn-list"><li>💼 共通キーワード：DX</li></ul>
+</div></div>
+</div></div>
+</main>
+<script>
+function filterAll() {
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('hidden'));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+function filterPri(p) {
+  document.querySelectorAll('.card').forEach(c => {
+    c.classList.toggle('hidden', c.dataset.priority !== p);
+  });
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+function filterMember(id) {
+  document.querySelectorAll('.card').forEach(c => {
+    const hasMember = c.querySelector(`.member-badge`) !== null &&
+      Array.from(c.querySelectorAll('.member-badge')).some(b => {
+        // check if this badge belongs to the member
+        return b.innerHTML.includes(id === 'aikawa' ? '相川' :
+               id === 'hori' ? '堀' :
+               id === 'saeki' ? '佐伯' :
+               id === 'maeno' ? '前野' : '竹内');
+      });
+    c.classList.toggle('hidden', !hasMember);
+  });
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
