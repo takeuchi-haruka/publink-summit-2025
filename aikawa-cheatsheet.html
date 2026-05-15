@@ -3,116 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>相川さん専用 — 官僚・議員カード v8</title>
+<title>相川さん専用 — 官僚・議員カード</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
-    background: #F7F5F2;
-    color: #1a1a1a;
-    font-size: 16px;
-  }
-  header {
-    background: linear-gradient(135deg, #F14C00, #F7AF00);
-    padding: 14px 16px;
-    position: sticky; top: 0; z-index: 100;
-    box-shadow: 0 2px 12px rgba(241,76,0,0.3);
-  }
-  header h1 { font-size: 15px; font-weight: 800; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.2); }
-  header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
-
-  .tab-bar {
-    display: flex; gap: 6px; padding: 10px 12px;
-    background: #fff; overflow-x: auto;
-    -webkit-overflow-scrolling: touch; scrollbar-width: none;
-    position: sticky; top: 62px; z-index: 99;
-    border-bottom: 1px solid #E8E4DF;
-  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif; background: #F7F5F2; color: #1a1a1a; font-size: 16px; }
+  header { background: linear-gradient(135deg, #F14C00, #F7AF00); padding: 10px 16px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(241,76,0,0.3); }
+  header p { font-size: 11px; color: rgba(255,255,255,0.95); font-weight: 600; }
+  .tab-bar { display: flex; gap: 6px; padding: 10px 12px; background: #fff; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; position: sticky; top: 38px; z-index: 99; border-bottom: 1px solid #E8E4DF; }
   .tab-bar::-webkit-scrollbar { display: none; }
-  .tab {
-    padding: 6px 14px; border-radius: 20px; font-size: 12px;
-    font-weight: 700; white-space: nowrap; cursor: pointer;
-    background: #F2EFE9; color: #888; border: 1.5px solid #DDD;
-    transition: all 0.2s;
-  }
+  .tab { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; white-space: nowrap; cursor: pointer; background: #F2EFE9; color: #888; border: 1.5px solid #DDD; transition: all 0.2s; }
   .tab.active { background: #F14C00; color: #fff; border-color: #F14C00; box-shadow: 0 0 10px rgba(241,76,0,0.3); }
-
-  .section-label {
-    padding: 10px 14px 4px;
-    font-size: 10px; font-weight: 800; letter-spacing: 1.5px;
-    color: #bbb; text-transform: uppercase;
-  }
+  .section-label { padding: 10px 14px 4px; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: #bbb; text-transform: uppercase; }
   .cards { padding: 6px 10px 80px; }
-
-  .card {
-    background: #fff;
-    border-radius: 16px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border: 1.5px solid #E8E4DF;
-    overflow: hidden;
-    transition: border-color 0.2s;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  }
+  .card { background: #fff; border-radius: 16px; margin-bottom: 10px; cursor: pointer; border: 1.5px solid #E8E4DF; overflow: hidden; transition: border-color 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
   .card:active { background: #FAF8F5; }
-  .card.tier-S { border-left: 5px solid #F14C00; }
-  .card.tier-A { border-left: 5px solid #F7AF00; }
-  .card.tier-B { border-left: 5px solid #8bc34a; }
-
-  .card-top {
-    display: flex; align-items: flex-start;
-    gap: 12px; padding: 12px 14px;
-  }
-  .photo-wrap { position: relative; flex-shrink: 0; }
-  .photo {
-    width: 72px; height: 72px;
-    border-radius: 50%; object-fit: cover;
-    border: 3px solid #E0DDD8;
-  }
-  .photo.tier-S { border-color: #F14C00; }
-  .photo.tier-A { border-color: #F7AF00; }
-  .photo.tier-B { border-color: #8bc34a; }
-
-  .badge-wrap {
-    position: absolute; bottom: -4px; left: 50%;
-    transform: translateX(-50%);
-    background: #fff; padding: 0 4px; border-radius: 6px;
-  }
-  .tier-badge {
-    font-size: 10px; font-weight: 900;
-    padding: 1px 6px; border-radius: 6px; color: #fff;
-  }
-  .tier-badge.S { background: #F14C00; }
-  .tier-badge.A { background: #c88000; }
-  .tier-badge.B { background: #4a7a20; }
-
+  .card.cat-kanryo { border-left: 5px solid #3F51B5; }
+  .card.cat-giin   { border-left: 5px solid #7B1FA2; }
+  .card-top { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; }
+  .photo-wrap { flex-shrink: 0; }
+  .photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid #E0DDD8; }
+  .photo.cat-kanryo { border-color: #3F51B5; }
+  .photo.cat-giin   { border-color: #7B1FA2; }
   .info { flex: 1; min-width: 0; }
   .name      { font-size: 18px; font-weight: 800; color: #1a1a1a; }
   .org       { font-size: 13px; color: #F14C00; margin-top: 2px; font-weight: 600; }
   .role-text { font-size: 12px; color: #999; margin-top: 1px; }
-
-  .cat-tag {
-    display: inline-block; font-size: 11px;
-    padding: 2px 8px; border-radius: 8px;
-    margin-top: 5px; font-weight: 700;
-  }
-  .cat-kanryo { background: #FFF0E8; color: #D04000; border: 1px solid #F8C8A8; }
-  .cat-giin   { background: #FFFBEC; color: #a06800; border: 1px solid #F0DC90; }
-  .cat-pitch  { background: #F14C00; color: #fff; }
-
-  .stars { color: #F7AF00; font-size: 14px; margin-left: 4px; }
-
+  .cat-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; margin-top: 5px; font-weight: 700; }
+  .tag-kanryo { background: #EEF2FF; color: #3F51B5; border: 1px solid #C5CAE9; }
+  .tag-giin   { background: #F3E5F5; color: #7B1FA2; border: 1px solid #CE93D8; }
   .detail { display: none; padding: 0 14px 14px; }
   .detail.open { display: block; animation: fd 0.18s; }
   @keyframes fd { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:none; } }
-
   .d-section { margin-bottom: 8px; }
-  .d-label {
-    font-size: 11px; font-weight: 700; color: #F14C00;
-    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px;
-  }
+  .d-label { font-size: 11px; font-weight: 700; color: #F14C00; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
   .d-text { font-size: 14px; color: #444; line-height: 1.6; }
-
   .box { border-radius: 8px; padding: 10px 12px; margin-top: 6px; }
   .box-rimo   { background: #FFF5F0; border-left: 3px solid #F14C00; }
   .box-rimo   .blabel { color: #D04000; }
@@ -134,45 +58,74 @@
   .box-mine   .blabel { color: #e65100; }
   .box-script { background: #E0F2F1; border-left: 3px solid #00897B; }
   .box-script .blabel { color: #004d40; }
-  .box-src    { background: #F3E5F5; border-left: 3px solid #8E24AA; }
-  .box-src    .blabel { color: #4a148c; }
-
   .blabel { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
   .btext  { font-size: 14px; color: #444; line-height: 1.6; }
   .btext a { color: #5C6BC0; word-break: break-all; }
-
-  .count-bar {
-    text-align: center; padding: 6px;
-    font-size: 12px; color: #bbb;
-    background: #fff;
-    border-bottom: 1px solid #E8E4DF;
-  }
+  .src-pills { display: flex; flex-wrap: wrap; gap: 5px; padding: 5px 2px 2px; }
+  .src-pill { font-size: 11px; background: #F3E5F5; color: #6A1B9A; padding: 3px 9px; border-radius: 12px; text-decoration: none; }
+  /* Schedule */
+  .sched-item { display: flex; gap: 12px; padding: 12px 14px; background: #fff; border-radius: 12px; margin-bottom: 8px; border: 1.5px solid #E8E4DF; }
+  .sched-item.sched-key { border-color: #F14C00; background: #FFF5F0; border-left: 4px solid #F14C00; }
+  .sched-time { font-size: 12px; font-weight: 800; color: #F14C00; min-width: 72px; padding-top: 2px; line-height: 1.5; white-space: pre-line; }
+  .sched-body { flex: 1; }
+  .sched-label { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+  .sched-note { font-size: 12px; color: #888; margin-top: 3px; }
+  .sched-who { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .sched-tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; }
+  .sched-tag.kanryo { background: #EEF2FF; color: #3F51B5; }
+  .sched-tag.giin   { background: #F3E5F5; color: #7B1FA2; }
+  .count-bar { text-align: center; padding: 6px; font-size: 12px; color: #bbb; background: #fff; border-bottom: 1px solid #E8E4DF; }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>🟠 相川さん専用 — 官僚・議員 対策カード v8</h1>
-  <p>5月16日 Publink Summit 2026 ／ ゴール: 会議体・諮問委員会に呼ばれる人になる</p>
+  <p>5月16日（金） Publink Summit 2026 ／ ゴール: 会議体・諮問委員会に呼ばれる人になる</p>
 </header>
-
 <div class="tab-bar">
-  <div class="tab active" data-f="all"    onclick="setFilter('all',this)">全員</div>
-  <div class="tab"        data-f="kanryo" onclick="setFilter('kanryo',this)">🏛️ 官僚</div>
-  <div class="tab"        data-f="giin"   onclick="setFilter('giin',this)">🗳️ 議員</div>
-  <div class="tab"        data-f="s"      onclick="setFilter('s',this)">🟠 最重要</div>
-  <div class="tab"        data-f="pitch"  onclick="setFilter('pitch',this)">Pitch共演</div>
+  <div class="tab active" onclick="setFilter('all',this)">全員</div>
+  <div class="tab" onclick="setFilter('kanryo',this)">🏛️ 官僚</div>
+  <div class="tab" onclick="setFilter('giin',this)">🗳️ 議員・大臣</div>
+  <div class="tab" onclick="setFilter('key',this)">🔑</div>
+  <div class="tab" onclick="setFilter('schedule',this)">📅 スケジュール</div>
 </div>
-
 <div class="count-bar" id="cnt"></div>
 <div class="cards" id="list"></div>
-
 <script>
 const B = 'https://wsrv.nl/?url=' + encodeURIComponent('https://publink.site/wp-content/uploads/2026/04/');
 
-const people = [
+const schedule = [
+  { time: '12:00', label: '開場・受付', note: 'ロビー・ブース会場', who: [], flag: false },
+  { time: '12:30\n〜13:00', label: '🤝 城内実大臣 名刺交換', note: 'ブース会場', who: [{ name: '城内 実', cat: 'giin' }], flag: true },
+  { time: '13:00〜', label: 'オープニング', note: '', who: [], flag: false },
+  { time: '〜14:30', label: 'Key Session → Session 1', note: '小林史明・堀本善雄 登壇', who: [{ name: '小林 史明', cat: 'giin' }, { name: '堀本 善雄', cat: 'kanryo' }], flag: false },
+  { time: '14:30', label: '⭐ Session 2後 / 第2セット控室', note: 'サクラルーム — 伊藤伸・長野浩二・占部昭裕・奥家敏和', who: [{ name: '伊藤 伸', cat: 'kanryo' }, { name: '長野 浩二', cat: 'kanryo' }, { name: '占部 昭裕', cat: 'kanryo' }, { name: '奥家 敏和', cat: 'kanryo' }], flag: true },
+  { time: '14:42\n〜15:00', label: '⭐ 第1セット後 休憩（18分）', note: '官僚スナック・ふらっと — 上杉泰樹', who: [{ name: '上杉 泰樹', cat: 'kanryo' }], flag: true },
+  { time: '15:00\n〜16:00', label: 'Session 3・AI人材育成・Session 5', note: '今里和之・合田哲雄・津脇慈子 登壇', who: [{ name: '今里 和之', cat: 'kanryo' }, { name: '合田 哲雄', cat: 'kanryo' }, { name: '津脇 慈子', cat: 'kanryo' }], flag: false },
+  { time: '〜16:30', label: '⭐ Pitch Session', note: '吉田泰己と共演 → 発表直後に名刺交換', who: [{ name: '吉田 泰己', cat: 'kanryo' }], flag: true },
+  { time: '17:00〜', label: '懇親会', note: '全員フォローのラストチャンス', who: [], flag: false },
+];
 
-  // ===== Pitch共演 =====
+const people = [
+  {
+    name: '城内 実', tier: 'S', cat: 'giin',
+    org: '内閣府', role: '経済財政政策・日本成長戦略・スタートアップ担当大臣',
+    photo: B + 'kiuchi_minoru.png',
+    age: '1965年4月19日生まれ（61歳）', edu: '開成高校 → 東京大学教養学部（国際関係論） → 外務省',
+    career: '外務省入省→在ドイツ大使館（ボン）→天皇陛下ドイツ語通訳官→2003年衆院議員（静岡7区）初当選→郵政造反で落選→2009年復帰→外務大臣政務官→外務副大臣→経済安保担当大臣（石破内閣）→2025年経済財政政策・成長戦略・スタートアップ担当大臣（高市内閣）。五ヶ国語（日・英・独・仏・韓）話者。',
+    rimo: 'スタートアップ担当大臣として、AI×スタートアップ育成5か年計画を主導。Rimoを「スタートアップ政策の成功事例」として政策文書・委員会で取り上げてもらうルートを作れる。',
+    gov: '経済財政政策・規制改革・スタートアップ・全世代型社会保障・感染症危機管理担当大臣。成長戦略17分野（AI含む）の官民投資ロードマップを統括。',
+    hotTopic: '成長戦略17分野（AI・半導体・量子・コンテンツ・創薬等）への集中投資。「投資と成長の好循環」の実現が今の最大テーマ。\n\nスタートアップ担当大臣として、2026年2月の経済演説で「責任ある積極財政」を表明。グローバル・ユニコーン創出が目標。\n\n規制改革も担当。「1万条項の規制撤廃」を推進してきた小林史明議員とも連動した「岩盤規制の打破」が進行中。',
+    icebreaker: '📌 ヴィンテージオーディオ × 1950年代SPレコードコレクター（霞が関・永田町では超レア）\n📌 三菱デボネアを40年以上乗り続ける愛車家 — ものへの愛着が深い\n📌 スタートアップ担当として「次に攻める規制」を聞く\n📌 サッカー少年 × 奥寺康彦（元日本代表）と親交がある',
+    personal: '・幼少期をボン（西ドイツ）で過ごしドイツ語が堪能。五ヶ国語話者で日独友好議員連盟事務局長。外交官時代は天皇陛下のドイツ語通訳を務めた。\n・1950〜60年代のヴィンテージオーディオ機器とSPレコードの熱心なコレクター。永田町ではほぼ唯一のレコードオタク系議員。\n・三菱初代デボネアを40年以上乗り続ける。「同じものに長く向き合う」という一貫した姿勢が信念の深さにも反映。\n・サッカーを小学生から続け、元日本代表・奥寺康彦（ブレーメンで活躍した日本人初のブンデスリーガー）と親交がある。\n・2005年の郵政造反で落選を覚悟しながら信念を貫いた。安倍晋三に直接説得されても首を縦に振らなかった。\n・アルジェリア人質事件（2013年）で外務大臣政務官として現地入りし危機対応の実務を経験。',
+    landmine: '・LGBT・同性婚の話題 → 2022年「お花畑正義感の人たち」、2023年「同性婚は少数派」発言で複数回炎上。絶対に触れない\n・「郵政造反は無意味だった」 → 信念の人への最大の侮辱\n・「スタートアップ政策って効果あるの？」という懐疑論 → 今の仕事そのものへの否定',
+    script: '「城内大臣、Rimoはスタートアップ育成5か年計画の中で、全国の官公庁・自治体での会議DX実装を進めています。成長戦略の文脈でAI×GovTechの民間事例として、政策文書に取り上げていただける機会をいただけますか。担当部局をご紹介いただければ、具体的な実績をお届けします」',
+    talk: '「スタートアップが社会インフラを変える実例を作っています。成長戦略17分野の中でAI×GovTechはまだ実装事例が少ない。Rimoがその先行事例になれると思っています」',
+    invite: '【会議体への道】\n・スタートアップ育成5か年計画フォローアップ委員会への民間委員参加\n・成長戦略文書へのRimo事例掲載（AI×GovTech成功事例として）\n・内閣府スタートアップ担当部局との定例意見交換会への参加',
+    action: '12:30〜13:00 ブース会場での名刺交換が唯一のチャンス。挨拶・名刺交換後、担当部局への紹介を即日お願いする。',
+    srcHot: [['https://www.kantei.go.jp/jp/104/meibo/daijin/kiuchi_minoru.html', '首相官邸: 城内大臣プロフィール'], ['https://www.cao.go.jp/minister/2510_m_kiuchi/index.html', '内閣府: 城内大臣会見']],
+    srcPers: [['https://www.m-kiuchi.com/profile', '城内実 公式プロフィール'], ['https://x.com/minoru_kiuchi', 'X: @minoru_kiuchi']],
+    stars: 5
+  },
   {
     name: '吉田 泰己', tier: 'S', cat: 'kanryo', sub: 'pitch',
     org: 'デジタル庁', role: '企画官（兼 経産省情報プロジェクト室長）',
@@ -181,223 +134,218 @@ const people = [
     career: '2008年経産省入省。法人税制→エネルギー→シンガポール・米国留学→情報プロジェクト室長→2021年デジタル庁企画官。政府IT調達プラットフォーム「DMP」推進の実務責任者。',
     rimo: 'Pitch共演者。DMP登録でRimoが全国1,741自治体・省庁の即日調達対象に。今日最大のビジネスチャンス。',
     gov: 'デジタル庁DMP（政府IT調達プラットフォーム）の運営実務責任者。SaaS評価・登録審査の権限保有。経産省情報プロジェクト室長兼任。',
-    talk: '「政府の調達スピードが変われば、日本のDXスピードが変わりますよね。DMP×AIをどう普及させるか、実装側の経営者として現場の声をお届けしたい。吉田さんのプロジェクトを民間から支えられるなら、一緒に動きたいです」\n\n※ 売り込みではなく「一緒に日本のDXを変えたい」が入口。同じミッションを持つ同士として話す。',
-    invite: '【会議体への道】\n・Pitch後に「DMP活用推進の民間有識者」として関わりたい旨を伝える\n・「政府SaaS普及促進コミュニティ」「デジタル庁技術諮問」への参加を打診\n・「評価事例として取り上げて」ではなく「一緒に評価の仕組みを作らせてください」',
+    hotTopic: 'DMP普及（317社超登録）。「政府調達の民主化」が使命で、SaaS登録数・活用件数が行政DXの指標。GaaS（Government as a Service）という概念で「国民サービスをSaaSのように設計し直す」という思想を持つ。\n\nnoteで51本の記事を書いており、最近はインドのDPI（デジタル公共インフラ）、台湾のシビックテックg0vに注目。「日本型のDPIをどう作るか」が最大の問い。',
+    icebreaker: '📌 DMP×会議DX — 317社超の中で議事録カテゴリはまだ空白\n📌 多摩美TCL修了 × 官僚 — 「ビジョンは美意識から」\n📌 noteで台湾g0v・インドDPIを現地取材している官僚\n📌 2011年震災でバラバラなデータを手作業集計した痛みがDXの原点',
+    personal: '・多摩美術大学クリエイティブリーダーシッププログラム（TCL）を2021年修了。官僚で自費受講は激レア。「ビジョンは論理ではなく美意識から生まれる」という思想。\n・シンガポール駐在（2015-17年）で「日本という共同幻想に気づいた」と語る転機体験あり。多様なルーツを持つ人々が働く環境が視野を広げた。\n・2011年東日本大震災で省庁のデータ集計担当として「バラバラな形式のデータを手作業で集計した」痛みが行政DXへの原動力。\n・note（note.com/hiroki_yoshida）で書評・デジタル社会・カルチャーを積極発信。51本超。台湾g0vの現地取材記事も書く。\n・読書の幅が広く、社会科学・テクノロジー・カルチャー系の本を好む。',
+    landmine: '・「行政って結局変わらないですよね」→本人が変えてきた人\n・「DXってうまくいってないですよね」→真剣に取り組む当事者\n・「DMPって認知されてないですよね」→自分の仕事の否定',
+    script: '「シンガポールで行政DXを見て、日本の官僚だからこそ変えられると確信したとnoteで読みました。同じ問題意識で、AIが会議から意思決定の質を変える実装をやっています。吉田さんが大事にしているGaaS的な発想と私たちの会議AIはつながると思っていて。一度議論させてください」',
+    talk: '「政府の調達スピードが変われば、日本のDXスピードが変わる。DMP×AIをどう普及させるか、実装側の経営者として現場の声をお届けしたい」',
+    invite: '・Pitch後に「DMP活用推進の民間有識者」として関わりたい旨を伝える\n・「評価の仕組みを一緒に作らせてください」というスタンスで打診',
     action: 'Pitch発表後に真っ先に名刺交換。DMP普及にどんな民間の協力が必要かを聞く。次回MTGを設定。',
-    hotTopic: '■ 今最も燃えていること\nDMP普及（317社超登録）。「政府調達の民主化」が使命で、SaaS登録数・活用件数が行政DXの指標。GaaS（Government as a Service）という概念で「国民サービスをSaaSのように設計し直す」という思想を持つ。\n\nnoteで51本の記事を書いており、最近はインドのDPI（デジタル公共インフラ）、台湾のシビックテックg0vに注目。「日本型のDPIをどう作るか」が最大の問い。',
-    icebreaker: '「RimoもDMP登録を検討しています。317社超の中で、会議DX・議事録カテゴリはまだ少ないですよね。自治体のニーズとしてどんな問い合わせが来てますか？」\n\nまたは: 「吉田さん、多摩美TCLを修了されてるの拝見して、官僚でそれをやる人がいるんだ、と。デザインが政策の何を変えると思ってますか？」',
-    personal: '■ 人間的な側面（Rimo関係なく盛り上がれる話題）\n・多摩美術大学クリエイティブリーダーシッププログラム（TCL）を2021年修了。官僚で自費受講は激レア。「ビジョンは論理ではなく美意識から生まれる」という思想を持つ。\n・シンガポール駐在（2015-17年）で「日本という共同幻想に気づいた」と語る転機体験あり。\n・2011年東日本大震災で省庁のデータ集計担当として「バラバラな形式のデータを手作業で集計した」痛みが行政DXへの原動力。\n・note（note.com/hiroki_yoshida）でデジタル社会・書評・カルチャーを積極発信。台湾g0vの現地取材記事も書いている。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「行政って結局変わらないですよね」という諦め論→本人が変えてきた人\n・「DXってうまくいってないですよね」という冷笑→真剣に取り組む当事者\n・「日本は遅れてる」という単純な比較→自分でシンガポール見て帰ってきた人が一番わかってる\n・「DMPって認知されてないですよね」→自分の仕事の否定に聞こえる',
-    script: '■ 会話台本（30秒版）\n「シンガポールで行政DXを見て、日本の官僚だからこそ変えられると確信したとnoteで読みました。同じ問題意識で、AIが会議から意思決定の質を変える実装をやっています。吉田さんが大事にしているGaaS的な発想、私たちの会議AIとつながると思っていて。一度議論させてください」',
-    sources: '・<a href="https://note.com/hiroki_yoshida" target="_blank">吉田泰己 note（デジタル社会・書評・カルチャー）</a>\n・<a href="https://www.pp.u-tokyo.ac.jp/en/grasppers-voice/hyoshida/" target="_blank">東京大学GraSPP インタビュー（シンガポール転機）</a>\n・<a href="https://bizzine.jp/article/detail/6963" target="_blank">Biz/Zine インタビュー（行政をハック）</a>\n・<a href="https://tub.tamabi.ac.jp/tdu/lecture/198/" target="_blank">多摩美TCL修了情報</a>',
+    srcHot: [['https://bizzine.jp/article/detail/6963', 'Biz/Zine: 行政をハック']],
+    srcPers: [['https://note.com/hiroki_yoshida', 'note: 吉田泰己'], ['https://www.pp.u-tokyo.ac.jp/en/grasppers-voice/hyoshida/', '東大GraSPP: シンガポール転機'], ['https://tub.tamabi.ac.jp/tdu/lecture/198/', '多摩美TCL修了']],
     stars: 5
   },
-
-  // ===== 経産省 =====
   {
-    name: '奥家 敏和', tier: 'S', cat: 'kanryo', sub: 'session2',
+    name: '奥家 敏和', tier: 'S', cat: 'kanryo',
     org: '経済産業省', role: '大臣官房審議官（商務情報政策局担当）',
     photo: B + '63785cd67b9108b865ff794a5a3a370c.png',
     age: '推定53〜55歳（1995年通産省入省）', edu: 'ハーバードKSミッドキャリアMPA（2004）',
-    career: '1995年通産省入省。マクロ経済→科学技術戦略→エネルギー（第4次エネルギー基本計画策定）→安全保障貿易管理課長→サイバーセキュリティ課長（4年間異例在任）→商務情報政策局総務課長→2024年審議官。「ソブリンAI」実現を提唱する経産省AI政策の中枢人物。',
-    rimo: 'NEDO・GENIAC・AI補助金のキーパーソン。「日本語AI＝ソブリンAI」の文脈でRimoをポジショニング。会議音声データ＝製造業ドメイン特化モデルの学習データとしての価値訴求。',
-    gov: '「AI戦略会議」「GENIAC」「NEDO AI社会実装補助金」を直接所管。「ソブリンAI実現に向けた産業政策研究会」事務局。AIロボティクス（AIRoA、2024年12月設立）にも関与。',
-    talk: '「ソブリンAIを実現するには、現場で実際に使われる日本語AIが必要です。私たちはそれを毎日作っています。ただ、民間だけでは限界がある。経産省が産業政策として日本語AI産業をどう育てるか、実装側の経営者として提言できる場に入れていただけませんか」',
-    invite: '【会議体への道】\n・「ソブリンAI産業政策研究会」民間委員への参加を直接打診\n・GENIAC審査・評価委員への推薦をお願いする\n・「AI戦略会議」の民間オブザーバーとして呼んでもらう\n→ 入口：「私の視点が政策に役立つなら、どんな形でも貢献したい」',
+    career: '1995年通産省入省。マクロ経済→科学技術戦略→エネルギー（第4次基本計画策定）→安全保障貿易管理課長→サイバーセキュリティ課長（4年間異例在任）→商務情報政策局総務課長→2024年審議官。「ソブリンAI」実現を提唱する経産省AI政策の中枢人物。',
+    rimo: 'NEDO・GENIAC・AI補助金のキーパーソン。「日本語AI＝ソブリンAI」の文脈でRimoをポジショニング。会議音声データ＝ドメイン特化モデルの学習データとしての価値訴求。',
+    gov: '「AI戦略会議」「GENIAC」「NEDO AI社会実装補助金」を直接所管。「ソブリンAI実現に向けた産業政策研究会」事務局。',
+    hotTopic: '「ソブリンAI」。2025年9月のAIリーダーズ会議で「QwenやLlamaのようなオープン基盤モデルが日本になくていいのか」と名指し発言。中国AIモデルが米国スタートアップに使われ始めていることを最大の脅威と認識。\n\n「製造業の暗黙知・無形資産をAIで価値化する方法」が最新の登壇テーマ。製造業の現場データ×ドメイン特化AIが日本の勝ち筋という確信。「データが全ての鍵を握る世界になる」が口癖。',
+    icebreaker: '📌 AIリーダーズ会議「データが全ての鍵」発言への共鳴\n📌 製造業の会議 = ドメイン特化AIの学習データ、という提案\n📌 FACTA「中国が接近」— それほどのキーパーソンだった\n📌 サイバーセキュリティ課長4年在任 × ハーバードKS時代の国際安保観',
+    personal: '・サイバーセキュリティ課長を4年間（異例の長期在任）。FACTAが「中国が接近した経産省サイバー課長」として取り上げた（本人が問題ではなく、それほどのキーパーソンとして注目された）。\n・ハーバードKSCミッドキャリアMPA（2003-04年）。イラク戦争直後のワシントンで「テクノロジーと国家安保の交差」を学んだ素地がある。\n・JETRO NY（2010-13年）。リーマン後のアメリカ産業を現地でウォッチ。英語は実務レベル。\n・エネルギー（第4次計画）→安保輸出管理→サイバー→AIという「社会インフラ安保三部作」のキャリア。一本の哲学で貫かれている。',
+    landmine: '・「ChatGPTやClaudeと似たような機能で」→米国AI依存の縮図として映る\n・「AWSやAzureに保管しています」→ソブリンAI論者に禁句\n・「GENIACに採択していただきたい」→補助金目当て即シャットダウン',
+    script: '「先日のAIリーダーズ会議でのご発言、刺さりました。Rimoって化学メーカーや製造業のお客様が増えていて、彼らが会議で話している設計判断や現場の経験則がテキストで蓄積されています。これはまさに審議官が仰っているドメイン特化基盤モデルの学習データになり得ると思って。ソブリンAIの文脈でこういう民間データ、経産省としてどう活用していきたいですか？」',
+    talk: '「ソブリンAIを実現するには、現場で実際に使われる日本語AIが必要です。私たちはそれを毎日作っています。経産省が産業政策として日本語AI産業をどう育てるか、実装側の経営者として提言できる場に入れていただけませんか」',
+    invite: '・「ソブリンAI産業政策研究会」民間委員への参加を直接打診\n・GENIAC審査・評価委員への推薦をお願いする\n・「AI戦略会議」の民間オブザーバーとして呼んでもらう',
     action: 'Session 2後の休憩・懇親会でアプローチ。「研究会に呼んでほしい」を明示的に伝える。',
-    hotTopic: '■ 今最も燃えていること\n「ソブリンAI」。2025年9月のAIリーダーズ会議で「QwenやLlamaのようなオープン基盤モデルが日本になくていいのか」と名指し発言。中国AIモデルが米国スタートアップに使われ始めていることを最大の脅威と認識。\n\n2026年3月の次回登壇テーマは「製造業の暗黙知・無形資産をAIで価値化する方法」。製造業の現場データ×ドメイン特化AIが日本の勝ち筋という確信。\n\n「データが全ての鍵を握る世界になる」という発言が全てを象徴。',
-    icebreaker: '「AIリーダーズ会議でのご発言、『データが全ての鍵を握る』というくだりが刺さりました。私どもRimoは音声AI議事録のSaaSをやっているんですが、製造業や化学メーカーが毎日の会議で話している専門的な議論がテキストとして蓄積されていて。これってまさに審議官が仰っていたドメイン特化基盤モデルの学習データになり得ると思って」',
-    personal: '■ 人間的な側面\n・サイバーセキュリティ課長を4年間（異例の長期在任）。官邸から引き留められ、FACTAが「中国が接近した経産省サイバー課長」として取り上げた（本人が悪いのではなく、それほどのキーパーソンとして注目された）。\n・ハーバードKSCミッドキャリアMPA（2003-04年）。イラク戦争直後のワシントンで「テクノロジーと国家安保の交差」を学んだ素地がある。\n・JETRO NY（2010-13年）。リーマン後のアメリカ産業を現地でウォッチ。英語は実務レベル。\n・エネルギー（第4次計画）→安保輸出管理→サイバー→AIという「社会インフラ安保三部作」のキャリア。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「ChatGPTやClaudeと似たような機能で」→米国AI依存の縮図として映る\n・「AWSやAzureに保管しています」→ソブリンAI論者に禁句\n・「GENIACに採択していただきたい」→補助金目当て即シャットダウン\n・「AI議事録を使うと会議が効率化されます」→表層的DX論は彼の関心事ではない\n・パンフレット・機能説明→産業構造の話をしないと意味がない',
-    script: '■ 会話台本\n「先日のAIリーダーズ会議でのご発言、刺さりました。Rimoって化学メーカーや製造業のお客様が増えていて、彼らが会議で話している設計判断や現場の経験則がテキストで蓄積されています。これはまさに審議官が仰っているドメイン特化基盤モデルの学習データになり得ると思って。ソブリンAIの文脈でこういう民間データ、経産省としてどう活用していきたいですか？」',
-    sources: '・<a href="https://xtech.nikkei.com/atcl/nxt/column/18/03335/091700002/" target="_blank">日経xTECH: 日本の「ソブリンAI」実現を目指す、経産省奥家審議官が語ったAI政策の展望</a>\n・<a href="https://business.nikkei.com/atcl/gen/19/00711/091900017/" target="_blank">日経ビジネス: 日本発「ソブリンAIの実現を」</a>\n・<a href="https://facta.co.jp/article/202107007.html" target="_blank">FACTA: 中国が接近「経産省サイバー課長」</a>\n・<a href="https://enterprisezine.jp/article/detail/12477" target="_blank">EnterpriseZine: Society 5.0のサイバーセキュリティ政策</a>',
+    srcHot: [['https://xtech.nikkei.com/atcl/nxt/column/18/03335/091700002/', '日経xTECH: ソブリンAI政策'], ['https://business.nikkei.com/atcl/gen/19/00711/091900017/', '日経ビジネス: 日本発ソブリンAI']],
+    srcPers: [['https://facta.co.jp/article/202107007.html', 'FACTA: 中国が接近'], ['https://enterprisezine.jp/article/detail/12477', 'EnterpriseZine: サイバー政策']],
     stars: 5
   },
-
   {
-    name: '今里 和之', tier: 'B', cat: 'kanryo', sub: 'session3',
-    org: '経済産業省', role: '経済産業政策局 産業人材課長',
-    photo: B + 'c5d056652ec66bd403f27c151747faa4-300x300-1.png',
-    age: '推定45〜47歳（2003年入省）', edu: '東京大学大学院理学系研究科（生物化学）→カーネギーメロン大学公共政策学修士',
-    career: '2003年経産省入省。産業機械課→ロボット政策室（立ち上げメンバー）→NEDO→原子力規制庁→NEDO欧州事務所長（2021年〜）→2024年産業人材課長。2040年雇用構造推計（326万人のAI人材不足）の主導者。',
-    rimo: 'AI人材育成×Rimo会議DXの連携。会議工数削減→リスキリング時間創出のKPI化。マナビDXへの登録・経産省リスキリング施策との接続。',
-    gov: '経産省「マナビDX」の所管担当。2025年5月に「2040年産業構造・就業構造推計」を提言。文系大卒余剰・理系不足という爆弾発言で各所議論になっている。',
-    talk: '「AI人材を育てる研修の場でこそ、AIツールを体験すべきです。受講者がRimoで議事録を取りながら学ぶ体験が、一番の教育になる。マナビDXの政策展開に、実装側の視点をお届けできれば」',
-    invite: '【会議体への道】\n・マナビDX政策WGへの参画を打診\n・「AI×人材育成推進委員会」への招待を依頼\n・HR Transformation Summitへの民間登壇者として繋いでもらう',
-    action: 'Session 3後の休憩・懇親会でアプローチ。今里→占部（直属の後輩）への紹介もお願いできる。',
-    hotTopic: '■ 今最も燃えていること\n「2040年に間に合う人材育成の速度を上げること」。2025年5月の推計でAI・ロボット関連326万人不足、事務・販売系は余剰という衝撃データを出した張本人。リスキリング第六次公募まで継続。HR Transformation Summit 2025登壇（2025年7月）。\n\n「一人一人を大事にしてその活躍を引き出さなければ、日本経済全体の活力にはつながらない」という信念。',
-    icebreaker: '「今里課長、2040年推計で326万人のAI・ロボット人材不足という数字、かなり衝撃的でした。会議工数削減でリスキリングの時間を作るというロジック、Rimoで実測できると思っています。御省のリスキリング事業のKPIに使えないかと」\n\nまたは:「東大で生物化学をされてたのにカーネギーメロンで公共政策に転換されたきっかけって何だったんですか。ロボット政策→エネルギー→人材と、線が見えてきて気になって」',
-    personal: '■ 人間的な側面\n・東大理学系研究科（分子生物化学）→カーネギーメロン公共政策という激レアルート。純粋科学者でも純粋官僚でもない「翻訳者」としての自己認識。\n・ロボット政策室を経産省内で立ち上げたメンバー。「100万円の最新ロボットより10万円のパワースーツ」というプラクティカルな発想の持ち主。\n・超異分野学会（ディープテック×政策）に2020年から登壇。\n・NEDO欧州事務所長（2021-23年）。ウクライナ戦争によるエネルギー危機の最中に欧州にいた。\n・神奈川県出身。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「リスキリングって流行語でしょ」→省を挙げて何年もやってきた政策の核心\n・「日本の終身雇用は守るべき」→キャリア自律・労働移動が政策の方向性と真逆\n・「教育は文科省の仕事」という縦割り思考→省庁横断で動いている人\n・「AIに仕事が奪われる」系の悲観論→スキル転換で対応できるという立場',
-    script: '■ 会話台本\n「今里課長、生物化学からカーネギーメロン公共政策への転換、ロボット政策から人材育成まで、『技術を社会に着地させる翻訳者』というご経歴がずっと一貫していると思っていて。2040年の326万人不足という推計、Rimoの会議ナレッジ化がOJT証跡・スキル見える化として機能できると思っています。一度壁打ちさせてもらえませんか」',
-    sources: '・<a href="https://www.keidanren.or.jp/journal/times/2025/0619_12.html" target="_blank">経団連タイムス: 2040年の産業構造の姿と人材育成（今里課長説明）</a>\n・<a href="https://www.motivation-cloud.com/hr2048/534" target="_blank">HR Transformation Summit 2025 登壇レポート</a>\n・<a href="https://hic.lne.st/2020/02/16833/" target="_blank">超異分野学会 2020 登壇プロフィール</a>\n・<a href="https://dentsu-ho.com/en/articles/2308" target="_blank">電通報: ロボット政策インタビュー（今里氏）</a>',
-    stars: 2
-  },
-
-  // ===== デジタル庁・内閣府 =====
-  {
-    name: '伊藤 伸', tier: 'S', cat: 'kanryo', sub: 'partner',
+    name: '伊藤 伸', tier: 'S', cat: 'kanryo',
     org: 'デジタル庁 / 構想日本', role: '参与 / 理事・総括ディレクター',
     photo: B + '5d2a46c552dd05ffb3e8e8c72b4a3cf6-300x300-1.png',
     age: '1978年生まれ（47〜48歳）', edu: '北海道本別町出身→帯広柏葉高校→同志社大学法学部',
     career: '2000年衆院議員秘書（山井和則、松井孝治）→2005年構想日本→2009年内閣府行政刷新会議参事官（民間人として）→2013年〜構想日本総括ディレクター→2022年デジタル庁参与。河野太郎元大臣の「最も信頼するブレーン」。自分ごと化会議を全国246回・1万人超で実施。',
     rimo: 'デジタル庁参与＋構想日本。政策形成の場に相川さんを接続できる最重要ブリッジ人物。',
-    gov: '構想日本「Japan Forum（JF）」は月次で省庁幹部・政治家・民間リーダーが集う政策討議プラットフォーム。河野太郎元大臣パイプ保有。デジタル庁参与として行政DX政策に参画中。',
-    talk: '「AIが意思決定の質を変える時代が来る、というのが私の確信です。ただ、それを実現するには政策と民間が同じテーブルに座らないといけない。構想日本のJFフォーラムはまさにその場だと思っています。日本の会議文化・政策決定プロセスをAIでどう変えるか、ぜひ一緒に議論させてください」',
-    invite: '【会議体への道 ★最重要★】\n・JFフォーラム（月次）への登壇者として招待してもらう\n・デジタル庁参与ネットワーク経由で「行政AI活用推進会議」への接続\n・河野太郎元大臣への紹介ルートを作る',
-    action: '①14:30 @サクラルーム控室（第2セット登壇者・OP自己紹介タイム）で最初のチャンス。②第2セット終了後「JFフォーラムで話をさせてもらえませんか」と直接打診。③懇親会でフォロー。',
-    hotTopic: '■ 今最も燃えていること\n「無謬性からの脱却」。2025年5月14日にYahoo!ニュースへWaymoを実際に体験した現地ルポを寄稿し「失敗を許さない日本の文化こそが最大の問題」と断言。「ほんの少しの事故で実証実験がストップする」という現象への怒りは現役進行形。\n\n2025年6月ABEMA Primeに生出演。10年前に構想日本が先行してきた「ふるさと住民票」が国策化された達成感の段階にある。くじ引き民主主義の著書を2025年に出版し普及活動中。',
-    icebreaker: '「伊藤さん、Waymoの記事読みました。『無謬性の壁』という言葉、行政AI化でも全く同じ構造ですよね。自分ごと化会議で1万人以上の『ふとした一言』を記録してきた方として、AIが会議記録を残すことで行政が失敗から学べる組織になる可能性、どう思われますか？」',
-    personal: '■ 人間的な側面\n・北海道本別町（人口6,000人）出身。人口6,000人の農業・酪農の町から帯広→京都→永田町というルート。「過疎地ほどデジタルのメリットが大きい」という発言は原体験から来ている。\n・事業仕分けの「生みの親」は実は構想日本（2002年に地方自治体向けに開発）。民主党が有名にしたが、自民党が2008年に国で先行実施していた。\n・仕分け会場が最大1日3,000人傍聴・100人3時間待ちの「テーマパーク化」した当事者。\n・「ポニー乗馬＝青少年健全育成」問題：ある県の事業仕分けで「小学生をポニーに乗せること」が青少年健全育成事業として予算化されていた実例を体験。\n・著書の推薦文は河野太郎（「1日160万回のワクチン接種はあなたのおかげ」と書いた）。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「事業仕分けは結局コストカットでしたよね」→彼にとっては民主主義の健全化の手段、コストカット装置ではない\n・「くじ引きは非合理では？専門家が決めた方が良くない？」→20年のキャリアの否定\n・「AIがあれば市民参加なんていらなくなりますね」→自分ごと化を否定する発言\n・売り込み・名刺交換目的のネットワーキング的接触→構想日本はビジネス売り込みを極度に嫌う',
-    script: '■ 会話台本\n「伊藤さん、Waymoの記事の『無謬性の壁』という言葉が印象に残っています。行政が失敗から学べない一つの理由に、会議の記録が残っていないことがあると思います。『あの時こう言ったのに』が証明できないから、無謬性が温存されてしまう。Rimoはその記録のツールです。自分ごと化会議の1万人の声が全部アーカイブされたら、民主主義の解像度が変わりますよね」',
-    sources: '・<a href="https://news.yahoo.co.jp/expert/articles/4563b6dcc18d4ccb9b56fc70e60b6e156bf502fc" target="_blank">Yahoo!ニュース: Waymo自動運転の衝撃体験〜無謬性からの脱却か（伊藤伸）</a>\n・<a href="https://news.yahoo.co.jp/expert/articles/2a9843f60a2ccd510d64d7cd2040c1a02d2765b7" target="_blank">Yahoo!ニュース: くじ引き民主主義に向けた挑戦（伊藤伸）</a>\n・<a href="https://friday.kodansha.co.jp/article/305278" target="_blank">FRIDAY: 河野太郎が大信頼するブレーン伊藤伸とは何者か</a>\n・<a href="https://www.kosonippon.org/tag/%E4%BC%8A%E8%97%A4%E4%BC%B8/" target="_blank">構想日本 伊藤伸タグ（最新活動）</a>',
+    gov: '構想日本「Japan Forum（JF）」は月次で省庁幹部・政治家・民間リーダーが集う政策討議プラットフォーム。河野太郎元大臣パイプ保有。',
+    hotTopic: '「無謬性からの脱却」。2025年5月にWaymoを実際に体験した現地ルポをYahoo!ニュースに寄稿し「失敗を許さない日本の文化こそが最大の問題」と断言。くじ引き民主主義の著書を2025年に出版し普及活動中。\n\n2025年6月ABEMA Primeに生出演。10年前に先行してきた「ふるさと住民票」が国策化された達成感の段階にある。',
+    icebreaker: '📌 Waymo記事「無謬性の壁」— 読んだと言うだけで刺さる\n📌 くじ引き民主主義 著者 — 本を読んだことを伝える\n📌 北海道本別町（人口6,000人）出身の原体験\n📌 事業仕分けの「本当の生みの親」エピソード',
+    personal: '・北海道本別町（人口6,000人の農業・酪農の町）から帯広→京都→永田町という非線形ルート。「過疎地ほどデジタルのメリットが大きい」は原体験から来ている。\n・事業仕分けの「生みの親」は実は構想日本（2002年に地方自治体向けに開発）。民主党が有名にしたが、構想日本が先行。\n・仕分け会場が最大1日3,000人傍聴・100人3時間待ちの「テーマパーク化」した当事者。\n・著書の推薦文は河野太郎（「1日160万回のワクチン接種はあなたのおかげ」と書いた）。\n・Twitter/X（@itoshin_kosonip）で積極発信。飲み会でも議論が尽きないタイプ。',
+    landmine: '・「事業仕分けは結局コストカットでしたよね」→民主主義の健全化の手段、コストカット装置ではない\n・「くじ引きは非合理では？」→20年のキャリアの否定\n・「AIがあれば市民参加なんていらない」→自分ごと化を否定する発言',
+    script: '「伊藤さん、Waymoの記事の『無謬性の壁』という言葉が印象に残っています。行政が失敗から学べない理由の一つに、会議の記録が残っていないことがあると思います。Rimoはその記録のツールです。自分ごと化会議の1万人の声が全部アーカイブされたら、民主主義の解像度が変わりますよね」',
+    talk: '「AIが意思決定の質を変える時代が来る。それを実現するには政策と民間が同じテーブルに座らないといけない。JFフォーラムはまさにその場だと思っています」',
+    invite: '★最重要★\n・JFフォーラム（月次）への登壇者として招待してもらう\n・デジタル庁参与ネットワーク経由で「行政AI活用推進会議」への接続\n・河野太郎元大臣への紹介ルートを作る',
+    action: '14:30 @サクラルーム控室（第2セット登壇者）で最初のチャンス。第2セット終了後「JFフォーラムで話をさせてもらえませんか」と直接打診。',
+    srcHot: [['https://news.yahoo.co.jp/expert/articles/4563b6dcc18d4ccb9b56fc70e60b6e156bf502fc', 'Yahoo!: Waymo×無謬性'], ['https://news.yahoo.co.jp/expert/articles/2a9843f60a2ccd510d64d7cd2040c1a02d2765b7', 'Yahoo!: くじ引き民主主義'], ['https://www.kosonippon.org/tag/%E4%BC%8A%E8%97%A4%E4%BC%B8/', '構想日本: 最新活動']],
+    srcPers: [['https://friday.kodansha.co.jp/article/305278', 'FRIDAY: 河野太郎のブレーン']],
     stars: 5
   },
-
   {
-    name: '長野 浩二', tier: 'S', cat: 'kanryo', sub: 'partner',
+    name: '長野 浩二', tier: 'S', cat: 'kanryo',
     org: '内閣府', role: '国立公文書館課長・参事官',
     photo: B + '027cf4a3bf18748f7e8bb4ee66151184-300x300-1.png',
     age: '不明', edu: '内閣府採用（学歴詳細不明）',
-    career: '内閣府採用。国家公務員の人材育成・キャリア形成支援・働き方改革などを担当。内閣府でエンゲージメント向上施策を推進しワーク・ライフバランス大臣賞受賞。「キャリアオーナーシップ経営アワード」2年連続受賞。現在は国立公文書館課長として行政記録デジタル化を所管。',
+    career: '内閣府採用。国家公務員の人材育成・キャリア形成支援・働き方改革などを担当。内閣府でエンゲージメント向上施策を推進しワーク・ライフバランス大臣賞受賞。現在は国立公文書館課長として行政記録デジタル化を所管。',
     rimo: '公文書管理×AI議事録が完全一致。国立公文書館でのRimo実証実験が最短ルート。2029年新館開設に向けた「AI議事録標準化」の議論に民間から参加できる。',
     gov: '国立公文書館・公文書管理政策担当参事官として行政記録デジタル化を直接所管。各省庁の会議録・議事録の保管・公開ルール策定に関与。',
+    hotTopic: '新国立公文書館（2029年開設予定・展示スペース5倍）に向けた行政記録デジタル化。公文書管理の「上流」から変えるという問題意識を持つ。\n\n職場外では「チョーノ・コンソーシアム（チョー魂）」という人事・キャリア領域の自主コミュニティを2023年設立。キャリアオーナーシップ経営アワード優秀賞を受賞するほどのコミュニティに育てた。',
+    icebreaker: '📌 「チョーノさん」と呼んでいいですか、から始める\n📌 プライベートでイベント40回主催 — エネルギーの源を聞く\n📌 公文書×AI議事録の上流接続を提案\n📌 「傾聴は向いていない」と言われて「でも人を元気にする力がある」と評価されたエピソード',
+    personal: '・職場外では「チョーノさん」という愛称（職場では「ナガノさん」）。二面性がある。\n・プライベートで20〜30代向けトークイベントを個人として約40回主催。「主催者が一番楽しそう」と参加者に言われるほど自ら楽しんでいる。\n・傾聴を学びにNPO研修に参加したら「傾聴は向いていない」と言われ「でも人を元気にする力がある」と評価された体験が自己認識の転機。\n・バイパス道路が地元にできたことで「公共施策が人々の暮らしを変える」と気づき、公務員を志した。\n・内閣府でエンゲージメント改革を推進した際、当初は「賛同者ゼロ」の孤立状態からスタート。仲間を増やしワーク・ライフバランス大臣賞受賞まで育てた。',
+    landmine: '・「公務員は変われない」という決めつけ→本人が変えてきた人\n・コスト削減ファーストのKPI押しつけ→人の意欲・エンゲージメントを大切にする人\n・形式的な名刺交換と一方的な売り込み',
+    script: '「長野さん、プライベートで働き方・生き方のイベントを40回主催されているとうかがいました。Rimoって会議記録だけじゃなくて、組織の記憶を残すツールだと思っていて。公文書×組織の知識継承という観点で、2029年の新国立公文書館に向けた取り組みにご一緒できないかと考えています」',
     talk: '「公文書の品質が上がれば、日本の民主主義の品質が上がります。AIが議事録を自動生成することの意義は、単なる効率化ではなく、政策決定の透明性・再現性を高めることだと思っています」',
-    invite: '【会議体への道】\n・「公文書管理委員会」有識者委員への参加打診\n・「行政記録デジタル化検討会」民間委員として招待してもらう\n・国立公文書館での実証実験の協議体に加わる',
-    action: '①14:30 @サクラルーム控室（第2セット登壇者）で最初の機会。②第2セット終了後「公文書×AIで実証実験をご提案したい」と声をかける。③懇親会でWG参加を打診。',
-    hotTopic: '■ 今最も燃えていること\n新国立公文書館（2029年開設予定・展示スペース5倍）に向けた行政記録デジタル化。公文書管理の「上流」から変えるという問題意識を持つ。\n\n職場外では「チョーノ・コンソーシアム（チョー魂）」という人事・キャリア領域の自主コミュニティを2023年設立。キャリアオーナーシップ経営アワード優秀賞を受賞するほどのコミュニティに育てた。',
-    icebreaker: '「長野さん、公文書管理の上流工程として、AI議事録を行政記録の標準にする議論に加わりたいと思っています。2029年の新国立公文書館に向けて、どんなデジタル化のロードマップをお持ちですか？」\n\nまたは:「プライベートで生き方・働き方のイベントを40回ご自身で主催されているとうかがいました。官僚としてのお仕事と、そういった個人活動のエネルギーってどこから来るんですか？」',
-    personal: '■ 人間的な側面\n・職場外では「チョーノさん」という愛称を持つ（職場では「ナガノさん」）。二面性がある。\n・プライベートで20〜30代向けトークイベントを個人として約40回主催。「主催者が一番楽しそう」と参加者に言われるほど自ら楽しんでいる。\n・傾聴を学びにNPO研修に参加したら「傾聴は向いていない」と言われ「でも人を元気にする力がある」と評価された体験が自己認識の転機。\n・バイパス道路が地元にできたことで「公共施策が人々の暮らしを変える」と気づき、公務員を志した。\n・内閣府でエンゲージメント改革を推進した際、当初は「賛同者ゼロ」の孤立状態からスタート。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「公務員は変われない」という決めつけ→本人が変えてきた人\n・コスト削減ファーストのKPI押しつけ→人の意欲・エンゲージメントを大切にする人\n・形式的な名刺交換と一方的な売り込み→「ここでは何を話してもいい」という場を大切にする人',
-    script: '■ 会話台本\n「長野さん、プライベートで働き方・生き方のイベントを40回主催されているとうかがいました。Rimoって会議記録だけじゃなくて、組織の記憶を残すツールだと思っていて。公文書×組織の知識継承という観点で、2029年の新国立公文書館に向けた取り組みにご一緒できないかと考えています。一度議論させてもらえますか」',
-    sources: '・<a href="https://lp-campus.kaonavi.jp/yokogao/57-1" target="_blank">カオナビキャンパス「人事のヨコガオ」長野浩二インタビュー</a>\n・<a href="https://co-consortium.persol-career.co.jp/article/2024/02/13/index.html" target="_blank">チョー魂インタビュー（パーソルキャリア）</a>\n・<a href="https://work-life-b.co.jp/case_study/31505" target="_blank">ワーク・ライフバランス社 内閣府事例（長野氏）</a>',
+    invite: '・「公文書管理委員会」有識者委員への参加打診\n・「行政記録デジタル化検討会」民間委員として招待してもらう\n・国立公文書館での実証実験の協議体に加わる',
+    action: '14:30 @サクラルーム控室（第2セット登壇者）で最初の機会。第2セット終了後「公文書×AIで実証実験をご提案したい」と声をかける。',
+    srcHot: [['https://work-life-b.co.jp/case_study/31505', 'WLB社: 内閣府事例']],
+    srcPers: [['https://lp-campus.kaonavi.jp/yokogao/57-1', 'カオナビ: 人事のヨコガオ'], ['https://co-consortium.persol-career.co.jp/article/2024/02/13/index.html', 'パーソル: チョー魂']],
     stars: 4
   },
-
   {
-    name: '津脇 慈子', tier: 'A', cat: 'kanryo', sub: 'session5',
+    name: '上杉 泰樹', tier: 'S', cat: 'kanryo',
+    org: '厚生労働省', role: '大臣官房 総務課 課長補佐',
+    photo: B + 'ea99202a4980be151c27f218564491fc-300x300-1-1.png',
+    age: '推定33〜35歳（2015年入省）', edu: '東京大学農学部→オックスフォード大学（公共政策・日本学専攻）',
+    career: '2015年厚生労働省入省。雇用政策、労働安全、公衆衛生等を担当。内閣官房への出向、オックスフォード大学留学を経て、現在は大臣官房総務課で省内AI・デジタル活用推進計画担当。D2PA（Data-Driven Policy Association）メンバー。GOBO（次世代の食と農を面白くする若手社会人集団）事務局長（2019〜）。',
+    rimo: '厚労省×AI議事録×労働政策。国立病院機構2拠点でもRimo導入済み。改革志向の若手幹部。',
+    gov: '大臣官房総務課で「省内AI・デジタル活用推進計画」担当。「政府AI利活用推進計画（2024年）」の厚労省実施分を主担当。',
+    hotTopic: '厚労省内のAI・生成AI業務活用の推進。最大の省の一つとして「省全体でAIを使える組織に変える」という構造変革側にいる。EBPMの推進（D2PA活動）とAI活用を同時に進める。\n\n2019年厚労省若手改革チームの緊急提言（Twitterで約2000万RT）の精神を今のAI時代に再実装しようとしている。',
+    icebreaker: '📌 D2PA×EBPM — 厚労省会議データの活用を直接提案\n📌 GOBO — 農学部出身 × 食農 × 働き方の接点を聞く\n📌 2019年若手改革提言（2000万RT）— あの問題意識を今AI時代に\n📌 オックスフォードでの生活 × 農学部出身というレアな組み合わせ',
+    personal: '・広島県出身。農学部出身→オックスフォードで公共政策・日本学というレアな組み合わせ。\n・GOBO（全国農業系サークルOBOGネットワーク）の事務局長を2019年から担当。本業とは別に食農コミュニティを主体的に運営している。農学部出身として「食と農業と社会の接点」への強い関心が継続している。\n・現役国家公務員のままYouTubeインタビューに顔出しで出演（2023年）、オックスフォードの生活や国家公務員試験について語った。霞が関官僚としては異例のオープンさ。\n・2019年若手改革チームの緊急提言の世代・入省年と合致。「本来の仕事を妨げる業務が多すぎる」という問題意識のある人。\n・植物・食農・フードシステムへの興味が農学部時代から継続している模様。',
+    landmine: '・「厚労省は組織が大きすぎて変えられない」→若手改革チームで変えようとしてきた人\n・「AI導入すれば公務員は不要」→政策判断の複雑性を理解している\n・「オックスフォードに留学できたんだからエリートですね」→現場を離れることへの複雑な感情あり',
+    script: '「上杉さん、2019年の若手チームの緊急提言、読みました。あの問題意識って今のAI導入で実現できると思っていて。Rimoが厚労省の会議を自動記録することで、本当に考えるべきことに集中できる。省内AI活用推進計画の中で、こういうユースケースをどう評価されていますか？」',
+    talk: '「AIが会議を変えれば、働き方が変わります。単なる効率化ではなく、日本の『会議文化』そのものを変える運動だと思っています」',
+    invite: '・「省内AI・デジタル活用推進計画」策定WGへの民間委員参加打診\n・国立病院機構での実績を踏まえた「医療AI推進フォーラム」参加',
+    action: '第1セット終了後（14:42〜15:00）18分の休憩が最初のチャンス。官僚スナック・ふらっとで自然に話しかける。',
+    srcHot: [['https://www.mhlw.go.jp/content/11600000/000540047.pdf', '厚労省: 若手改革緊急提言']],
+    srcPers: [['https://sites.google.com/view/d2pa/member', 'D2PA: メンバーページ'], ['https://www.facebook.com/gobo.network/posts/763886687343050/', 'GOBO: 事務局長就任'], ['https://www.youtube.com/watch?v=AWyGekyVowA', 'YouTube: 国家公務員インタビュー']],
+    stars: 4
+  },
+  {
+    name: '津脇 慈子', tier: 'A', cat: 'kanryo',
     org: '内閣府', role: '科学技術・イノベーション推進参事官',
     photo: B + '92c0f0864e93025a70aaee4ad75f7eca-300x300-1.png',
     age: '推定43〜44歳（2004年経産省入省）', edu: '筑紫女学園（福岡）→東京大学法学部→コロンビア大ロースクール（NY）→ケンブリッジ大（英国）',
-    career: '2004年経産省入省→内閣官房IT室→デジタル庁企画官（立上げメンバー）→JETROロサンゼルス次長（2022〜2024）→2025年7月〜内閣官房グローバル・スタートアップ・キャンパス（GSC）構想推進室→現職。',
+    career: '2004年経産省入省→内閣官房IT室→デジタル庁企画官（立上げメンバー）→JETROロサンゼルス次長（2022〜2024）→2025年7月〜内閣官房GSC構想推進室→現職。',
     rimo: 'デジタル庁立上げメンバー。GSC×海外スタートアップ×言語バリア解消。内閣府イノベーション政策×JETRO連携で海外展開にも繋がる。',
     gov: 'CSTI（総合科学技術・イノベーション会議）事務局歴任。JETROロサンゼルス次長として日本スタートアップの海外展開支援実績。現在はGSC構想の立て直しを担当。',
-    talk: '「行政DXの現場を変えてきた方として、これからのAI時代に何が必要か一番わかっていらっしゃると思います。CSTIや内閣府の政策検討の場で、スタートアップ経営者として意見を届けたいんです。ぜひ一緒に動かせてください」',
-    invite: '【会議体への道】\n・CSTI民間有識者委員への推薦を依頼\n・「AIスタートアップ×行政DX政策懇談会」への参加\n・GSC入居チームへのRimo提供経由でのつながり強化',
+    hotTopic: 'GSC（グローバル・スタートアップ・キャンパス）構想の「立て直し」。2025年7月にXで「実現難易度が極めて高め。でも担当する以上、意味あるものにしたい」と投稿。636億円予算の塩漬け批判を受けながら引き受けた。\n\n「リリースしてからが勝負」「アジャイルで失敗を許容する」という思想でGSCを再設計しようとしている段階。',
+    icebreaker: '📌 GSC「意味あるものにしたい」X投稿 — 見ていた、と伝える\n📌 アニメエキスポ × ゴジラ-1.0 × ハリウッドとの戦い\n📌 VCに5分で追い返された体験 — 「今もその感覚は?」\n📌 書道部（筑紫女学園）× 「自律・和平・感恩」の校訓',
+    personal: '・福岡・筑紫女学園（書道部）出身。「自律・和平・感恩」という校訓を「本当にいい言葉」と語る。書道への愛着は今も。\n・JETROロサンゼルス次長（2022-24年）でアニメエキスポを担当。「ゴジラ-1.0」「君たちはどう生きるか」をアメリカで売り込んだ人。海外での日本コンテンツ熱狂の現場を知っている。\n・2014年「2050年を考えろ」という命題でVCに5分で追い返された体験が転機。「官の肩書が通じない世界に自分を置いた」ことで純粋な想いに立ち返った。\n・X(@YoshikoTsuwaki)でプライベートも含め積極発信。離婚歴も自ら開示する圧倒的なオープンさ。旅行・食・ファッションの投稿も。\n・デジタル庁立ち上げで民間人の「パブリックマインドの強さ」に衝撃を受けた（官僚が民間人から刺激を受けるという逆説）。',
+    landmine: '・「官僚はどうせ変わらない」→自身が体現者\n・GSCへの「箱物批判」だけ→欠陥は認識済み、改善策の話ならウェルカム\n・デジタル庁の失敗事例を軽々しく扱う→亡くなった民間人材への哀悼ツイートがあるほど仲間を大切にする人',
+    script: '「津脇さん、GSCの立て直しX拝見していました。私たちRimoって、まさにGSCが集めようとしているディープテック系スタートアップが海外研究者と連携するときの言語バリアを消せるツールなんです。『リリースしてからが勝負』という津脇さんの哲学と、Rimoのアジャイルな実装は通じるものがあると思って。GSCの中でパイロット使用とかご一緒できないでしょうか」',
+    talk: '「行政DXの現場を変えてきた方として、これからのAI時代に何が必要か一番わかっていらっしゃると思います。CSTIや内閣府の政策検討の場で、スタートアップ経営者として意見を届けたいんです」',
+    invite: '・CSTI民間有識者委員への推薦を依頼\n・「AIスタートアップ×行政DX政策懇談会」への参加\n・GSC入居チームへのRimo提供経由でのつながり強化',
     action: 'Session 5後・懇親会でアプローチ。',
-    hotTopic: '■ 今最も燃えていること\nGSC（グローバル・スタートアップ・キャンパス）構想の「立て直し」。2025年7月にXで「実現難易度が極めて高め。でも担当する以上、意味あるものにしたい」と投稿。636億円予算の塩漬け批判を受けながら引き受けた。\n\n「リリースしてからが勝負」「アジャイルで失敗を許容する」という思想でGSCを再設計しようとしている段階。',
-    icebreaker: '「津脇さん、GSCの立て直しのX投稿、見ていました。あの『意味あるものにしたい』という言葉、すごくリアルで。GSCが集めようとしているディープテックスタートアップが海外チームと連携するときの言語・記録バリアを消せるツールがRimoです。どんな日常インフラが揃えば世界から人が来ると思いますか？」\n\nまたは:「LAでアニメエキスポ行ったとき、海外のファンが日本コンテンツに熱狂している光景を見て、一番ぐっときた瞬間ってどんなときでしたか？」',
-    personal: '■ 人間的な側面\n・福岡・筑紫女学園（書道部）出身。「自律・和平・感恩」という校訓を「本当にいい言葉」と語る。\n・JETROロサンゼルス次長（2022-24年）でアニメエキスポ対応。「ゴジラ-1.0」「君たちはどう生きるか」をアメリカで売り込んだ人。\n・2014年「2050年を考えろ」という命題でVCに5分で追い返された体験が転機。「官の肩書が通じない世界に自分を置いた」ことで純粋な想いに立ち返った。\n・デジタル庁立ち上げで民間人の「パブリックマインドの強さ」に衝撃を受けた（官僚が民間人から刺激を受けるという逆説）。\n・X(@YoshikoTsuwaki)でプライベートも含め積極発信。離婚歴も自ら開示する圧倒的なオープンさ。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「官僚はどうせ変わらない」という決めつけ→自身が体現者\n・GSCへの「箱物批判」だけ→欠陥は認識済み。改善策の話ならウェルカム\n・「政府の政策は遅い」という単純批判→難しさを一番知っている\n・デジタル庁の失敗事例を軽々しく扱う→亡くなった民間人材への哀悼ツイートがあるほど仲間を大切にする人',
-    script: '■ 会話台本\n「津脇さん、GSCの立て直しX拝見していました。私たちRimoって、まさにGSCが集めようとしているディープテック系スタートアップが海外研究者と連携するときの言語バリアを消せるツールなんです。『リリースしてからが勝負』という津脇さんの哲学と、Rimoのアジャイルな実装の仕方、通じるものがあると思って。GSCの中でパイロット使用とかご一緒できないでしょうか」',
-    sources: '・<a href="https://therace.jp/business/yoshiko_tsuwaki/" target="_blank">THE RACE インタビュー（「プロフェッショナルとは」）</a>\n・<a href="https://x.com/YoshikoTsuwaki/status/1940531168723849572" target="_blank">X: GSC担当着任「実現難易度が極めて高め」投稿</a>\n・<a href="https://gric.forstartups.com/2025speakers/yoshiko-tsuwaki2025" target="_blank">GRIC2026 登壇プロフィール</a>\n・<a href="https://xtech.nikkei.com/atcl/nxt/column/18/01651/062500011/" target="_blank">日経xTECH: デジタル庁「失敗恐れずアジャイルで」</a>',
+    srcHot: [['https://x.com/YoshikoTsuwaki/status/1940531168723849572', 'X: GSC「意味あるものに」'], ['https://xtech.nikkei.com/atcl/nxt/column/18/01651/062500011/', '日経xTECH: アジャイルで失敗恐れず']],
+    srcPers: [['https://therace.jp/business/yoshiko_tsuwaki/', 'THE RACE: プロフェッショナルとは'], ['https://gric.forstartups.com/2025speakers/yoshiko-tsuwaki2025', 'GRIC2026 登壇プロフィール']],
     stars: 3
   },
-
   {
-    name: '占部 昭裕', tier: 'B', cat: 'kanryo', sub: 'partner',
-    org: '内閣官房 日本成長戦略本部', role: '主査',
-    photo: B + '856807d3e1734dfff1d10908c2ec6fbc-300x300-1.png',
-    age: '推定28〜30歳（2020年入省）', edu: '京都大学法学部（行政法ゼミ、2018年在学確認）',
-    career: '2020年経産省入省。再エネ導入促進、対中通商交渉、省内業務改革、リスキリング政策担当（産業人材課課長補佐）。内閣官房日本成長戦略本部事務局主査として高市内閣の成長戦略の立案・推進を担う。',
-    rimo: '成長戦略17分野×人材育成の交差点。成長戦略文書へのRimo事例掲載が実現すると認知度が一気に上がる。',
-    gov: '内閣官房・日本成長戦略本部事務局の主査として高市内閣の成長戦略を直接立案。国家レベルのAI・DX政策の具体化を担う若手実務者。入省6年未満での抜擢。',
-    talk: '「成長戦略の中でAI活用を加速させるには、実際に現場で使われているスタートアップの声が必要だと思います。成長戦略の策定プロセスに、民間経営者として関わる機会があればぜひ」',
-    invite: '【会議体への道】\n・「日本成長戦略推進会議」民間有識者への参加打診\n・成長戦略文書へのRimo事例掲載を依頼',
-    action: '①14:30 @サクラルーム控室で最初の機会。②第2セット終了後「成長戦略にAIスタートアップの声を届けたい」と声をかける。③懇親会でフォロー。',
-    hotTopic: '■ 今最も燃えていること\n成長戦略17分野（AI・半導体・量子・再エネ・バイオ等）の官民投資ロードマップの具体化（2026年3月策定）。入省6年未満で内閣官房の成長戦略本部主査という異例の抜擢。\n\n以前の産業人材課では日経電子版特集「自分のキャリアは自分で選択する」に実名顔写真入りで登場し、リスキリング・転職文化の変革を語った。',
-    icebreaker: '「占部さん、サウナが好きなんですよね。整った後って判断力めちゃくちゃ上がるって言いますよね。成長戦略の会議の前にサウナ入ってきたりするんですか（笑）」\n\nまたは:「成長戦略17分野、どこに一番本気を入れてますか？現場感を聞かせてください」',
-    personal: '■ 人間的な側面\n・サウナが趣味。美大生×官僚 共創デザインラボの自己紹介で「整えるサウナに目がありません」と記載（霞が関官僚らしからぬカジュアルさ）。\n・経産省の若手有志が多摩美大学生と組む「美大生×官僚 共創デザインラボ」に自発的に参加。「官僚と美大生がどう共創していくかにつなげたい」と発言。\n・国会業務改革有志活動（若手官僚の霞が関改革）にも関わっていたとされる。\n・京都大学法学部行政法ゼミ出身。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「官僚は上しか見ていない」「政策は現場無視」→若手として現場に近い自意識がある\n・「成長戦略って岸田のころと変わらないでしょ」→現在の仕事の否定\n・個人のSNS・プライベートへの詮索→意図的に低プロフィール維持\n・「リスキリングで転職できるの？」→自分が推進してきた事業への懐疑',
-    script: '■ 会話台本\n「占部さん、成長戦略17分野の中で、AIと人材育成の交差点ってどこにあると思いますか？Rimoって会議音声をAIで文字起こし・議事録化するんですが、官民連携プロジェクトで膨大な会議が発生するときのナレッジ管理として使えると思っていて。リスキリング事業のKPIにも絡められると考えています。現場感を聞かせてもらえますか」',
-    sources: '・<a href="https://ps.nikkei.com/metireskilling2025/vol1.html" target="_blank">日経: 「自分のキャリアは自分で選択する」リスキリング特集（占部氏登場）</a>\n・<a href="https://note.com/kyoso_design_lab/n/n9747cc0fe534" target="_blank">美大生×官僚 共創デザインラボ 2024年度中間発表（占部氏コメント）</a>\n・<a href="https://www.cas.go.jp/jp/seisaku/nipponseichosenryaku/kaigi/dai2/shiryou1-2.pdf" target="_blank">内閣官房 日本成長戦略本部 第2回会議資料</a>',
-    stars: 2
-  },
-
-  // ===== 文科省・厚労省 =====
-  {
-    name: '合田 哲雄', tier: 'A', cat: 'kanryo', sub: 'session3',
+    name: '合田 哲雄', tier: 'A', cat: 'kanryo',
     org: '文部科学省', role: '高等教育局長',
     photo: B + 'db4b7fe9117c78e4363f79977c67bd6a-300x300-1.png',
     age: '1970年2月生まれ（56歳）', edu: '北海道生まれ・岡山県倉敷市（倉敷南高校）育ち→東北大学法学部→東大大学院修士',
     career: '1992年文部省入省。国立大学法人化・学習指導要領改訂（2017年は「150年ぶりの大改正」と表現、2回担当）・10兆円大学ファンド創設に関与。NSFフェロー（全米科学財団）としての米国駐在経験。目黒区立小中学校PTA会長を計6年。2025年7月高等教育局長就任。',
     rimo: 'AI×高等教育政策。大学寄付講座・共同研究のターゲット。国立大学法人2校でRimo導入済みの実績あり。SPReAD（文科省AI for Science）の1000プロジェクトに活用を提案できる。',
     gov: '高等教育局長として10兆円大学ファンド・AI×教育DX推進計画を統括。文科省AI活用推進政策の最高責任者。',
-    talk: '「AIが教育と研究の質を根本から変えていく。その変化を加速させるのが私の役割だと思っています。文科省の大学DX・AI教育政策を民間から支える立場で関わりたい。10兆円ファンドの議論にも、使われる側の経営者視点を届けられれば」',
-    invite: '【会議体への道】\n・大学ファンド審査委員会への民間委員参加打診\n・「AI×高等教育政策懇談会」の発言者として招待してもらう\n・国立大学向けRimo寄付講座の設置相談',
-    action: '①「AI時代の人材育成」セッション直後の休憩が最適。②官僚スナック・ふらっとで話しかける。③懇親会でフォロー。',
-    hotTopic: '■ 今最も燃えていること\n「好きを諦めさせる教育の終焉」と文理分断の解体。「高校生の7割が普通科、そのうち7割が文系→高校生の半数が普通科文系。女子理系進学率はわずか16%」という才能の漏れを「構造的な問題」と捉えている。STEAM JAPAN紙上で「好きを諦めさせる教育は、終わりにしよう」と断言。\n\n10兆円大学ファンドを梃子に研究力強化と、「文理分断からの脱却」を同時に進める段階。',
-    icebreaker: '「合田局長、倉敷ご出身なんですよね。大原美術館のある文化的な街で育ったと伺いました。子どもの頃に見た絵で、今でも忘れられないものってありますか？」\n\nまたは:「SPReADの1000プロジェクトにRimoを使っている研究者が増えています。AI for Science×会議記録という観点でお話しできないでしょうか」',
-    personal: '■ 人間的な側面\n・岡山県倉敷市（大原美術館・美観地区がある文化都市）で高校まで育った。文化庁次長経験とルーツが直結している。\n・NSFフェロー（全米科学財団）として渡米中に東日本大震災が発生。アメリカの科学者たちから「なぜ日本で暴動が起きないか」と繰り返し聞かれ、即席で日本の共同体文化を説明し続けた体験。\n・PTA会長を目黒区立小学校・中学校でそれぞれ3年ずつ計6年。官僚の頂点を目指しながら「普通の保護者」として地域に関わり続けた稀有な経歴。\n・Winny事件に対して「包丁で殺人事件が起きたとき包丁職人が逮捕されるようなもの」と公然と批判した異色の官僚。\n・高校時代に「行列やベクトルを意味も分からず暗記した」自分の体験を公言。「血肉にならない学び」への問題意識は原体験から来ている。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「偏差値の話」「東大合格者数」→彼が最も嫌悪する同質競争の象徴\n・「STEM教育さえやれば解決」→好き×多様性×民主主義の三軸で考える人にはSTEM偏重も問題\n・大学ファンドへの単純な「箱物批判」→設計者本人に向かって言うのは最悪。批判するなら意図を理解した上で\n・「文科省は変わらない」という官僚批判',
-    script: '■ 会話台本\n「合田局長、倉敷ご出身と伺って、大原美術館のある街で育った美的センスが文化庁次長にもつながったのかなと。私たちRimoは大学の研究ミーティングでも使われていて、研究者の議論を自動で構造化することで、文理を超えたコラボが生まれやすくなると思っています。SPReADの1000プロジェクトとの連携を検討させていただけないでしょうか」',
-    sources: '・<a href="https://steam-japan.com/en/report/11173/" target="_blank">STEAM JAPAN: 「好きを諦めさせる教育は、終わりにしよう」合田哲雄インタビュー</a>\n・<a href="https://www.kknews.co.jp/post_committee/260101_2c" target="_blank">KKS教育家庭新聞: AI時代を切り拓く学びは必然（合田局長）</a>\n・<a href="https://www.kiyohara-keiko.org/view/1205" target="_blank">清原慶子氏との対談（合田氏との議論）</a>',
+    hotTopic: '「好きを諦めさせる教育の終焉」と文理分断の解体。「高校生の半数が普通科文系。女子理系進学率はわずか16%」という才能の漏れを「構造的な問題」と捉えている。STEAM JAPAN紙上で「好きを諦めさせる教育は、終わりにしよう」と断言。\n\n10兆円大学ファンドを梃子に研究力強化と、「文理分断からの脱却」を同時に進める段階。',
+    icebreaker: '📌 倉敷 × 大原美術館 — 子どもの頃に刺さった一枚\n📌 「好きを諦めさせる教育は終わりにしよう」STEAM JAPAN\n📌 PTA会長6年 × 「普通の保護者」として地域に根ざした官僚\n📌 高校時代「意味もわからず暗記した」— 今の教育改革の原点',
+    personal: '・岡山県倉敷市（大原美術館・美観地区がある文化都市）で高校まで育った。美術への感性は幼少期から培われており、文化庁次長経験ともつながっている。\n・NSFフェロー（全米科学財団）として渡米中に東日本大震災が発生。アメリカの科学者たちから「なぜ日本で暴動が起きないか」と繰り返し聞かれ、即席で日本の共同体文化を説明し続けた体験。\n・PTA会長を目黒区立小学校・中学校でそれぞれ3年ずつ計6年。官僚の頂点を目指しながら「普通の保護者」として地域に関わり続けた稀有な経歴。日常の子育て話ができる。\n・Winny事件に対して「包丁で殺人事件が起きたとき包丁職人が逮捕されるようなもの」と公然と批判した異色の官僚。\n・高校時代に「行列やベクトルを意味も分からず暗記した」自分の体験を公言。「血肉にならない学び」への問題意識は原体験から来ている。',
+    landmine: '・「偏差値の話」「東大合格者数」→彼が最も嫌悪する同質競争の象徴\n・「STEM教育さえやれば解決」→好き×多様性×民主主義の三軸で考える人\n・大学ファンドへの単純な「箱物批判」→設計者本人に向かって言うのは最悪',
+    script: '「合田局長、倉敷ご出身と伺って、大原美術館のある街で育った美的センスが文化庁次長にもつながったのかなと。私たちRimoは大学の研究ミーティングでも使われていて、研究者の議論を自動で構造化することで、文理を超えたコラボが生まれやすくなると思っています。SPReADの1000プロジェクトとの連携を検討させていただけないでしょうか」',
+    talk: '「AIが教育と研究の質を根本から変えていく。その変化を加速させるのが私の役割だと思っています。文科省の大学DX・AI教育政策を民間から支える立場で関わりたい」',
+    invite: '・大学ファンド審査委員会への民間委員参加打診\n・「AI×高等教育政策懇談会」の発言者として招待してもらう\n・国立大学向けRimo寄付講座の設置相談',
+    action: '「AI時代の人材育成」セッション直後の休憩が最適。官僚スナック・ふらっとで話しかける。懇親会でフォロー。',
+    srcHot: [['https://steam-japan.com/en/report/11173/', 'STEAM JAPAN: 好きを諦めさせるな'], ['https://www.kknews.co.jp/post_committee/260101_2c', 'KKS: AI時代を切り拓く学び']],
+    srcPers: [['https://www.kiyohara-keiko.org/view/1205', '清原慶子との対談']],
     stars: 3
   },
-
   {
-    name: '上杉 泰樹', tier: 'S', cat: 'kanryo', sub: 'partner',
-    org: '厚生労働省', role: '大臣官房 総務課 課長補佐',
-    photo: B + 'ea99202a4980be151c27f218564491fc-300x300-1-1.png',
-    age: '推定33〜35歳（2015年入省）', edu: '東京大学農学部→オックスフォード大学（公共政策・日本学専攻）',
-    career: '2015年厚生労働省入省。雇用政策、労働安全、公衆衛生等を担当。内閣官房への出向、オックスフォード大学留学を経て、現在は大臣官房総務課で省内AI・デジタル活用推進計画担当。D2PA（Data-Driven Policy Association）メンバー。GOBO（次世代の食と農を面白くする若手社会人集団）事務局長（2019〜）。',
-    rimo: '厚労省×AI議事録×労働政策。国立病院機構2拠点でもRimo導入済み。改革志向の若手幹部。EBPMの材料として厚労省の会議データを活用する構想。',
-    gov: '大臣官房総務課で「省内AI・デジタル活用推進計画」担当。「政府AI利活用推進計画（2024年）」の厚労省実施分を主担当。',
-    talk: '「AIが会議を変えれば、働き方が変わります。単なる効率化ツールではなく、日本の『会議文化』そのものを変える運動だと思っています。厚労省の働き方改革・AI活用推進計画の中で、民間の視点を届けられる場があれば、ぜひ参加したいです」',
-    invite: '【会議体への道】\n・「省内AI・デジタル活用推進計画」策定WGへの民間委員参加打診\n・「労働DX推進有識者会議」への招待依頼\n・国立病院機構での実績を踏まえた「医療AI推進フォーラム」参加',
-    action: '①第1セット終了後（14:42〜15:00）18分の休憩が最初のチャンス。②官僚スナック・ふらっとで自然に話しかける。③懇親会でWGへの参加を打診。',
-    hotTopic: '■ 今最も燃えていること\n厚労省内のAI・生成AI業務活用の推進。最大の省の一つとして「省全体でAIを使える組織に変える」という構造変革側にいる。EBPMの推進（D2PA活動）とAI活用を同時に進める。\n\n2019年厚労省若手改革チームの緊急提言（Twitterで約2000万RT）の精神を今のAI時代に再実装しようとしている。',
-    icebreaker: '「上杉さん、D2PAの活動知っています。厚労省の会議データがEBPMの材料になるという文脈で、Rimoをご活用いただけないかと。また、GOBOの活動も——農学部から厚労省で雇用政策というのが面白いなと思っていて、食と働き方の接点ってどこにあると思われますか？」',
-    personal: '■ 人間的な側面\n・広島県出身。農学部出身→オックスフォードで公共政策・日本学というレアな組み合わせ。\n・GOBO（全国農業系サークルOBOGネットワーク）の事務局長を2019年から担当。本業とは別に食農コミュニティを主体的に運営している。\n・現役国家公務員のままYouTubeインタビューに顔出しで出演（2023年）、オックスフォードの生活や国家公務員試験について語った。霞が関官僚としては異例のオープンさ。\n・2019年若手改革チームの緊急提言の世代・入省年と合致。「本来の仕事を妨げる業務が多すぎる」という問題意識のある人。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「厚労省は組織が大きすぎて変えられない」→若手改革チームで変えようとしてきた人\n・「AI導入すれば公務員は不要」→AIが代替できない政策判断の複雑性を理解している\n・「オックスフォードに留学できたんだからエリートですね」→現場を離れることへの複雑な感情あり\n・霞が関改革のスキャンダル掘り→2019年提言の背景には過労死問題があり、センシティブ',
-    script: '■ 会話台本\n「上杉さん、2019年の若手チームの緊急提言、読みました。あの問題意識って今のAI導入で実現できると思っていて。本来の政策立案に集中できる時間を作るのがRimoです。厚労省の会議って年間何千時間の議事録作業があるか——半分でも自動化できたら、本当に考えるべきことに集中できる。省内AI活用推進計画の中で、こういうユースケースをどう評価されていますか？」',
-    sources: '・<a href="https://sites.google.com/view/d2pa/member" target="_blank">D2PA メンバーページ（上杉泰樹）</a>\n・<a href="https://www.facebook.com/gobo.network/posts/763886687343050/" target="_blank">GOBO Facebook: 2019年新体制（上杉泰樹 事務局長就任）</a>\n・<a href="https://www.youtube.com/watch?v=AWyGekyVowA" target="_blank">YouTube: 上杉泰樹インタビュー前編（オックスフォードに通う国家公務員）</a>\n・<a href="https://www.mhlw.go.jp/content/11600000/000540047.pdf" target="_blank">厚労省改革若手チーム緊急提言（PDF）</a>',
+    name: '小林 史明', tier: 'A', cat: 'giin',
+    org: '衆議院議員・自由民主党', role: '経済産業部会長',
+    photo: B + '810f7092672b92e30d1589184f296b8d-300x300-1.png',
+    age: '1983年4月8日（43歳）', edu: '上智大学理工学部化学科',
+    career: 'NTTドコモ法人営業→2012年衆院初当選（6期）。デジタル副大臣、環境副大臣歴任。地方自治体AI研究会（2018年設立）主宰。「テクノロジーの社会実装」を政治信条とする。',
+    rimo: 'AI政策・デジタル規制改革の政治家。Rimoを行政DX成功事例として政策資料・委員会で取り上げてもらうと認知が一気に拡大。',
+    gov: '自民党DX推進本部副本部長。超党派AI議員連盟メンバー。地方自治体AI研究会（2018年設立）主宰で首長・官僚との政策ネットワーク保有。',
+    hotTopic: '「規制を変えたのに現場が動かない問題」。AIを活用している企業が日本ではわずか3%という現実に対して「なぜ使わないのか」を追いかけている段階。「1万条項の規制撤廃」という成果を出したが、次のフェーズは文化変革だという認識。',
+    icebreaker: '📌 スノボC級インストラクター — 今シーズンゲレンデ行った?\n📌 正田耕三好き × カープ愛 — 1984年ロス五輪の渋いチョイス\n📌 もみじ饅頭製造機2時間眺めた幼少体験が理系の原点\n📌 規制改革のおかげでRimoが全国自治体に入れた、という感謝から入る',
+    personal: '・元スノーボードC級インストラクター。両親がスキー好きで幼少期から雪山に連れて行ってもらった。今も冬はゲレンデへ。\n・広島カープ愛。好きな選手は正田耕三（1984年ロス五輪金メダル・元二塁手）という渋いチョイス。中高は野球部。\n・幼稚園のころ、毎日2時間もみじ饅頭の自動製造機を眺めていたことが理系進学の原体験。「機械がものを作る」ことへの原初的な興奮。\n・実家・日東製網は漁網メーカー（創業100年超）。製品のゴールネットがJ1リーグに採用されている。\n・好物は「ねぶとの唐揚げ」（広島・福山の瀬戸内地魚）。郷土愛が強い。\n・X(@kb2474)で積極発信。Instagramフォロワー約12,000人でプライベートな投稿も多い。\n・祖父は参議院議員・福山商工会議所会頭（肩書き124個の伝説的な人物）。',
+    landmine: '・規制改革の成果を矮小化→「そんなの意味なかった」は最悪\n・「政治家は変わらない」系の諦め論→変えてきた当事者\n・スライドを見せながらの説明→対話を大切にする人\n・「先生に補助金を取らせてほしい」系の実利要求→動機は社会変革',
+    script: '「小林先生、先生の1万条項撤廃のおかげでRimoが全国の自治体に普及できた直接の理由があります。次のステップは現場を動かすこと。AI活用3%という現実を変えるには、実際に使っている民間経営者の声が政策に届く必要があると思っています。先生の地方自治体AI研究会に呼んでいただけませんか」',
+    talk: '「AIが政策決定そのものを支援する時代が来る。デジタル副大臣として先頭を走られてきた小林先生と、超党派でAI国家戦略を作っていきたい」',
+    invite: '★議員経由が最速★\n・地方自治体AI研究会への参加・登壇打診\n・超党派AI議員連盟の勉強会への登壇依頼\n→ 「先生の研究会に呼んでください。民間から貢献したい」',
+    action: 'Session 1後の休憩か懇親会でアプローチ。議員秘書へのフォローも。',
+    srcHot: [['https://say-g.com/interview-kobayashi-fumiaki-10826', '政治ドットコム: 規制改革の哲学']],
+    srcPers: [['https://fumiaki-kobayashi.jp/profile', '小林史明 公式プロフィール'], ['https://sogyotecho.jp/kobayashi-interview/', '起業の学校: もみじ饅頭の原体験'], ['https://x.com/kb2474', 'X: @kb2474']],
     stars: 4
   },
-
-  // ===== 金融庁 =====
   {
-    name: '堀本 善雄', tier: 'B', cat: 'kanryo', sub: 'session1',
+    name: '今里 和之', tier: 'B', cat: 'kanryo',
+    org: '経済産業省', role: '経済産業政策局 産業人材課長',
+    photo: B + 'c5d056652ec66bd403f27c151747faa4-300x300-1.png',
+    age: '推定45〜47歳（2003年入省）', edu: '東京大学大学院理学系研究科（生物化学）→カーネギーメロン大学公共政策学修士',
+    career: '2003年経産省入省。産業機械課→ロボット政策室（立ち上げメンバー）→NEDO→原子力規制庁→NEDO欧州事務所長（2021年〜）→2024年産業人材課長。2040年雇用構造推計（326万人のAI人材不足）の主導者。',
+    rimo: 'AI人材育成×Rimo会議DXの連携。会議工数削減→リスキリング時間創出のKPI化。マナビDXへの登録・経産省リスキリング施策との接続。',
+    gov: '経産省「マナビDX」の所管担当。2025年5月に「2040年産業構造・就業構造推計」を提言。',
+    hotTopic: '「2040年に間に合う人材育成の速度を上げること」。2025年5月の推計でAI・ロボット関連326万人不足、事務・販売系は余剰という衝撃データを出した張本人。リスキリング第六次公募まで継続。\n\nHR Transformation Summit 2025登壇（2025年7月）。「一人一人を大事にしてその活躍を引き出さなければ、日本経済全体の活力にはつながらない」という信念。',
+    icebreaker: '📌 2040年326万人不足の推計 — 数字の衝撃を語る\n📌 生物化学 → 公共政策 — この転換のきっかけを聞く\n📌 ロボット政策室立ち上げ時代の話を振る\n📌 NEDO欧州でウクライナ戦争を体験（2022年2月〜）',
+    personal: '・東大理学系研究科（分子生物化学）→カーネギーメロン公共政策という激レアルート。純粋科学者でも純粋官僚でもない「翻訳者」としての自己認識。\n・ロボット政策室を経産省内で立ち上げたメンバー。「100万円の最新ロボットより10万円のパワースーツ」というプラクティカルな発想の持ち主。\n・超異分野学会（ディープテック×政策）に2020年から登壇。ベンチャー・研究者・官僚が交わるコミュニティを愛する。\n・NEDO欧州事務所長（2021-23年）。ウクライナ戦争によるエネルギー危機の最中に欧州にいた。この経験がエネルギー安保への深い理解の素地。\n・神奈川県出身。細胞→組織→社会という視点の連続性が本人のキャリアを貫いている。',
+    landmine: '・「リスキリングって流行語でしょ」→省を挙げて何年もやってきた政策の核心\n・「日本の終身雇用は守るべき」→キャリア自律・労働移動が政策の方向性と真逆\n・「AIに仕事が奪われる」系の悲観論→スキル転換で対応できるという立場',
+    script: '「今里課長、生物化学からカーネギーメロン公共政策への転換、ロボット政策から人材育成まで、『技術を社会に着地させる翻訳者』というご経歴がずっと一貫していると思っていて。2040年の326万人不足という推計、Rimoの会議ナレッジ化がOJT証跡・スキル見える化として機能できると思っています。一度壁打ちさせてもらえますか」',
+    talk: '「AI人材を育てる研修の場でこそ、AIツールを体験すべきです。受講者がRimoで議事録を取りながら学ぶ体験が、一番の教育になる」',
+    invite: '・マナビDX政策WGへの参画を打診\n・「AI×人材育成推進委員会」への招待を依頼\n・今里→占部（直属の後輩）への紹介もお願いできる',
+    action: 'Session 3後の休憩・懇親会でアプローチ。',
+    srcHot: [['https://www.keidanren.or.jp/journal/times/2025/0619_12.html', '経団連タイムス: 2040年推計'], ['https://www.motivation-cloud.com/hr2048/534', 'HR Transformation 2025']],
+    srcPers: [['https://hic.lne.st/2020/02/16833/', '超異分野学会 2020'], ['https://dentsu-ho.com/en/articles/2308', '電通報: ロボット政策']],
+    stars: 2
+  },
+  {
+    name: '占部 昭裕', tier: 'B', cat: 'kanryo',
+    org: '内閣官房 日本成長戦略本部', role: '主査',
+    photo: B + '856807d3e1734dfff1d10908c2ec6fbc-300x300-1.png',
+    age: '推定28〜30歳（2020年入省）', edu: '京都大学法学部（行政法ゼミ、2018年在学確認）',
+    career: '2020年経産省入省。再エネ導入促進、対中通商交渉、省内業務改革、リスキリング政策担当（産業人材課課長補佐）。内閣官房日本成長戦略本部事務局主査として高市内閣の成長戦略の立案・推進を担う。',
+    rimo: '成長戦略17分野×人材育成の交差点。成長戦略文書へのRimo事例掲載が実現すると認知度が一気に上がる。城内大臣の直属ライン。',
+    gov: '内閣官房・日本成長戦略本部事務局の主査として高市内閣の成長戦略を直接立案。国家レベルのAI・DX政策の具体化を担う若手実務者。入省6年未満での抜擢。',
+    hotTopic: '成長戦略17分野（AI・半導体・量子・再エネ・バイオ等）の官民投資ロードマップの具体化（2026年3月策定）。入省6年未満で内閣官房の成長戦略本部主査という異例の抜擢。\n\n以前の産業人材課では日経電子版特集「自分のキャリアは自分で選択する」に実名顔写真入りで登場し、リスキリング・転職文化の変革を語った。',
+    icebreaker: '📌 サウナ × 整った後の判断力 — 成長戦略の会議前も整えてる?（笑）\n📌 美大生×官僚 共創デザインラボへの参加\n📌 成長戦略17分野で個人的に一番熱いテーマを聞く\n📌 城内大臣の直属ラインとして「大臣の今の優先事項」を聞く',
+    personal: '・サウナが趣味。美大生×官僚 共創デザインラボの自己紹介で「整えるサウナに目がありません」と記載（霞が関官僚らしからぬカジュアルさ）。水風呂→外気浴のルーティンを大切にしている模様。\n・経産省の若手有志が多摩美大学生と組む「美大生×官僚 共創デザインラボ」に自発的に参加。「官僚と美大生がどう共創していくかにつなげたい」と発言。デザイン思考への強い関心。\n・国会業務改革有志活動（若手官僚の霞が関改革）にも関わっていたとされる。\n・京都大学法学部行政法ゼミ出身。京都での学生時代は町家カフェや哲学の道で過ごしたのでは（想像）。\n・意図的に低プロフィールを維持しているが、発言はロジカルでシャープ。',
+    landmine: '・「官僚は上しか見ていない」→若手として現場に近い自意識がある\n・「成長戦略って岸田のころと変わらないでしょ」→現在の仕事の否定\n・個人のSNS・プライベートへの詮索→意図的に低プロフィール維持',
+    script: '「占部さん、成長戦略17分野の中で、AIと人材育成の交差点ってどこにあると思いますか？Rimoって会議音声をAIで文字起こし・議事録化するんですが、官民連携プロジェクトで膨大な会議が発生するときのナレッジ管理として使えると思っていて。リスキリング事業のKPIにも絡められると考えています」',
+    talk: '「成長戦略の中でAI活用を加速させるには、実際に現場で使われているスタートアップの声が必要だと思います。成長戦略の策定プロセスに、民間経営者として関わる機会があれば」',
+    invite: '・「日本成長戦略推進会議」民間有識者への参加打診\n・成長戦略文書へのRimo事例掲載を依頼',
+    action: '14:30 @サクラルーム控室（第2セット登壇者）で最初の機会。',
+    srcHot: [['https://ps.nikkei.com/metireskilling2025/vol1.html', '日経: リスキリング特集（占部氏）'], ['https://www.cas.go.jp/jp/seisaku/nipponseichosenryaku/kaigi/dai2/shiryou1-2.pdf', '内閣官房: 成長戦略会議資料']],
+    srcPers: [['https://note.com/kyoso_design_lab/n/n9747cc0fe534', '共創デザインラボ: 占部氏コメント']],
+    stars: 2
+  },
+  {
+    name: '堀本 善雄', tier: 'B', cat: 'kanryo',
     org: '金融庁', role: '総合政策局長',
     photo: B + '70e0d43070706d1ca548b73df5810a69-300x300-1.png',
     age: '推定57〜58歳（1990年大蔵省入省）', edu: '東京大学経済学部→ハーバード大学大学院留学（1993年）',
     career: '1990年大蔵省入省。1993年ハーバード留学。世界銀行出向でアジア通貨危機を体験。2008年プロモントリー・フィナンシャル・ジャパンに民間転職（40歳超で異例）。2013年金融庁復帰（中途採用）。監督局審議官→政策立案総括審議官→2025年〜総合政策局長。「出戻り官僚」の先駆者・Revolver会設立に関与。',
     rimo: '金融機関向けRimo Voice導入の行政側アプローチ。金融庁AI官民フォーラムでの「AI健全利活用」実証例として提案。',
     gov: '金融庁総合政策局長として金融規制・フィンテック政策・金融DX推進を統括。AI官民フォーラム（2025年6月〜第3回実施）を主導。AIディスカッションペーパー1.1版（2026年3月）を公表。',
-    talk: '「金融DXの本質は、審議・意思決定の質を上げることだと思っています。金融機関の会議録・議事録の自動化は、コンプライアンスの品質も上げます。民間経験をお持ちの堀本さんだからこそ、金融庁のDX推進の観点で、民間から何ができるかアドバイスをいただけますか」',
-    invite: '【会議体への道】\n・「金融AI官民フォーラム」の民間委員への参加打診\n・フィンテックサミット等での登壇機会を聞く\n・AI健全利活用の「実証事例」として金融庁に認定してもらうルートを探る',
-    action: '①Key Session登壇後の休憩（14:30頃）が最適。②Award審査員として場にいる間にも声をかけやすい。③懇親会でフォロー。',
-    hotTopic: '■ 今最も燃えていること\n「AIガバナンスの設計」と「資産運用立国の実行フェーズ」の同時進行。金融庁AI官民フォーラム（3回実施）でAIエージェントが金融業務を自動化する時代のガバナンス枠組みを構築中。AIディスカッションペーパー1.1版（2026年3月）を公表。\n\n「2200兆円の眠っている資金を家計と企業の成長投資に結びつける好循環を実現する」が使命。',
-    icebreaker: '「堀本局長、Publink Letterのインタビューを読みました。理容店ご出身で奨学金で東大を卒業されたご経歴、『制度に救われた側として制度を作る側に』というお言葉が印象に残っています。Rimoも、会議から生まれた意思決定を記録・民主化するツールです」\n\nまたは:「金融庁AI官民フォーラムでのAI健全利活用の議論、参加してみたいのですが、金融AI活用の実証事例として関わる方法はありますか？」',
-    personal: '■ 人間的な側面\n・兵庫県姫路市出身。実家は小さな理容店を営む母子家庭。大学受験直前に母が交通事故で急逝。奨学金とアルバイトで東大経済学部を卒業。この体験が「制度に救われた側として制度を作る側に回る」という入省動機の核心。\n・2006年マイケル・ポーター「共通価値の創造（CSV）」を読んで40歳で民間転職を決意。「官と民の間にこそ新しい可能性がある」という確信。\n・「Revolver会」（出戻り官僚コミュニティ）の設立に関与。霞が関の人材流動を先駆けて実践した人物として日経新聞で取り上げられた。\n・世界銀行出向でアジア通貨危機（1997年）を体験。「金融が国家の安定に与える影響の大きさ」を身をもって感じた。',
-    landmine: '■ 絶対に言ってはいけないこと\n・「金融庁は規制が多すぎて邪魔」→民間経験があるからこそ規制の必要性も民間の苦労も理解している\n・「官僚はどうせ変わらない」→本人が出戻りという異例の行動で体制を変えようとしている人\n・「資産運用立国はNISAだけでしょ」→構造改革全体を考えているので矮小化に反発する\n・競合サービスの政府採用実績を自慢げに出す→金融庁は公平性に敏感',
-    script: '■ 会話台本\n「堀本局長、Publink Letterで理容店ご出身の話、読みました。奨学金制度に救われた側として制度を作る側に回るというお言葉、私たちRimoとも重なっていて。Rimoも、会議に参加できない人たちに意思決定を届けるツールだと思っています。AI官民フォーラムでの健全利活用の議論に、金融機関のコンプライアンス会議記録という観点で参加させていただけますか」',
-    sources: '・<a href="https://publink.site/letter/fsa_horimoto/" target="_blank">Publink Letter: 「資産運用立国」が目指す日本の姿とは（堀本氏インタビュー全文）</a>\n・<a href="https://www.fsa.go.jp/singi/ai_forum/gijiyoshi/20251112.html" target="_blank">金融庁AI官民フォーラム第3回議事要旨</a>\n・<a href="https://www.nikkei.com/article/DGKKZO87860250X00C25A4CM0000/" target="_blank">日経: 霞が関「出戻り」実った回り道（堀本氏）</a>',
+    hotTopic: '「AIガバナンスの設計」と「資産運用立国の実行フェーズ」の同時進行。金融庁AI官民フォーラム（3回実施）でAIエージェントが金融業務を自動化する時代のガバナンス枠組みを構築中。\n\n「2200兆円の眠っている資金を家計と企業の成長投資に結びつける好循環を実現する」が使命。',
+    icebreaker: '📌 Publink Letter「制度に救われた側として作る側に」— 読んだと伝える\n📌 AI官民フォーラム — 金融×AI会議記録の実証事例提案\n📌 ポーターCSVで40歳民間転職を決意 — 読書が人生を変えた話\n📌 Revolver会（出戻り官僚コミュニティ）— 霞が関の人材流動の先駆者',
+    personal: '・兵庫県姫路市出身。実家は小さな理容店を営む母子家庭。大学受験直前に母が交通事故で急逝。奨学金とアルバイトで東大経済学部を卒業。この体験が「制度に救われた側として制度を作る側に回る」という入省動機の核心。\n・2006年マイケル・ポーター「共通価値の創造（CSV）」を読んで40歳で民間転職を決意。「官と民の間にこそ新しい可能性がある」という確信。読書が人生の転機になった人。\n・「Revolver会」（出戻り官僚コミュニティ）の設立に関与。霞が関の人材流動を先駆けて実践した人物として日経新聞で取り上げられた。\n・世界銀行出向でアジア通貨危機（1997年）を体験。「金融が国家の安定に与える影響の大きさ」を身をもって感じた。\n・読書家。経済・経営・政策系の書籍を好む。CSV論から行動が変わる型の人。',
+    landmine: '・「金融庁は規制が多すぎて邪魔」→民間経験があるからこそ規制の必要性も民間の苦労も理解している\n・「官僚はどうせ変わらない」→出戻りという異例の行動で体制を変えようとしている人\n・競合サービスの政府採用実績を自慢げに出す→金融庁は公平性に敏感',
+    script: '「堀本局長、Publink Letterで理容店ご出身の話、読みました。奨学金制度に救われた側として制度を作る側に回るというお言葉、私たちRimoとも重なっていて。Rimoも、会議に参加できない人たちに意思決定を届けるツールだと思っています。AI官民フォーラムでの健全利活用の議論に、金融機関のコンプライアンス会議記録という観点で参加させていただけますか」',
+    talk: '「金融DXの本質は、審議・意思決定の質を上げることだと思っています。金融機関の会議録・議事録の自動化は、コンプライアンスの品質も上げます」',
+    invite: '・「金融AI官民フォーラム」の民間委員への参加打診\n・AI健全利活用の「実証事例」として金融庁に認定してもらうルートを探る',
+    action: 'Key Session登壇後の休憩（14:30頃）が最適。Award審査員として場にいる間にも声をかけやすい。',
+    srcHot: [['https://www.fsa.go.jp/singi/ai_forum/gijiyoshi/20251112.html', '金融庁: AI官民フォーラム第3回']],
+    srcPers: [['https://publink.site/letter/fsa_horimoto/', 'Publink Letter: 堀本インタビュー'], ['https://www.nikkei.com/article/DGKKZO87860250X00C25A4CM0000/', '日経: 出戻り官僚']],
     stars: 2
   },
-
-  // ===== 議員 =====
-  {
-    name: '小林 史明', tier: 'A', cat: 'giin', sub: 'session1',
-    org: '衆議院議員・自由民主党', role: '経済産業部会長',
-    photo: B + '810f7092672b92e30d1589184f296b8d-300x300-1.png',
-    age: '1983年4月8日（43歳）', edu: '上智大学理工学部化学科',
-    career: 'NTTドコモ法人営業→2012年衆院初当選（6期）。デジタル副大臣、環境副大臣歴任。地方自治体AI研究会（2018年設立）主宰。「テクノロジーの社会実装」を政治信条とする。',
-    rimo: 'AI政策・デジタル規制改革の政治家。Rimoを行政DX成功事例として政策資料・委員会で取り上げてもらうと認知が一気に拡大。',
-    gov: '自民党DX推進本部副本部長。超党派AI議員連盟メンバー。デジタル庁創設を推進した中心議員。地方自治体AI研究会（2018年設立）主宰で首長・官僚との政策ネットワーク保有。',
-    talk: '「AIが政策決定そのものを支援する時代が来る、というのが私の確信です。今日のPitchでもその話をします。デジタル副大臣として先頭を走られてきた小林先生と、超党派でAI国家戦略を作っていきたい。先生の研究会やWGに、民間経営者として参加させてください」',
-    invite: '【会議体への道 ★議員経由が最速★】\n・地方自治体AI研究会への参加・登壇打診\n・超党派AI議員連盟の勉強会への登壇依頼（「AIが意思決定を変える」テーマで）\n→ 入口：「先生の研究会に呼んでください。民間から貢献したい」',
-    action: 'Session 1後の休憩か懇親会でアプローチ。議員秘書へのフォローも。',
-    hotTopic: '■ 今最も燃えていること\n「規制を変えたのに現場が動かない問題」。AIを活用している企業が日本ではわずか3%という現実に対して「なぜ使わないのか」を追いかけている段階。「1万条項の規制撤廃」という成果を出したが、次のフェーズは文化変革だという認識。\n\n2025年10月の自民党総裁選では小泉進次郎を応援（X投稿）。経済産業部会長として産業DX推進を主導中。',
-    icebreaker: '「小林先生、先生の規制改革のおかげでRimoが全国の自治体に入れるようになりました。本当にありがとうございます。ただ、次の壁は現場が動かないことで——AI活用3%という現状、先生はなぜだと思われますか？」\n\nまたは:「先生、スノーボードのインストラクター資格をお持ちとうかがいました。今シーズン、ゲレンデ行かれましたか？」',
-    personal: '■ 人間的な側面\n・元スノーボードC級インストラクター。両親がスキー好きで幼少期から雪山に連れて行ってもらった。\n・広島カープ愛。好きな選手は正田耕三（1984年ロス五輪金メダル・元二塁手）という渋いチョイス。中高は野球部。\n・幼稚園のころ、毎日2時間もみじ饅頭の自動製造機を眺めていたことが理系進学の原体験。\n・実家・日東製網は漁網メーカー（創業100年超）。製品が開発したゴールネットがJ1リーグに採用されている。\n・好物は「ねぶとの唐揚げ」（広島・福山の瀬戸内地魚）。郷土愛が強い。\n・X(@kb2474)で積極発信。Instagramフォロワー約12,000人。\n・祖父は参議院議員・福山商工会議所会頭（肩書き124個の伝説的な人物）。',
-    landmine: '■ 絶対に言ってはいけないこと\n・規制改革の成果を矮小化→「そんなの意味なかった」は最悪\n・「政治家は変わらない」系の諦め論→変えてきた当事者\n・スライドを見せながらの説明→対話を大切にする人\n・「先生に補助金を取らせてほしい」系の実利要求→彼の動機は社会変革であって利権ではない',
-    script: '■ 会話台本\n「小林先生、先生の1万条項撤廃のおかげでRimoが全国の自治体に普及できた直接の理由があります。次のステップは現場を動かすこと。AI活用3%という現実を変えるには、実際に使っている民間経営者の声が政策に届く必要があると思っています。先生の地方自治体AI研究会に呼んでいただけませんか。私が今見ている現場の声をお届けします」',
-    sources: '・<a href="https://fumiaki-kobayashi.jp/profile" target="_blank">小林史明 公式プロフィール（スノーボード・カープ・好物ねぶと）</a>\n・<a href="https://sogyotecho.jp/kobayashi-interview/" target="_blank">起業の学校インタビュー（もみじ饅頭製造機からの原体験）</a>\n・<a href="https://say-g.com/interview-kobayashi-fumiaki-10826" target="_blank">政治ドットコム: 「8割は相手の話を聞くことが仕事」</a>\n・<a href="https://x.com/kb2474" target="_blank">小林史明 X (@kb2474)</a>',
-    stars: 4
-  },
-
 ];
 
 let filter = 'all';
@@ -411,29 +359,42 @@ function toggle(el) {
   const d = el.querySelector('.detail');
   if (d) d.classList.toggle('open');
 }
-
 function nl2br(s) { return s ? s.replace(/\n/g, '<br>') : ''; }
+function srcPills(arr) {
+  if (!arr || !arr.length) return '';
+  return `<div class="src-pills">${arr.map(([url, lbl]) => `<a class="src-pill" href="${url}" target="_blank">${lbl}</a>`).join('')}</div>`;
+}
+
+function renderSchedule() {
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+  document.getElementById('cnt').textContent = `${schedule.length}件`;
+  for (const s of schedule) {
+    const item = document.createElement('div');
+    item.className = 'sched-item' + (s.flag ? ' sched-key' : '');
+    const who = s.who.length ? `<div class="sched-who">${s.who.map(w => `<span class="sched-tag ${w.cat}">${w.name}</span>`).join('')}</div>` : '';
+    item.innerHTML = `<div class="sched-time">${s.time}</div><div class="sched-body"><div class="sched-label">${s.label}</div>${s.note ? `<div class="sched-note">${s.note}</div>` : ''}${who}</div>`;
+    list.appendChild(item);
+  }
+}
 
 function render() {
+  if (filter === 'schedule') { renderSchedule(); return; }
   const list = document.getElementById('list');
   list.innerHTML = '';
   let cnt = 0;
-  const order = {S:0, A:1, B:2};
-  const sorted = [...people].sort((a,b) => {
-    const td = (order[a.tier]||2) - (order[b.tier]||2);
+  const order = { S: 0, A: 1, B: 2 };
+  const sorted = [...people].sort((a, b) => {
+    const td = (order[a.tier] || 2) - (order[b.tier] || 2);
     return td !== 0 ? td : b.stars - a.stars;
   });
-
   let lastCat = '';
   for (const p of sorted) {
-    if (filter !== 'all') {
-      if (filter === 'kanryo' && p.cat !== 'kanryo') continue;
-      if (filter === 'giin'   && p.cat !== 'giin')   continue;
-      if (filter === 's'      && p.tier !== 'S')      continue;
-      if (filter === 'pitch'  && p.sub  !== 'pitch')  continue;
-    }
-
-    const catLabel = p.cat === 'kanryo' ? '🏛️ 官僚' : '🗳️ 議員';
+    if (filter === 'kanryo' && p.cat !== 'kanryo') continue;
+    if (filter === 'giin'   && p.cat !== 'giin')   continue;
+    if (filter === 'key'    && p.tier !== 'S')      continue;
+    cnt++;
+    const catLabel = p.cat === 'kanryo' ? '🏛️ 官僚' : '🗳️ 議員・大臣';
     if (filter === 'all' && catLabel !== lastCat) {
       const lbl = document.createElement('div');
       lbl.className = 'section-label';
@@ -441,86 +402,45 @@ function render() {
       list.appendChild(lbl);
       lastCat = catLabel;
     }
-
-    cnt++;
     const card = document.createElement('div');
-    card.className = `card tier-${p.tier}`;
+    card.className = `card cat-${p.cat}`;
     card.onclick = () => toggle(card);
-
-    const stars = '★'.repeat(p.stars) + '☆'.repeat(5 - p.stars);
-    const catClass = p.cat === 'kanryo' ? 'cat-kanryo' : 'cat-giin';
-    const catText  = p.cat === 'kanryo' ? '官僚' : '議員';
-
+    const catClass = p.cat === 'kanryo' ? 'tag-kanryo' : 'tag-giin';
+    const catText  = p.cat === 'kanryo' ? '🏛️ 官僚' : '🗳️ 議員・大臣';
     card.innerHTML = `
       <div class="card-top">
         <div class="photo-wrap">
-          <img class="photo tier-${p.tier}" src="${p.photo}" alt="${p.name}"
+          <img class="photo cat-${p.cat}" src="${p.photo}" alt="${p.name}"
                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22><rect fill=%22%232a1600%22 width=%2272%22 height=%2272%22 rx=%2236%22/><text x=%2236%22 y=%2244%22 text-anchor=%22middle%22 font-size=%2226%22 fill=%22%23F18900%22>${p.name[0]}</text></svg>'">
-          <div class="badge-wrap"><span class="tier-badge ${p.tier}">${p.tier}</span></div>
         </div>
         <div class="info">
-          <div class="name">${p.name} <span class="stars">${p.tier === 'S' ? stars : ''}</span></div>
+          <div class="name">${p.name}</div>
           <div class="org">${p.org}</div>
           <div class="role-text">${p.role}</div>
           <span class="cat-tag ${catClass}">${catText}</span>
-          ${p.sub === 'pitch' ? '<span class="cat-tag cat-pitch" style="margin-left:4px">Pitch共演</span>' : ''}
         </div>
       </div>
       <div class="detail">
         ${p.age ? `<div class="d-section"><div class="d-label">年齢</div><div class="d-text">${p.age}</div></div>` : ''}
         ${p.edu ? `<div class="d-section"><div class="d-label">学歴</div><div class="d-text">${p.edu}</div></div>` : ''}
         <div class="d-section"><div class="d-label">経歴</div><div class="d-text">${p.career}</div></div>
-        <div class="box box-rimo">
-          <div class="blabel">💡 Rimoとの接続点</div>
-          <div class="btext">${p.rimo}</div>
-        </div>
-        <div class="box box-gov">
-          <div class="blabel">🏛️ 政府権限・会議体</div>
-          <div class="btext">${p.gov}</div>
-        </div>
-        <div class="box box-hot">
-          <div class="blabel">🔥 今この人が燃えていること</div>
-          <div class="btext">${nl2br(p.hotTopic)}</div>
-        </div>
-        <div class="box box-ice">
-          <div class="blabel">🧊 アイスブレイク（最強の一言）</div>
-          <div class="btext">${nl2br(p.icebreaker)}</div>
-        </div>
-        <div class="box box-pers">
-          <div class="blabel">🎭 人間的な側面・プライベート</div>
-          <div class="btext">${nl2br(p.personal)}</div>
-        </div>
-        <div class="box box-mine">
-          <div class="blabel">⚠️ 地雷・絶対NG</div>
-          <div class="btext">${nl2br(p.landmine)}</div>
-        </div>
-        <div class="box box-script">
-          <div class="blabel">💬 会話台本（コピペ可）</div>
-          <div class="btext">${nl2br(p.script)}</div>
-        </div>
-        <div class="box box-talk">
-          <div class="blabel">🗣️ 話すべきこと（ミッション軸）</div>
-          <div class="btext">${nl2br(p.talk)}</div>
-        </div>
-        <div class="box box-invite">
-          <div class="blabel">🎯 会議体・諮問委員会への接続戦略</div>
-          <div class="btext">${nl2br(p.invite)}</div>
-        </div>
-        <div class="box box-action">
-          <div class="blabel">⚡ 当日アクション</div>
-          <div class="btext">${p.action}</div>
-        </div>
-        <div class="box box-src">
-          <div class="blabel">🔗 出典URL（タップで開く）</div>
-          <div class="btext">${nl2br(p.sources)}</div>
-        </div>
-      </div>
-    `;
+        <div class="box box-rimo"><div class="blabel">💡 Rimoとの接続点</div><div class="btext">${p.rimo}</div></div>
+        <div class="box box-gov"><div class="blabel">🏛️ 政府権限・会議体</div><div class="btext">${p.gov}</div></div>
+        <div class="box box-hot"><div class="blabel">🔥 今燃えていること</div><div class="btext">${nl2br(p.hotTopic)}</div></div>
+        ${srcPills(p.srcHot)}
+        <div class="box box-ice"><div class="blabel">🧊 アイスブレイク</div><div class="btext">${nl2br(p.icebreaker)}</div></div>
+        <div class="box box-pers"><div class="blabel">🎭 人間的な側面・プライベート</div><div class="btext">${nl2br(p.personal)}</div></div>
+        ${srcPills(p.srcPers)}
+        <div class="box box-mine"><div class="blabel">⚠️ 地雷・絶対NG</div><div class="btext">${nl2br(p.landmine)}</div></div>
+        <div class="box box-script"><div class="blabel">💬 会話台本</div><div class="btext">${nl2br(p.script)}</div></div>
+        <div class="box box-talk"><div class="blabel">🗣️ 話すべきこと（ミッション軸）</div><div class="btext">${nl2br(p.talk)}</div></div>
+        <div class="box box-invite"><div class="blabel">🎯 会議体・諮問委員会への接続戦略</div><div class="btext">${nl2br(p.invite)}</div></div>
+        <div class="box box-action"><div class="blabel">⚡ 当日アクション</div><div class="btext">${p.action}</div></div>
+      </div>`;
     list.appendChild(card);
   }
   document.getElementById('cnt').textContent = `${cnt}名表示`;
 }
-
 render();
 </script>
 </body>
