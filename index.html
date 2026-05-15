@@ -12,7 +12,15 @@ header { background: linear-gradient(135deg, #F14C00, #F7AF00); padding: 14px 16
 header h1 { font-size: 15px; font-weight: 800; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.2); }
 header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
 
-.view-bar { display: flex; background: #fff; position: sticky; top: 62px; z-index: 99; border-bottom: 2px solid #EEE; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.search-wrap { background: #fff; padding: 8px 12px; border-bottom: 1px solid #EEE; position: sticky; top: 62px; z-index: 100; }
+.search-box { display: flex; align-items: center; background: #F2EFE9; border-radius: 22px; padding: 8px 14px; gap: 8px; }
+.search-box input { border: none; background: transparent; font-size: 15px; flex: 1; outline: none; font-family: inherit; color: #1a1a1a; }
+.search-box input::placeholder { color: #bbb; }
+.search-icon { color: #bbb; font-size: 15px; flex-shrink: 0; }
+.search-clear { color: #bbb; font-size: 18px; cursor: pointer; display: none; flex-shrink: 0; line-height: 1; padding: 0 2px; }
+.search-cnt { text-align: center; font-size: 12px; color: #888; padding: 6px; background: #fff; border-bottom: 1px solid #EEE; display: none; }
+.no-results { text-align: center; padding: 60px 20px; color: #bbb; font-size: 14px; }
+.view-bar { display: flex; background: #fff; position: sticky; top: 114px; z-index: 99; border-bottom: 2px solid #EEE; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .view-bar::-webkit-scrollbar { display: none; }
 .view-tab { flex-shrink: 0; padding: 11px 12px; text-align: center; font-size: 12px; font-weight: 700; cursor: pointer; color: #aaa; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; white-space: nowrap; }
 .view-tab.active { color: #F14C00; border-bottom-color: #F14C00; }
@@ -72,7 +80,16 @@ header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
   <p>全75名 ／ カードをタップ → プロフィール詳細</p>
 </header>
 
-<div class="view-bar">
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="search-input" type="search" placeholder="名前・所属・キーワードで検索…" oninput="doSearch(this.value)">
+    <span class="search-clear" id="search-clear" onclick="clearSearch()">✕</span>
+  </div>
+</div>
+<div id="search-cnt" class="search-cnt"></div>
+
+<div class="view-bar" id="view-bar">
 <div class="view-tab active" onclick="setTab('kanko', this)">🏛️ 官公庁 <span class="cnt-badge" id="cnt-kanko">22</span></div>
 <div class="view-tab" onclick="setTab('giin', this)">🗳️ 議員 <span class="cnt-badge" id="cnt-giin">1</span></div>
 <div class="view-tab" onclick="setTab('jichi', this)">🏙️ 地方自治体 <span class="cnt-badge" id="cnt-jichi">48</span></div>
@@ -2599,15 +2616,66 @@ header p  { font-size: 11px; color: rgba(255,255,255,0.9); margin-top: 3px; }
 </div>
 
 <script>
+let activeTab = 'kanko';
+
 function setTab(cat, el) {
+  activeTab = cat;
   document.querySelectorAll('.cat-section').forEach(s => s.style.display = 'none');
   document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('sec-' + cat).style.display = '';
   el.classList.add('active');
 }
+
 function toggleCard(card) {
   const d = card.querySelector('.detail');
   if (d) d.classList.toggle('open');
+}
+
+function doSearch(q) {
+  const query = q.trim().toLowerCase();
+  const clearBtn = document.getElementById('search-clear');
+  const cntBar = document.getElementById('search-cnt');
+  const viewBar = document.getElementById('view-bar');
+
+  clearBtn.style.display = query ? 'inline' : 'none';
+
+  if (!query) {
+    cntBar.style.display = 'none';
+    viewBar.style.display = '';
+    document.querySelectorAll('.cat-section').forEach(s => s.style.display = 'none');
+    document.getElementById('sec-' + activeTab).style.display = '';
+    document.querySelectorAll('.card').forEach(c => c.style.display = '');
+    return;
+  }
+
+  viewBar.style.display = 'none';
+  document.querySelectorAll('.cat-section').forEach(s => s.style.display = '');
+
+  let cnt = 0;
+  document.querySelectorAll('.card').forEach(card => {
+    const text = card.textContent.toLowerCase();
+    if (text.includes(query)) {
+      card.style.display = '';
+      cnt++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  document.querySelectorAll('.cat-section').forEach(s => {
+    const hasVisible = [...s.querySelectorAll('.card')].some(c => c.style.display !== 'none');
+    s.style.display = hasVisible ? '' : 'none';
+  });
+
+  cntBar.style.display = 'block';
+  cntBar.textContent = cnt > 0 ? `🔍 "${q}" — ${cnt}件ヒット` : `🔍 "${q}" — 該当なし`;
+}
+
+function clearSearch() {
+  const inp = document.getElementById('search-input');
+  inp.value = '';
+  doSearch('');
+  inp.focus();
 }
 </script>
 </body>
